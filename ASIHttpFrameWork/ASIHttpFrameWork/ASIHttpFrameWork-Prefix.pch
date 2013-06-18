@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ASIHttpFrameWork' target in the 'ASIHttpFrameWork' project
+//
+
+//#ifdef __OBJC__
+//    #import <Cocoa/Cocoa.h>
+//#endif
