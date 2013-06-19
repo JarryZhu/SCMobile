@@ -17,7 +17,6 @@
 		4492257817431EBA000CA622 /* SCSplashWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492257717431EBA000CA622 /* SCSplashWindow.m */; };
 		4492259217438FCC000CA622 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492259117438FCC000CA622 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4495B1AB17558AE600E930D3 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4495B1AA17558AE600E930D3 /* JSONKit.m */; };
-		449666AB1750885500AF01A4 /* PlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449666AA1750885500AF01A4 /* PlaceHolderTextView.m */; };
 		449666AF1750B24300AF01A4 /* SCTouchScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449666AE1750B24300AF01A4 /* SCTouchScrollView.m */; };
 		449683DD17630CCB0044DF08 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 449683D617630CCB0044DF08 /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		449683DE17630CCB0044DF08 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 449683D817630CCB0044DF08 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -27,8 +26,6 @@
 		4498FDA31739EC26002419D4 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4498FDA21739EC26002419D4 /* NSDate+Extend.m */; };
 		449DA82B176183FC0057504B /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 449DA82A176183FC0057504B /* OpenUDID.m */; };
 		44A04482175DB5EC00CCCE64 /* SCAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A04481175DB5EC00CCCE64 /* SCAnimationEffect.m */; };
-		44A0448B175DDB9B00CCCE64 /* GrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A04488175DDB9B00CCCE64 /* GrowingTextView.m */; };
-		44A0448C175DDB9B00CCCE64 /* GrowingTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0448A175DDB9B00CCCE64 /* GrowingTextViewInternal.m */; };
 		44A04495175DDBB700CCCE64 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0448F175DDBB700CCCE64 /* UncaughtExceptionHandler.m */; };
 		44A0A06F1752FE6900B51C77 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0A06E1752FE6900B51C77 /* NSString+Extend.m */; };
 		44A0A0721752FEFC00B51C77 /* NSNumber+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0A0711752FEFC00B51C77 /* NSNumber+Extend.m */; };
@@ -80,8 +77,6 @@
 		4492259117438FCC000CA622 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		4495B1A917558AE600E930D3 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4495B1AA17558AE600E930D3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		449666A91750885500AF01A4 /* PlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceHolderTextView.h; sourceTree = "<group>"; };
-		449666AA1750885500AF01A4 /* PlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceHolderTextView.m; sourceTree = "<group>"; };
 		449666AD1750B24300AF01A4 /* SCTouchScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTouchScrollView.h; sourceTree = "<group>"; };
 		449666AE1750B24300AF01A4 /* SCTouchScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTouchScrollView.m; sourceTree = "<group>"; };
 		449683D517630CCB0044DF08 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -101,10 +96,6 @@
 		449DA82A176183FC0057504B /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		44A04480175DB5EC00CCCE64 /* SCAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAnimationEffect.h; sourceTree = "<group>"; };
 		44A04481175DB5EC00CCCE64 /* SCAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAnimationEffect.m; sourceTree = "<group>"; };
-		44A04487175DDB9B00CCCE64 /* GrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowingTextView.h; sourceTree = "<group>"; };
-		44A04488175DDB9B00CCCE64 /* GrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingTextView.m; sourceTree = "<group>"; };
-		44A04489175DDB9B00CCCE64 /* GrowingTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowingTextViewInternal.h; sourceTree = "<group>"; };
-		44A0448A175DDB9B00CCCE64 /* GrowingTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingTextViewInternal.m; sourceTree = "<group>"; };
 		44A0448E175DDBB700CCCE64 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		44A0448F175DDBB700CCCE64 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		44A0A06D1752FE6900B51C77 /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
@@ -294,19 +285,6 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
-		449666A81750885500AF01A4 /* UITextViewWidget */ = {
-			isa = PBXGroup;
-			children = (
-				44A04487175DDB9B00CCCE64 /* GrowingTextView.h */,
-				44A04488175DDB9B00CCCE64 /* GrowingTextView.m */,
-				44A04489175DDB9B00CCCE64 /* GrowingTextViewInternal.h */,
-				44A0448A175DDB9B00CCCE64 /* GrowingTextViewInternal.m */,
-				449666A91750885500AF01A4 /* PlaceHolderTextView.h */,
-				449666AA1750885500AF01A4 /* PlaceHolderTextView.m */,
-			);
-			path = UITextViewWidget;
-			sourceTree = "<group>";
-		};
 		449666AC1750B22400AF01A4 /* TouchScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,7 +368,6 @@
 				4451C8BC17632CFA009D890A /* MLNavigation */,
 				4492258E17438FCC000CA622 /* SVProgressHUD */,
 				449666AC1750B22400AF01A4 /* TouchScrollView */,
-				449666A81750885500AF01A4 /* UITextViewWidget */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -462,14 +439,11 @@
 				4492259217438FCC000CA622 /* SVProgressHUD.m in Sources */,
 				443B388D1744DC2B00EC78BA /* UIImage+Extend.m in Sources */,
 				447F0A83174B12B60094A5E9 /* UITableView+ZGParallelView.m in Sources */,
-				449666AB1750885500AF01A4 /* PlaceHolderTextView.m in Sources */,
 				449666AF1750B24300AF01A4 /* SCTouchScrollView.m in Sources */,
 				44A0A06F1752FE6900B51C77 /* NSString+Extend.m in Sources */,
 				44A0A0721752FEFC00B51C77 /* NSNumber+Extend.m in Sources */,
 				4495B1AB17558AE600E930D3 /* JSONKit.m in Sources */,
 				44A04482175DB5EC00CCCE64 /* SCAnimationEffect.m in Sources */,
-				44A0448B175DDB9B00CCCE64 /* GrowingTextView.m in Sources */,
-				44A0448C175DDB9B00CCCE64 /* GrowingTextViewInternal.m in Sources */,
 				44A04495175DDBB700CCCE64 /* UncaughtExceptionHandler.m in Sources */,
 				449DA82B176183FC0057504B /* OpenUDID.m in Sources */,
 				449683DD17630CCB0044DF08 /* DDASLLogger.m in Sources */,

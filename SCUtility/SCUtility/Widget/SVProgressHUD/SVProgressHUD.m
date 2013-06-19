@@ -358,6 +358,8 @@
         if(!self.superview)
             [self.overlayWindow addSubview:self];
         
+        isTextCenter = NO;
+        
         self.fadeOutTimer = nil;
         self.imageView.hidden = YES;
         self.maskType = hudMaskType;
