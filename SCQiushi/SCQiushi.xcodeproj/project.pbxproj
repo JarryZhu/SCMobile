@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44C04F331774535E005AA1D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F321774535E005AA1D7 /* UIKit.framework */; };
+		44C04F351774535E005AA1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F341774535E005AA1D7 /* Foundation.framework */; };
+		44C04F371774535E005AA1D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F361774535E005AA1D7 /* CoreGraphics.framework */; };
+		44C04F451774535E005AA1D7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F441774535E005AA1D7 /* Default.png */; };
+		44C04F471774535F005AA1D7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F461774535F005AA1D7 /* Default@2x.png */; };
+		44C04F491774535F005AA1D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F481774535F005AA1D7 /* Default-568h@2x.png */; };
+		44C04F571774535F005AA1D7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F561774535F005AA1D7 /* SenTestingKit.framework */; };
+		44C04F581774535F005AA1D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F321774535E005AA1D7 /* UIKit.framework */; };
+		44C04F591774535F005AA1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F341774535E005AA1D7 /* Foundation.framework */; };
+		44C04F611774535F005AA1D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F5F1774535F005AA1D7 /* InfoPlist.strings */; };
+		44C04F641774535F005AA1D7 /* SCQiushiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F631774535F005AA1D7 /* SCQiushiTests.m */; };
+		44C04F7117745410005AA1D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F7017745410005AA1D7 /* AppDelegate.m */; };
+		44C04F7517745430005AA1D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F7417745430005AA1D7 /* ViewController.m */; };
+		44C04F7817745455005AA1D7 /* SCQiushi-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F7617745455005AA1D7 /* SCQiushi-Info.plist */; };
+		44C04F7A17745471005AA1D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F7917745471005AA1D7 /* main.m */; };
+		44C04F7D177454A0005AA1D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F7B177454A0005AA1D7 /* InfoPlist.strings */; };
+		44C04F80177454A6005AA1D7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F7E177454A6005AA1D7 /* ViewController.xib */; };
+		44C04F8B1774586F005AA1D7 /* NetASIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F841774586F005AA1D7 /* NetASIAdapter.m */; };
+		44C04F8C1774586F005AA1D7 /* NetBaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F861774586F005AA1D7 /* NetBaseAdapter.m */; };
+		44C04F8D1774586F005AA1D7 /* NetServiceFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F881774586F005AA1D7 /* NetServiceFace.m */; };
+		44C04F8E1774586F005AA1D7 /* NetServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F8A1774586F005AA1D7 /* NetServiceManager.m */; };
+		44C04F901774587E005AA1D7 /* libSCUtility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F8F1774587E005AA1D7 /* libSCUtility.a */; };
+		44C04F92177458D6005AA1D7 /* ASIHttpFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F91177458D6005AA1D7 /* ASIHttpFrameWork.framework */; };
+		44C04F9417745902005AA1D7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F9317745902005AA1D7 /* CFNetwork.framework */; };
+		44C04F9617745909005AA1D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F9517745909005AA1D7 /* QuartzCore.framework */; };
+		44C04F981774591A005AA1D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F971774591A005AA1D7 /* SystemConfiguration.framework */; };
+		44C04F9A177459BB005AA1D7 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */; };
+		44C04F9C177459D8005AA1D7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F9B177459D8005AA1D7 /* MobileCoreServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44C04F5A1774535F005AA1D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C04F271774535E005AA1D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44C04F2E1774535E005AA1D7;
+			remoteInfo = SCQiushi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44C04F2F1774535E005AA1D7 /* SCQiushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCQiushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C04F321774535E005AA1D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		44C04F341774535E005AA1D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44C04F361774535E005AA1D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44C04F441774535E005AA1D7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		44C04F461774535F005AA1D7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		44C04F481774535F005AA1D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		44C04F551774535F005AA1D7 /* SCQiushiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCQiushiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C04F561774535F005AA1D7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		44C04F5E1774535F005AA1D7 /* SCQiushiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCQiushiTests-Info.plist"; sourceTree = "<group>"; };
+		44C04F601774535F005AA1D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44C04F621774535F005AA1D7 /* SCQiushiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCQiushiTests.h; sourceTree = "<group>"; };
+		44C04F631774535F005AA1D7 /* SCQiushiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCQiushiTests.m; sourceTree = "<group>"; };
+		44C04F6F17745410005AA1D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		44C04F7017745410005AA1D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		44C04F7317745430005AA1D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		44C04F7417745430005AA1D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		44C04F7617745455005AA1D7 /* SCQiushi-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SCQiushi-Info.plist"; path = "Supporting/SCQiushi-Info.plist"; sourceTree = "<group>"; };
+		44C04F7717745455005AA1D7 /* SCQiushi-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCQiushi-Prefix.pch"; path = "Supporting/SCQiushi-Prefix.pch"; sourceTree = "<group>"; };
+		44C04F7917745471005AA1D7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Supporting/main.m; sourceTree = "<group>"; };
+		44C04F7C177454A0005AA1D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Supporting/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44C04F7F177454A6005AA1D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = SCQiushi/Supporting/en.lproj/ViewController.xib; sourceTree = SOURCE_ROOT; };
+		44C04F831774586F005AA1D7 /* NetASIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetASIAdapter.h; sourceTree = "<group>"; };
+		44C04F841774586F005AA1D7 /* NetASIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetASIAdapter.m; sourceTree = "<group>"; };
+		44C04F851774586F005AA1D7 /* NetBaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetBaseAdapter.h; sourceTree = "<group>"; };
+		44C04F861774586F005AA1D7 /* NetBaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetBaseAdapter.m; sourceTree = "<group>"; };
+		44C04F871774586F005AA1D7 /* NetServiceFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServiceFace.h; sourceTree = "<group>"; };
+		44C04F881774586F005AA1D7 /* NetServiceFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServiceFace.m; sourceTree = "<group>"; };
+		44C04F891774586F005AA1D7 /* NetServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServiceManager.h; sourceTree = "<group>"; };
+		44C04F8A1774586F005AA1D7 /* NetServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServiceManager.m; sourceTree = "<group>"; };
+		44C04F8F1774587E005AA1D7 /* libSCUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSCUtility.a; path = "/Users/Jarry/Library/Developer/Xcode/DerivedData/SCMobile-hdotichnjqwybtaedyexwkfvqnuu/Build/Products/Debug-iphoneos/libSCUtility.a"; sourceTree = "<absolute>"; };
+		44C04F91177458D6005AA1D7 /* ASIHttpFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASIHttpFrameWork.framework; path = ../SCCommon/Vender/ASIHttpFrameWork.framework; sourceTree = "<group>"; };
+		44C04F9317745902005AA1D7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		44C04F9517745909005AA1D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		44C04F971774591A005AA1D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		44C04F9B177459D8005AA1D7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44C04F2C1774535E005AA1D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C04F9C177459D8005AA1D7 /* MobileCoreServices.framework in Frameworks */,
+				44C04F9A177459BB005AA1D7 /* libz.1.2.5.dylib in Frameworks */,
+				44C04F981774591A005AA1D7 /* SystemConfiguration.framework in Frameworks */,
+				44C04F9617745909005AA1D7 /* QuartzCore.framework in Frameworks */,
+				44C04F9417745902005AA1D7 /* CFNetwork.framework in Frameworks */,
+				44C04F901774587E005AA1D7 /* libSCUtility.a in Frameworks */,
+				44C04F331774535E005AA1D7 /* UIKit.framework in Frameworks */,
+				44C04F351774535E005AA1D7 /* Foundation.framework in Frameworks */,
+				44C04F371774535E005AA1D7 /* CoreGraphics.framework in Frameworks */,
+				44C04F92177458D6005AA1D7 /* ASIHttpFrameWork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C04F511774535F005AA1D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C04F571774535F005AA1D7 /* SenTestingKit.framework in Frameworks */,
+				44C04F581774535F005AA1D7 /* UIKit.framework in Frameworks */,
+				44C04F591774535F005AA1D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44C04F261774535E005AA1D7 = {
+			isa = PBXGroup;
+			children = (
+				44C04F381774535E005AA1D7 /* SCQiushi */,
+				44C04F5C1774535F005AA1D7 /* SCQiushiTests */,
+				44C04F311774535E005AA1D7 /* Frameworks */,
+				44C04F301774535E005AA1D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44C04F301774535E005AA1D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F2F1774535E005AA1D7 /* SCQiushi.app */,
+				44C04F551774535F005AA1D7 /* SCQiushiTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44C04F311774535E005AA1D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F6D17745377005AA1D7 /* libs */,
+				44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */,
+				44C04F9B177459D8005AA1D7 /* MobileCoreServices.framework */,
+				44C04F971774591A005AA1D7 /* SystemConfiguration.framework */,
+				44C04F9517745909005AA1D7 /* QuartzCore.framework */,
+				44C04F9317745902005AA1D7 /* CFNetwork.framework */,
+				44C04F321774535E005AA1D7 /* UIKit.framework */,
+				44C04F341774535E005AA1D7 /* Foundation.framework */,
+				44C04F361774535E005AA1D7 /* CoreGraphics.framework */,
+				44C04F561774535F005AA1D7 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44C04F381774535E005AA1D7 /* SCQiushi */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F6E17745410005AA1D7 /* AppDelegate */,
+				44C04F7217745430005AA1D7 /* Classes */,
+				44C04F821774586F005AA1D7 /* NetAdapter */,
+				44C04F8117745787005AA1D7 /* Resources */,
+				44C04F391774535E005AA1D7 /* Supporting Files */,
+			);
+			path = SCQiushi;
+			sourceTree = "<group>";
+		};
+		44C04F391774535E005AA1D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F7617745455005AA1D7 /* SCQiushi-Info.plist */,
+				44C04F7717745455005AA1D7 /* SCQiushi-Prefix.pch */,
+				44C04F7B177454A0005AA1D7 /* InfoPlist.strings */,
+				44C04F7917745471005AA1D7 /* main.m */,
+				44C04F441774535E005AA1D7 /* Default.png */,
+				44C04F461774535F005AA1D7 /* Default@2x.png */,
+				44C04F481774535F005AA1D7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44C04F5C1774535F005AA1D7 /* SCQiushiTests */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F621774535F005AA1D7 /* SCQiushiTests.h */,
+				44C04F631774535F005AA1D7 /* SCQiushiTests.m */,
+				44C04F5D1774535F005AA1D7 /* Supporting Files */,
+			);
+			path = SCQiushiTests;
+			sourceTree = "<group>";
+		};
+		44C04F5D1774535F005AA1D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F5E1774535F005AA1D7 /* SCQiushiTests-Info.plist */,
+				44C04F5F1774535F005AA1D7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44C04F6D17745377005AA1D7 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F91177458D6005AA1D7 /* ASIHttpFrameWork.framework */,
+				44C04F8F1774587E005AA1D7 /* libSCUtility.a */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		44C04F6E17745410005AA1D7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F6F17745410005AA1D7 /* AppDelegate.h */,
+				44C04F7017745410005AA1D7 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		44C04F7217745430005AA1D7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F7317745430005AA1D7 /* ViewController.h */,
+				44C04F7417745430005AA1D7 /* ViewController.m */,
+				44C04F7E177454A6005AA1D7 /* ViewController.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		44C04F8117745787005AA1D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		44C04F821774586F005AA1D7 /* NetAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				44C04F831774586F005AA1D7 /* NetASIAdapter.h */,
+				44C04F841774586F005AA1D7 /* NetASIAdapter.m */,
+				44C04F851774586F005AA1D7 /* NetBaseAdapter.h */,
+				44C04F861774586F005AA1D7 /* NetBaseAdapter.m */,
+				44C04F871774586F005AA1D7 /* NetServiceFace.h */,
+				44C04F881774586F005AA1D7 /* NetServiceFace.m */,
+				44C04F891774586F005AA1D7 /* NetServiceManager.h */,
+				44C04F8A1774586F005AA1D7 /* NetServiceManager.m */,
+			);
+			path = NetAdapter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44C04F2E1774535E005AA1D7 /* SCQiushi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44C04F671774535F005AA1D7 /* Build configuration list for PBXNativeTarget "SCQiushi" */;
+			buildPhases = (
+				44C04F2B1774535E005AA1D7 /* Sources */,
+				44C04F2C1774535E005AA1D7 /* Frameworks */,
+				44C04F2D1774535E005AA1D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCQiushi;
+			productName = SCQiushi;
+			productReference = 44C04F2F1774535E005AA1D7 /* SCQiushi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44C04F541774535F005AA1D7 /* SCQiushiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44C04F6A1774535F005AA1D7 /* Build configuration list for PBXNativeTarget "SCQiushiTests" */;
+			buildPhases = (
+				44C04F501774535F005AA1D7 /* Sources */,
+				44C04F511774535F005AA1D7 /* Frameworks */,
+				44C04F521774535F005AA1D7 /* Resources */,
+				44C04F531774535F005AA1D7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44C04F5B1774535F005AA1D7 /* PBXTargetDependency */,
+			);
+			name = SCQiushiTests;
+			productName = SCQiushiTests;
+			productReference = 44C04F551774535F005AA1D7 /* SCQiushiTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44C04F271774535E005AA1D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Jarry;
+			};
+			buildConfigurationList = 44C04F2A1774535E005AA1D7 /* Build configuration list for PBXProject "SCQiushi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 44C04F261774535E005AA1D7;
+			productRefGroup = 44C04F301774535E005AA1D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44C04F2E1774535E005AA1D7 /* SCQiushi */,
+				44C04F541774535F005AA1D7 /* SCQiushiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44C04F2D1774535E005AA1D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C04F451774535E005AA1D7 /* Default.png in Resources */,
+				44C04F471774535F005AA1D7 /* Default@2x.png in Resources */,
+				44C04F491774535F005AA1D7 /* Default-568h@2x.png in Resources */,
+				44C04F7D177454A0005AA1D7 /* InfoPlist.strings in Resources */,
+				44C04F80177454A6005AA1D7 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C04F521774535F005AA1D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C04F611774535F005AA1D7 /* InfoPlist.strings in Resources */,
+				44C04F7817745455005AA1D7 /* SCQiushi-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44C04F531774535F005AA1D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44C04F2B1774535E005AA1D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C04F7117745410005AA1D7 /* AppDelegate.m in Sources */,
+				44C04F7517745430005AA1D7 /* ViewController.m in Sources */,
+				44C04F7A17745471005AA1D7 /* main.m in Sources */,
+				44C04F8B1774586F005AA1D7 /* NetASIAdapter.m in Sources */,
+				44C04F8C1774586F005AA1D7 /* NetBaseAdapter.m in Sources */,
+				44C04F8D1774586F005AA1D7 /* NetServiceFace.m in Sources */,
+				44C04F8E1774586F005AA1D7 /* NetServiceManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C04F501774535F005AA1D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C04F641774535F005AA1D7 /* SCQiushiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44C04F5B1774535F005AA1D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44C04F2E1774535E005AA1D7 /* SCQiushi */;
+			targetProxy = 44C04F5A1774535F005AA1D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44C04F5F1774535F005AA1D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44C04F601774535F005AA1D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		44C04F7B177454A0005AA1D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44C04F7C177454A0005AA1D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		44C04F7E177454A6005AA1D7 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44C04F7F177454A6005AA1D7 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44C04F651774535F005AA1D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		44C04F661774535F005AA1D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44C04F681774535F005AA1D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SCCommon/Vender\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCQiushi/Supporting/SCQiushi-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../SCUtility/**";
+				INFOPLIST_FILE = "SCQiushi/Supporting/SCQiushi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		44C04F691774535F005AA1D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SCCommon/Vender\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCQiushi/Supporting/SCQiushi-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../SCUtility/**";
+				INFOPLIST_FILE = "SCQiushi/Supporting/SCQiushi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		44C04F6B1774535F005AA1D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCQiushi.app/SCQiushi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCQiushi/SCQiushi-Prefix.pch";
+				INFOPLIST_FILE = "SCQiushiTests/SCQiushiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		44C04F6C1774535F005AA1D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCQiushi.app/SCQiushi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCQiushi/SCQiushi-Prefix.pch";
+				INFOPLIST_FILE = "SCQiushiTests/SCQiushiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44C04F2A1774535E005AA1D7 /* Build configuration list for PBXProject "SCQiushi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C04F651774535F005AA1D7 /* Debug */,
+				44C04F661774535F005AA1D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44C04F671774535F005AA1D7 /* Build configuration list for PBXNativeTarget "SCQiushi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C04F681774535F005AA1D7 /* Debug */,
+				44C04F691774535F005AA1D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		44C04F6A1774535F005AA1D7 /* Build configuration list for PBXNativeTarget "SCQiushiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C04F6B1774535F005AA1D7 /* Debug */,
+				44C04F6C1774535F005AA1D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44C04F271774535E005AA1D7 /* Project object */;
+}

@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		449496D1177055D7002BB5C1 /* libSCUtility.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libSCUtility.a; path = "../SCUtility/build/Release-iphoneos/libSCUtility.a"; sourceTree = "<group>"; };
+		449496D1177055D7002BB5C1 /* libSCUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSCUtility.a; path = "../SCUtility/build/Release-iphoneos/libSCUtility.a"; sourceTree = "<group>"; };
 		4495911B176FF3BA009EFDFD /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4495911E176FF3BA009EFDFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44959120176FF3BA009EFDFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -457,6 +457,7 @@
 				GCC_PREFIX_HEADER = "Currency/Supporting/Currency-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../SCUtility/**";
 				INFOPLIST_FILE = "Currency/Supporting/Currency-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -474,6 +475,7 @@
 				GCC_PREFIX_HEADER = "Currency/Supporting/Currency-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../SCUtility/**";
 				INFOPLIST_FILE = "Currency/Supporting/Currency-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
