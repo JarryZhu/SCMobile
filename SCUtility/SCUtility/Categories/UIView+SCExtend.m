@@ -8,7 +8,7 @@
 
 #import "UIView+SCExtend.h"
 
-@implementation UIView (Extend)
+@implementation UIView (SCExtend)
 
 - (CGFloat) x
 {

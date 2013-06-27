@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		449D8D1D177BCA6B00D7CF78 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D1A177BCA6B00D7CF78 /* JASidePanelController.m */; };
+		449D8D1E177BCA6B00D7CF78 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D1C177BCA6B00D7CF78 /* UIViewController+JASidePanel.m */; };
+		449D8D24177BD58F00D7CF78 /* BaseTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D21177BD58F00D7CF78 /* BaseTitleViewController.m */; };
+		449D8D25177BD58F00D7CF78 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D23177BD58F00D7CF78 /* BaseViewController.m */; };
+		449D8D29177BD88600D7CF78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D28177BD88600D7CF78 /* MainViewController.m */; };
+		449D8D2F177BD8C400D7CF78 /* navigation_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D2B177BD8C400D7CF78 /* navigation_bg@2x.png */; };
+		449D8D31177BD8C400D7CF78 /* left_menu_seperator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D2E177BD8C400D7CF78 /* left_menu_seperator@2x.png */; };
+		449D8D33177BD8E100D7CF78 /* left_menu_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D32177BD8E100D7CF78 /* left_menu_bg@2x.png */; };
+		449D8D37177BD92300D7CF78 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D36177BD92300D7CF78 /* LeftMenuViewController.m */; };
+		449D8D41177BE60600D7CF78 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D3A177BE60600D7CF78 /* BButton.m */; };
+		449D8D42177BE60600D7CF78 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D3C177BE60600D7CF78 /* NSString+FontAwesome.m */; };
+		449D8D43177BE60600D7CF78 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D3E177BE60600D7CF78 /* FontAwesome.ttf */; };
+		449D8D44177BE60600D7CF78 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D40177BE60600D7CF78 /* UIColor+BButton.m */; };
+		449D8D46177C01F800D7CF78 /* top_btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D45177C01F800D7CF78 /* top_btn_back@2x.png */; };
+		449D8D48177C2CD600D7CF78 /* main_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D47177C2CD600D7CF78 /* main_background@2x.png */; };
+		449D8D4A177C37D100D7CF78 /* top_btn_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D49177C37D100D7CF78 /* top_btn_menu@2x.png */; };
+		449D8D4D177C3F2400D7CF78 /* LeftMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D4C177C3F2400D7CF78 /* LeftMenuCell.m */; };
+		449D8D4F177C433200D7CF78 /* left_menu_accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D4E177C433200D7CF78 /* left_menu_accessory@2x.png */; };
 		44C04F331774535E005AA1D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F321774535E005AA1D7 /* UIKit.framework */; };
 		44C04F351774535E005AA1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F341774535E005AA1D7 /* Foundation.framework */; };
 		44C04F371774535E005AA1D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F361774535E005AA1D7 /* CoreGraphics.framework */; };
@@ -48,6 +66,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		449D8D19177BCA6B00D7CF78 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		449D8D1A177BCA6B00D7CF78 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		449D8D1B177BCA6B00D7CF78 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		449D8D1C177BCA6B00D7CF78 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		449D8D20177BD58F00D7CF78 /* BaseTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTitleViewController.h; sourceTree = "<group>"; };
+		449D8D21177BD58F00D7CF78 /* BaseTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTitleViewController.m; sourceTree = "<group>"; };
+		449D8D22177BD58F00D7CF78 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		449D8D23177BD58F00D7CF78 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		449D8D27177BD88600D7CF78 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		449D8D28177BD88600D7CF78 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		449D8D2B177BD8C400D7CF78 /* navigation_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_bg@2x.png"; sourceTree = "<group>"; };
+		449D8D2E177BD8C400D7CF78 /* left_menu_seperator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_seperator@2x.png"; sourceTree = "<group>"; };
+		449D8D32177BD8E100D7CF78 /* left_menu_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_bg@2x.png"; sourceTree = "<group>"; };
+		449D8D35177BD92300D7CF78 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		449D8D36177BD92300D7CF78 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		449D8D39177BE60600D7CF78 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
+		449D8D3A177BE60600D7CF78 /* BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BButton.m; sourceTree = "<group>"; };
+		449D8D3B177BE60600D7CF78 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		449D8D3C177BE60600D7CF78 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		449D8D3E177BE60600D7CF78 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		449D8D3F177BE60600D7CF78 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
+		449D8D40177BE60600D7CF78 /* UIColor+BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BButton.m"; sourceTree = "<group>"; };
+		449D8D45177C01F800D7CF78 /* top_btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_btn_back@2x.png"; sourceTree = "<group>"; };
+		449D8D47177C2CD600D7CF78 /* main_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_background@2x.png"; sourceTree = "<group>"; };
+		449D8D49177C37D100D7CF78 /* top_btn_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_btn_menu@2x.png"; sourceTree = "<group>"; };
+		449D8D4B177C3F2400D7CF78 /* LeftMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuCell.h; sourceTree = "<group>"; };
+		449D8D4C177C3F2400D7CF78 /* LeftMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuCell.m; sourceTree = "<group>"; };
+		449D8D4E177C433200D7CF78 /* left_menu_accessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_accessory@2x.png"; sourceTree = "<group>"; };
 		44C04F2F1774535E005AA1D7 /* SCQiushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCQiushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C04F321774535E005AA1D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44C04F341774535E005AA1D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +164,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		449D8D17177BCA5800D7CF78 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D18177BCA6B00D7CF78 /* JASidePanel */,
+				449D8D38177BE60600D7CF78 /* BButton */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		449D8D18177BCA6B00D7CF78 /* JASidePanel */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D19177BCA6B00D7CF78 /* JASidePanelController.h */,
+				449D8D1A177BCA6B00D7CF78 /* JASidePanelController.m */,
+				449D8D1B177BCA6B00D7CF78 /* UIViewController+JASidePanel.h */,
+				449D8D1C177BCA6B00D7CF78 /* UIViewController+JASidePanel.m */,
+			);
+			name = JASidePanel;
+			path = ../../../SCCommon/Widget/JASidePanel;
+			sourceTree = "<group>";
+		};
+		449D8D1F177BD58F00D7CF78 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D20177BD58F00D7CF78 /* BaseTitleViewController.h */,
+				449D8D21177BD58F00D7CF78 /* BaseTitleViewController.m */,
+				449D8D22177BD58F00D7CF78 /* BaseViewController.h */,
+				449D8D23177BD58F00D7CF78 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		449D8D26177BD85B00D7CF78 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D27177BD88600D7CF78 /* MainViewController.h */,
+				449D8D28177BD88600D7CF78 /* MainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		449D8D2A177BD8C400D7CF78 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D47177C2CD600D7CF78 /* main_background@2x.png */,
+				449D8D2B177BD8C400D7CF78 /* navigation_bg@2x.png */,
+				449D8D49177C37D100D7CF78 /* top_btn_menu@2x.png */,
+				449D8D45177C01F800D7CF78 /* top_btn_back@2x.png */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		449D8D2C177BD8C400D7CF78 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D32177BD8E100D7CF78 /* left_menu_bg@2x.png */,
+				449D8D2E177BD8C400D7CF78 /* left_menu_seperator@2x.png */,
+				449D8D4E177C433200D7CF78 /* left_menu_accessory@2x.png */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		449D8D34177BD91000D7CF78 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D35177BD92300D7CF78 /* LeftMenuViewController.h */,
+				449D8D36177BD92300D7CF78 /* LeftMenuViewController.m */,
+				449D8D4B177C3F2400D7CF78 /* LeftMenuCell.h */,
+				449D8D4C177C3F2400D7CF78 /* LeftMenuCell.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		449D8D38177BE60600D7CF78 /* BButton */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D39177BE60600D7CF78 /* BButton.h */,
+				449D8D3A177BE60600D7CF78 /* BButton.m */,
+				449D8D3B177BE60600D7CF78 /* NSString+FontAwesome.h */,
+				449D8D3C177BE60600D7CF78 /* NSString+FontAwesome.m */,
+				449D8D3D177BE60600D7CF78 /* resources */,
+				449D8D3F177BE60600D7CF78 /* UIColor+BButton.h */,
+				449D8D40177BE60600D7CF78 /* UIColor+BButton.m */,
+			);
+			name = BButton;
+			path = ../../../SCCommon/Widget/BButton;
+			sourceTree = "<group>";
+		};
+		449D8D3D177BE60600D7CF78 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				449D8D3E177BE60600D7CF78 /* FontAwesome.ttf */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		44C04F261774535E005AA1D7 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +301,7 @@
 			children = (
 				44C04F6E17745410005AA1D7 /* AppDelegate */,
 				44C04F7217745430005AA1D7 /* Classes */,
+				449D8D17177BCA5800D7CF78 /* Widget */,
 				44C04F821774586F005AA1D7 /* NetAdapter */,
 				44C04F8117745787005AA1D7 /* Resources */,
 				44C04F391774535E005AA1D7 /* Supporting Files */,
@@ -220,6 +363,9 @@
 		44C04F7217745430005AA1D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				449D8D1F177BD58F00D7CF78 /* Base */,
+				449D8D26177BD85B00D7CF78 /* Main */,
+				449D8D34177BD91000D7CF78 /* Menu */,
 				44C04F7317745430005AA1D7 /* ViewController.h */,
 				44C04F7417745430005AA1D7 /* ViewController.m */,
 				44C04F7E177454A6005AA1D7 /* ViewController.xib */,
@@ -230,6 +376,8 @@
 		44C04F8117745787005AA1D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				449D8D2A177BD8C400D7CF78 /* main */,
+				449D8D2C177BD8C400D7CF78 /* menu */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -325,6 +473,14 @@
 				44C04F491774535F005AA1D7 /* Default-568h@2x.png in Resources */,
 				44C04F7D177454A0005AA1D7 /* InfoPlist.strings in Resources */,
 				44C04F80177454A6005AA1D7 /* ViewController.xib in Resources */,
+				449D8D2F177BD8C400D7CF78 /* navigation_bg@2x.png in Resources */,
+				449D8D31177BD8C400D7CF78 /* left_menu_seperator@2x.png in Resources */,
+				449D8D33177BD8E100D7CF78 /* left_menu_bg@2x.png in Resources */,
+				449D8D43177BE60600D7CF78 /* FontAwesome.ttf in Resources */,
+				449D8D46177C01F800D7CF78 /* top_btn_back@2x.png in Resources */,
+				449D8D48177C2CD600D7CF78 /* main_background@2x.png in Resources */,
+				449D8D4A177C37D100D7CF78 /* top_btn_menu@2x.png in Resources */,
+				449D8D4F177C433200D7CF78 /* left_menu_accessory@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +523,16 @@
 				44C04F8C1774586F005AA1D7 /* NetBaseAdapter.m in Sources */,
 				44C04F8D1774586F005AA1D7 /* NetServiceFace.m in Sources */,
 				44C04F8E1774586F005AA1D7 /* NetServiceManager.m in Sources */,
+				449D8D1D177BCA6B00D7CF78 /* JASidePanelController.m in Sources */,
+				449D8D1E177BCA6B00D7CF78 /* UIViewController+JASidePanel.m in Sources */,
+				449D8D24177BD58F00D7CF78 /* BaseTitleViewController.m in Sources */,
+				449D8D25177BD58F00D7CF78 /* BaseViewController.m in Sources */,
+				449D8D29177BD88600D7CF78 /* MainViewController.m in Sources */,
+				449D8D37177BD92300D7CF78 /* LeftMenuViewController.m in Sources */,
+				449D8D41177BE60600D7CF78 /* BButton.m in Sources */,
+				449D8D42177BE60600D7CF78 /* NSString+FontAwesome.m in Sources */,
+				449D8D44177BE60600D7CF78 /* UIColor+BButton.m in Sources */,
+				449D8D4D177C3F2400D7CF78 /* LeftMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +651,7 @@
 				INFOPLIST_FILE = "SCQiushi/Supporting/SCQiushi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -503,6 +670,7 @@
 				INFOPLIST_FILE = "SCQiushi/Supporting/SCQiushi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -561,6 +729,7 @@
 				44C04F691774535F005AA1D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44C04F6A1774535F005AA1D7 /* Build configuration list for PBXNativeTarget "SCQiushiTests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +738,7 @@
 				44C04F6C1774535F005AA1D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

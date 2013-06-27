@@ -2,23 +2,40 @@
 //  AppDelegate.m
 //  SCQiushi
 //
-//  Created by Surwin on 13-6-21.
+//  Created by Jarry on 13-6-21.
 //  Copyright (c) 2013年 Jarry. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "LeftMenuViewController.h"
+#import "MainViewController.h"
 
 #import "ViewController.h"
 
 @implementation AppDelegate
 
++ (AppDelegate *) sharedAppDelegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [SCLog initLog];    //init SCLog utility
+        
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    self.menuController = [[JASidePanelController alloc] init];
+    self.menuController.shouldDelegateAutorotateToVisiblePanel = NO;
+    
+    self.menuController.centerPanel = [[MainViewController alloc] init];
+    self.menuController.leftPanel = [[LeftMenuViewController alloc] init];
+    
+    
+    self.window.rootViewController = self.menuController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
