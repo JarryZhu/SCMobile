@@ -9,7 +9,7 @@
 #import "LeftMenuViewController.h"
 #import "LeftMenuCell.h"
 
-static NSString *menuTitles[] = {@"随便逛逛", @"精华", @"有图有真相", @"穿越", @"设置"};
+static NSString *menuTitles[] = {@"随便看看", @"精华", @"有图有真相", @"穿越", @"设置"};
 
 
 @interface LeftMenuViewController ()
@@ -31,10 +31,23 @@ static NSString *menuTitles[] = {@"随便逛逛", @"精华", @"有图有真相",
     return self;
 }
 
+- (void) dealloc
+{
+    [adView removeFromSuperview];
+    adView = nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //创建广告 banner
+    if (adView == nil) {
+        adView = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50]; //设置广告显示位置
+        adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
+    }
+    [self.view addSubview:adView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +59,7 @@ static NSString *menuTitles[] = {@"随便逛逛", @"精华", @"有图有真相",
 - (UITableView *) tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 256.0f, self.view.height)
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, self.view.height)
                                                   style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -69,7 +82,7 @@ static NSString *menuTitles[] = {@"随便逛逛", @"精华", @"有图有真相",
     return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"SideMenuCell";
     LeftMenuCell *cell = (LeftMenuCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -85,32 +98,45 @@ static NSString *menuTitles[] = {@"随便逛逛", @"精华", @"有图有真相",
 
 #pragma mark - UITableViewDelegate
 
-/*- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return kMenuHeaderHeight;
+	return 33;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    SideMenuHeader *headerView = [[[SideMenuHeader alloc] initWithFrame:CGRectMake(0.0f, 0.0f, SCREEN_WIDTH, kMenuHeaderHeight)] autorelease];
-    [headerView addTarget:self action:@selector(headerAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [headerView updateData];
-    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, SCREEN_WIDTH, 33)];
+    [headerView addBackgroundColor:@"left_menu_head_bg"];
+        
     return headerView;
-}*/
+}
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return kMenuCellHeight;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     //[[AppDelegate sharedAppDelegate] switchMenu:indexPath.row animated:YES exData:nil];
     
+}
+
+#pragma mark - AdSageDelegate
+- (UIViewController *) viewControllerForPresentingModalView
+{
+    return self; //[AppDelegate sharedAppDelegate].menuController;
+}
+
+- (void) adSageDidReceiveBannerAd:(AdSageView *)adSageView
+{
+}
+
+- (void) adSageDidFailToReceiveBannerAd:(AdSageView *)adSageView
+{
+    ERRORLOG(@"-- LeftMenu -- adSageDidFailToReceiveBannerAd");
 }
 
 @end

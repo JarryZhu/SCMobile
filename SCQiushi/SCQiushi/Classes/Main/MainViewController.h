@@ -7,7 +7,13 @@
 //
 
 #import "BaseTitleViewController.h"
+#import "AdSageDelegate.h"
+#import "AdSageView.h"
 
-@interface MainViewController : BaseTitleViewController
+@interface MainViewController : BaseTitleViewController <AdSageDelegate>
+{
+    AdSageView * adView;
+}
+
 
 @end

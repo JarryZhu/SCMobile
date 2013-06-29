@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441F9021177D8CC200C66F97 /* left_menu_head_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9020177D8CC200C66F97 /* left_menu_head_bg@2x.png */; };
+		441F9023177D8E9700C66F97 /* left_menu_cell_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9022177D8E9700C66F97 /* left_menu_cell_select@2x.png */; };
+		441F9026177D933300C66F97 /* left_menu_line1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9024177D933300C66F97 /* left_menu_line1@2x.png */; };
+		441F9027177D933300C66F97 /* left_menu_line2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9025177D933300C66F97 /* left_menu_line2@2x.png */; };
 		449D8D1D177BCA6B00D7CF78 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D1A177BCA6B00D7CF78 /* JASidePanelController.m */; };
 		449D8D1E177BCA6B00D7CF78 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D1C177BCA6B00D7CF78 /* UIViewController+JASidePanel.m */; };
 		449D8D24177BD58F00D7CF78 /* BaseTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D21177BD58F00D7CF78 /* BaseTitleViewController.m */; };
@@ -25,6 +29,20 @@
 		449D8D4A177C37D100D7CF78 /* top_btn_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D49177C37D100D7CF78 /* top_btn_menu@2x.png */; };
 		449D8D4D177C3F2400D7CF78 /* LeftMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D4C177C3F2400D7CF78 /* LeftMenuCell.m */; };
 		449D8D4F177C433200D7CF78 /* left_menu_accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449D8D4E177C433200D7CF78 /* left_menu_accessory@2x.png */; };
+		449E9127177E70EC00D39119 /* libMobiSageMediatorSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E9126177E70EC00D39119 /* libMobiSageMediatorSDK.a */; };
+		449E913C177E70FE00D39119 /* CloseBannerBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 449E9136177E70FE00D39119 /* CloseBannerBtn.png */; };
+		449E913D177E70FE00D39119 /* CloseBannerBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449E9137177E70FE00D39119 /* CloseBannerBtn@2x.png */; };
+		449E913E177E70FE00D39119 /* timeuptoclosefs_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 449E9138177E70FE00D39119 /* timeuptoclosefs_ipad.png */; };
+		449E913F177E70FE00D39119 /* timeuptoclosefs_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 449E9139177E70FE00D39119 /* timeuptoclosefs_iphone.png */; };
+		449E9141177E731400D39119 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E9140177E731400D39119 /* CoreLocation.framework */; };
+		449E9143177E732A00D39119 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E9142177E732A00D39119 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		449E9145177E733A00D39119 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E9144177E733A00D39119 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		449E9147177E739500D39119 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E9146177E739500D39119 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		449E92CD177EBBF300D39119 /* ASIHttpFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449E92CC177EBBF300D39119 /* ASIHttpFrameWork.framework */; };
+		449E92D7177EBF5000D39119 /* NetASIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E92D0177EBF5000D39119 /* NetASIAdapter.m */; };
+		449E92D8177EBF5000D39119 /* NetBaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E92D2177EBF5000D39119 /* NetBaseAdapter.m */; };
+		449E92D9177EBF5000D39119 /* NetServiceFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E92D4177EBF5000D39119 /* NetServiceFace.m */; };
+		449E92DA177EBF5000D39119 /* NetServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E92D6177EBF5000D39119 /* NetServiceManager.m */; };
 		44C04F331774535E005AA1D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F321774535E005AA1D7 /* UIKit.framework */; };
 		44C04F351774535E005AA1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F341774535E005AA1D7 /* Foundation.framework */; };
 		44C04F371774535E005AA1D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F361774535E005AA1D7 /* CoreGraphics.framework */; };
@@ -42,12 +60,7 @@
 		44C04F7A17745471005AA1D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F7917745471005AA1D7 /* main.m */; };
 		44C04F7D177454A0005AA1D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F7B177454A0005AA1D7 /* InfoPlist.strings */; };
 		44C04F80177454A6005AA1D7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C04F7E177454A6005AA1D7 /* ViewController.xib */; };
-		44C04F8B1774586F005AA1D7 /* NetASIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F841774586F005AA1D7 /* NetASIAdapter.m */; };
-		44C04F8C1774586F005AA1D7 /* NetBaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F861774586F005AA1D7 /* NetBaseAdapter.m */; };
-		44C04F8D1774586F005AA1D7 /* NetServiceFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F881774586F005AA1D7 /* NetServiceFace.m */; };
-		44C04F8E1774586F005AA1D7 /* NetServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C04F8A1774586F005AA1D7 /* NetServiceManager.m */; };
 		44C04F901774587E005AA1D7 /* libSCUtility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F8F1774587E005AA1D7 /* libSCUtility.a */; };
-		44C04F92177458D6005AA1D7 /* ASIHttpFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F91177458D6005AA1D7 /* ASIHttpFrameWork.framework */; };
 		44C04F9417745902005AA1D7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F9317745902005AA1D7 /* CFNetwork.framework */; };
 		44C04F9617745909005AA1D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F9517745909005AA1D7 /* QuartzCore.framework */; };
 		44C04F981774591A005AA1D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F971774591A005AA1D7 /* SystemConfiguration.framework */; };
@@ -66,6 +79,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441F9020177D8CC200C66F97 /* left_menu_head_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_head_bg@2x.png"; sourceTree = "<group>"; };
+		441F9022177D8E9700C66F97 /* left_menu_cell_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_cell_select@2x.png"; sourceTree = "<group>"; };
+		441F9024177D933300C66F97 /* left_menu_line1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_line1@2x.png"; sourceTree = "<group>"; };
+		441F9025177D933300C66F97 /* left_menu_line2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_line2@2x.png"; sourceTree = "<group>"; };
 		449D8D19177BCA6B00D7CF78 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		449D8D1A177BCA6B00D7CF78 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		449D8D1B177BCA6B00D7CF78 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
@@ -94,6 +111,29 @@
 		449D8D4B177C3F2400D7CF78 /* LeftMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuCell.h; sourceTree = "<group>"; };
 		449D8D4C177C3F2400D7CF78 /* LeftMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuCell.m; sourceTree = "<group>"; };
 		449D8D4E177C433200D7CF78 /* left_menu_accessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_accessory@2x.png"; sourceTree = "<group>"; };
+		449E9126177E70EC00D39119 /* libMobiSageMediatorSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobiSageMediatorSDK.a; path = ../../../SCCommon/Vender/MobiSage/lite/libMobiSageMediatorSDK.a; sourceTree = "<group>"; };
+		449E9129177E70FE00D39119 /* AdSageAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapter.h; sourceTree = "<group>"; };
+		449E912A177E70FE00D39119 /* AdSageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageDelegate.h; sourceTree = "<group>"; };
+		449E912B177E70FE00D39119 /* AdSageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageManager.h; sourceTree = "<group>"; };
+		449E912C177E70FE00D39119 /* AdSageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageView.h; sourceTree = "<group>"; };
+		449E912D177E70FE00D39119 /* MobiSageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageSDK.h; sourceTree = "<group>"; };
+		449E9136177E70FE00D39119 /* CloseBannerBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseBannerBtn.png; sourceTree = "<group>"; };
+		449E9137177E70FE00D39119 /* CloseBannerBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CloseBannerBtn@2x.png"; sourceTree = "<group>"; };
+		449E9138177E70FE00D39119 /* timeuptoclosefs_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeuptoclosefs_ipad.png; sourceTree = "<group>"; };
+		449E9139177E70FE00D39119 /* timeuptoclosefs_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeuptoclosefs_iphone.png; sourceTree = "<group>"; };
+		449E9140177E731400D39119 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		449E9142177E732A00D39119 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		449E9144177E733A00D39119 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		449E9146177E739500D39119 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		449E92CC177EBBF300D39119 /* ASIHttpFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASIHttpFrameWork.framework; path = ../SCCommon/Vender/ASIHttpFrameWork.framework; sourceTree = "<group>"; };
+		449E92CF177EBF5000D39119 /* NetASIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetASIAdapter.h; sourceTree = "<group>"; };
+		449E92D0177EBF5000D39119 /* NetASIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetASIAdapter.m; sourceTree = "<group>"; };
+		449E92D1177EBF5000D39119 /* NetBaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetBaseAdapter.h; sourceTree = "<group>"; };
+		449E92D2177EBF5000D39119 /* NetBaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetBaseAdapter.m; sourceTree = "<group>"; };
+		449E92D3177EBF5000D39119 /* NetServiceFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServiceFace.h; sourceTree = "<group>"; };
+		449E92D4177EBF5000D39119 /* NetServiceFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServiceFace.m; sourceTree = "<group>"; };
+		449E92D5177EBF5000D39119 /* NetServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServiceManager.h; sourceTree = "<group>"; };
+		449E92D6177EBF5000D39119 /* NetServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServiceManager.m; sourceTree = "<group>"; };
 		44C04F2F1774535E005AA1D7 /* SCQiushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCQiushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C04F321774535E005AA1D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44C04F341774535E005AA1D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,16 +156,7 @@
 		44C04F7917745471005AA1D7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Supporting/main.m; sourceTree = "<group>"; };
 		44C04F7C177454A0005AA1D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Supporting/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		44C04F7F177454A6005AA1D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = SCQiushi/Supporting/en.lproj/ViewController.xib; sourceTree = SOURCE_ROOT; };
-		44C04F831774586F005AA1D7 /* NetASIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetASIAdapter.h; sourceTree = "<group>"; };
-		44C04F841774586F005AA1D7 /* NetASIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetASIAdapter.m; sourceTree = "<group>"; };
-		44C04F851774586F005AA1D7 /* NetBaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetBaseAdapter.h; sourceTree = "<group>"; };
-		44C04F861774586F005AA1D7 /* NetBaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetBaseAdapter.m; sourceTree = "<group>"; };
-		44C04F871774586F005AA1D7 /* NetServiceFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServiceFace.h; sourceTree = "<group>"; };
-		44C04F881774586F005AA1D7 /* NetServiceFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServiceFace.m; sourceTree = "<group>"; };
-		44C04F891774586F005AA1D7 /* NetServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServiceManager.h; sourceTree = "<group>"; };
-		44C04F8A1774586F005AA1D7 /* NetServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServiceManager.m; sourceTree = "<group>"; };
 		44C04F8F1774587E005AA1D7 /* libSCUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSCUtility.a; path = "/Users/Jarry/Library/Developer/Xcode/DerivedData/SCMobile-hdotichnjqwybtaedyexwkfvqnuu/Build/Products/Debug-iphoneos/libSCUtility.a"; sourceTree = "<absolute>"; };
-		44C04F91177458D6005AA1D7 /* ASIHttpFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASIHttpFrameWork.framework; path = ../SCCommon/Vender/ASIHttpFrameWork.framework; sourceTree = "<group>"; };
 		44C04F9317745902005AA1D7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		44C04F9517745909005AA1D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		44C04F971774591A005AA1D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -138,16 +169,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449E9147177E739500D39119 /* MessageUI.framework in Frameworks */,
+				449E9145177E733A00D39119 /* StoreKit.framework in Frameworks */,
+				449E9143177E732A00D39119 /* CoreTelephony.framework in Frameworks */,
+				449E9141177E731400D39119 /* CoreLocation.framework in Frameworks */,
 				44C04F9C177459D8005AA1D7 /* MobileCoreServices.framework in Frameworks */,
-				44C04F9A177459BB005AA1D7 /* libz.1.2.5.dylib in Frameworks */,
 				44C04F981774591A005AA1D7 /* SystemConfiguration.framework in Frameworks */,
 				44C04F9617745909005AA1D7 /* QuartzCore.framework in Frameworks */,
 				44C04F9417745902005AA1D7 /* CFNetwork.framework in Frameworks */,
-				44C04F901774587E005AA1D7 /* libSCUtility.a in Frameworks */,
 				44C04F331774535E005AA1D7 /* UIKit.framework in Frameworks */,
 				44C04F351774535E005AA1D7 /* Foundation.framework in Frameworks */,
 				44C04F371774535E005AA1D7 /* CoreGraphics.framework in Frameworks */,
-				44C04F92177458D6005AA1D7 /* ASIHttpFrameWork.framework in Frameworks */,
+				44C04F9A177459BB005AA1D7 /* libz.1.2.5.dylib in Frameworks */,
+				44C04F901774587E005AA1D7 /* libSCUtility.a in Frameworks */,
+				449E9127177E70EC00D39119 /* libMobiSageMediatorSDK.a in Frameworks */,
+				449E92CD177EBBF300D39119 /* ASIHttpFrameWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				449D8D32177BD8E100D7CF78 /* left_menu_bg@2x.png */,
+				441F9020177D8CC200C66F97 /* left_menu_head_bg@2x.png */,
+				441F9022177D8E9700C66F97 /* left_menu_cell_select@2x.png */,
+				441F9024177D933300C66F97 /* left_menu_line1@2x.png */,
+				441F9025177D933300C66F97 /* left_menu_line2@2x.png */,
 				449D8D2E177BD8C400D7CF78 /* left_menu_seperator@2x.png */,
 				449D8D4E177C433200D7CF78 /* left_menu_accessory@2x.png */,
 			);
@@ -260,6 +300,63 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		449E9124177E70C900D39119 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				449E9125177E70DB00D39119 /* MobiSage */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		449E9125177E70DB00D39119 /* MobiSage */ = {
+			isa = PBXGroup;
+			children = (
+				449E9126177E70EC00D39119 /* libMobiSageMediatorSDK.a */,
+				449E9128177E70FE00D39119 /* Public File */,
+			);
+			name = MobiSage;
+			sourceTree = "<group>";
+		};
+		449E9128177E70FE00D39119 /* Public File */ = {
+			isa = PBXGroup;
+			children = (
+				449E9129177E70FE00D39119 /* AdSageAdapter.h */,
+				449E912A177E70FE00D39119 /* AdSageDelegate.h */,
+				449E912B177E70FE00D39119 /* AdSageManager.h */,
+				449E912C177E70FE00D39119 /* AdSageView.h */,
+				449E912D177E70FE00D39119 /* MobiSageSDK.h */,
+				449E9135177E70FE00D39119 /* Resources */,
+			);
+			name = "Public File";
+			path = "../../../SCCommon/Vender/MobiSage/lite/Public File";
+			sourceTree = "<group>";
+		};
+		449E9135177E70FE00D39119 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				449E9136177E70FE00D39119 /* CloseBannerBtn.png */,
+				449E9137177E70FE00D39119 /* CloseBannerBtn@2x.png */,
+				449E9138177E70FE00D39119 /* timeuptoclosefs_ipad.png */,
+				449E9139177E70FE00D39119 /* timeuptoclosefs_iphone.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		449E92CE177EBF5000D39119 /* NetAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				449E92CF177EBF5000D39119 /* NetASIAdapter.h */,
+				449E92D0177EBF5000D39119 /* NetASIAdapter.m */,
+				449E92D1177EBF5000D39119 /* NetBaseAdapter.h */,
+				449E92D2177EBF5000D39119 /* NetBaseAdapter.m */,
+				449E92D3177EBF5000D39119 /* NetServiceFace.h */,
+				449E92D4177EBF5000D39119 /* NetServiceFace.m */,
+				449E92D5177EBF5000D39119 /* NetServiceManager.h */,
+				449E92D6177EBF5000D39119 /* NetServiceManager.m */,
+			);
+			path = NetAdapter;
+			sourceTree = "<group>";
+		};
 		44C04F261774535E005AA1D7 = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +381,10 @@
 			children = (
 				44C04F6D17745377005AA1D7 /* libs */,
 				44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */,
+				449E9146177E739500D39119 /* MessageUI.framework */,
+				449E9144177E733A00D39119 /* StoreKit.framework */,
+				449E9142177E732A00D39119 /* CoreTelephony.framework */,
+				449E9140177E731400D39119 /* CoreLocation.framework */,
 				44C04F9B177459D8005AA1D7 /* MobileCoreServices.framework */,
 				44C04F971774591A005AA1D7 /* SystemConfiguration.framework */,
 				44C04F9517745909005AA1D7 /* QuartzCore.framework */,
@@ -302,7 +403,8 @@
 				44C04F6E17745410005AA1D7 /* AppDelegate */,
 				44C04F7217745430005AA1D7 /* Classes */,
 				449D8D17177BCA5800D7CF78 /* Widget */,
-				44C04F821774586F005AA1D7 /* NetAdapter */,
+				449E92CE177EBF5000D39119 /* NetAdapter */,
+				449E9124177E70C900D39119 /* Vender */,
 				44C04F8117745787005AA1D7 /* Resources */,
 				44C04F391774535E005AA1D7 /* Supporting Files */,
 			);
@@ -345,7 +447,7 @@
 		44C04F6D17745377005AA1D7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				44C04F91177458D6005AA1D7 /* ASIHttpFrameWork.framework */,
+				449E92CC177EBBF300D39119 /* ASIHttpFrameWork.framework */,
 				44C04F8F1774587E005AA1D7 /* libSCUtility.a */,
 			);
 			name = libs;
@@ -380,21 +482,6 @@
 				449D8D2C177BD8C400D7CF78 /* menu */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		44C04F821774586F005AA1D7 /* NetAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				44C04F831774586F005AA1D7 /* NetASIAdapter.h */,
-				44C04F841774586F005AA1D7 /* NetASIAdapter.m */,
-				44C04F851774586F005AA1D7 /* NetBaseAdapter.h */,
-				44C04F861774586F005AA1D7 /* NetBaseAdapter.m */,
-				44C04F871774586F005AA1D7 /* NetServiceFace.h */,
-				44C04F881774586F005AA1D7 /* NetServiceFace.m */,
-				44C04F891774586F005AA1D7 /* NetServiceManager.h */,
-				44C04F8A1774586F005AA1D7 /* NetServiceManager.m */,
-			);
-			path = NetAdapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +568,14 @@
 				449D8D48177C2CD600D7CF78 /* main_background@2x.png in Resources */,
 				449D8D4A177C37D100D7CF78 /* top_btn_menu@2x.png in Resources */,
 				449D8D4F177C433200D7CF78 /* left_menu_accessory@2x.png in Resources */,
+				441F9021177D8CC200C66F97 /* left_menu_head_bg@2x.png in Resources */,
+				441F9023177D8E9700C66F97 /* left_menu_cell_select@2x.png in Resources */,
+				441F9026177D933300C66F97 /* left_menu_line1@2x.png in Resources */,
+				441F9027177D933300C66F97 /* left_menu_line2@2x.png in Resources */,
+				449E913C177E70FE00D39119 /* CloseBannerBtn.png in Resources */,
+				449E913D177E70FE00D39119 /* CloseBannerBtn@2x.png in Resources */,
+				449E913E177E70FE00D39119 /* timeuptoclosefs_ipad.png in Resources */,
+				449E913F177E70FE00D39119 /* timeuptoclosefs_iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +614,6 @@
 				44C04F7117745410005AA1D7 /* AppDelegate.m in Sources */,
 				44C04F7517745430005AA1D7 /* ViewController.m in Sources */,
 				44C04F7A17745471005AA1D7 /* main.m in Sources */,
-				44C04F8B1774586F005AA1D7 /* NetASIAdapter.m in Sources */,
-				44C04F8C1774586F005AA1D7 /* NetBaseAdapter.m in Sources */,
-				44C04F8D1774586F005AA1D7 /* NetServiceFace.m in Sources */,
-				44C04F8E1774586F005AA1D7 /* NetServiceManager.m in Sources */,
 				449D8D1D177BCA6B00D7CF78 /* JASidePanelController.m in Sources */,
 				449D8D1E177BCA6B00D7CF78 /* UIViewController+JASidePanel.m in Sources */,
 				449D8D24177BD58F00D7CF78 /* BaseTitleViewController.m in Sources */,
@@ -533,6 +624,10 @@
 				449D8D42177BE60600D7CF78 /* NSString+FontAwesome.m in Sources */,
 				449D8D44177BE60600D7CF78 /* UIColor+BButton.m in Sources */,
 				449D8D4D177C3F2400D7CF78 /* LeftMenuCell.m in Sources */,
+				449E92D7177EBF5000D39119 /* NetASIAdapter.m in Sources */,
+				449E92D8177EBF5000D39119 /* NetBaseAdapter.m in Sources */,
+				449E92D9177EBF5000D39119 /* NetServiceFace.m in Sources */,
+				449E92DA177EBF5000D39119 /* NetServiceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,8 +745,15 @@
 				HEADER_SEARCH_PATHS = "../SCUtility/**";
 				INFOPLIST_FILE = "SCQiushi/Supporting/SCQiushi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite\"",
+					"\"/Users/Jarry/Library/Developer/Xcode/DerivedData/SCMobile-hdotichnjqwybtaedyexwkfvqnuu/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -669,8 +771,15 @@
 				HEADER_SEARCH_PATHS = "../SCUtility/**";
 				INFOPLIST_FILE = "SCQiushi/Supporting/SCQiushi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite\"",
+					"\"/Users/Jarry/Library/Developer/Xcode/DerivedData/SCMobile-hdotichnjqwybtaedyexwkfvqnuu/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

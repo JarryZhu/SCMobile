@@ -6,8 +6,13 @@
 //  Copyright (c) 2013年 Jarry. All rights reserved.
 //
 
+#import "AdSageDelegate.h"
+#import "AdSageView.h"
 
-@interface LeftMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface LeftMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, AdSageDelegate>
+{
+    AdSageView * adView;
+}
 
 @property   (nonatomic, retain)     UITableView     *tableView;
 

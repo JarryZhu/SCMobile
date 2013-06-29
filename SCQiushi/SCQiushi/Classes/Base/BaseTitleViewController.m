@@ -69,7 +69,7 @@
 {
     if (!_leftButton) {
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _leftButton.frame = CGRectMake(6, 3, 42, 38);
+        _leftButton.frame = CGRectMake(2, 3, 44, 38);
         
         [_leftButton setNormalImage:@"top_btn_menu" selectedImage:nil];
         
@@ -82,12 +82,12 @@
 {
     if (!_rightButton) {
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _rightButton.frame = CGRectMake(270, 3, 42, 38);
+        _rightButton.frame = CGRectMake(274, 3, 44, 38);
         
         _rightButton.titleLabel.font = BOLDSYSTEMFONT(14);
         _rightButton.titleLabel.textAlignment = UITextAlignmentCenter;
         
-        //[_rightButton setNormalImage:kImageButtonBG selectedImage:kImageButtonBGHL];
+        [_rightButton setNormalImage:@"top_btn_back" selectedImage:nil];
 
         [_rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }

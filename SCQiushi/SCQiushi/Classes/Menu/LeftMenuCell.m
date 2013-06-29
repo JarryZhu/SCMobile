@@ -19,20 +19,29 @@
         // Initialization code
         self.clipsToBounds = YES;
         
+        // 选中背景
+        UIView *bgView = [[UIView alloc] init];
+		[bgView addBackgroundColor:@"left_menu_cell_select"];
+		self.selectedBackgroundView = bgView;
+        
         // Menu Text
-        self.textLabel.font = BOLDSYSTEMFONT(16);
+        self.textLabel.font = BOLDSYSTEMFONT(17);
 		self.textLabel.shadowOffset = CGSizeMake(0.5f, 0.8f);
 		self.textLabel.shadowColor = BLACK_COLOR;
 		self.textLabel.textColor = COLOR_MENU_TEXT;
+        self.textLabel.highlightedTextColor = LIGHTGRAY_COLOR;
         
         UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(230, 0, 10, kMenuCellHeight)];
         accessoryView.backgroundColor = CLEAR_COLOR;
         accessoryView.contentMode = UIViewContentModeCenter;
         accessoryView.image = IMAGENAMED(@"left_menu_accessory");
-        [self addSubview:accessoryView];
+        //[self addSubview:accessoryView];
         
-        UIView *bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, kMenuCellHeight-2, 256, 2)];
-        [bottomLine addBackgroundColor:@"left_menu_seperator"];
+        UIView *topLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
+        [topLine addBackgroundColor:@"left_menu_line1"];
+        [self addSubview:topLine];
+        UIView *bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, kMenuCellHeight-1, 320, 1)];
+        [bottomLine addBackgroundColor:@"left_menu_line2"];
         [self addSubview:bottomLine];
         
     }
@@ -44,6 +53,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
 }
 
 #pragma mark - UIView
