@@ -95,7 +95,7 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
         return;
     }
     
-    timer = [[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(loadAdTimeOut:) userInfo:nil repeats:NO] retain];
+    timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(loadAdTimeOut:) userInfo:nil repeats:NO];
     
     GADRequest *request = [GADRequest request];
     CLLocation *locationInfo = self.getLocationInfo;
@@ -105,7 +105,7 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 
     // Set the frame for this view to match the bounds of the parent adWhirlView.
     CGPoint origin = CGPointMake(0.0, 0.0);
-    GADBannerView *view = [[[GADBannerView alloc] initWithAdSize:adSizeList(bannerAdViewSize) origin:origin] autorelease];
+    GADBannerView *view = [[GADBannerView alloc] initWithAdSize:adSizeList(bannerAdViewSize) origin:origin];
     view.adUnitID = [self getPublisherId];
     view.delegate = self;
     [view setRootViewController:[_adSageDelegate viewControllerForPresentingModalView] ];
@@ -120,7 +120,7 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
         return;
     }
     
-    timer = [[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(loadAdTimeOut:) userInfo:nil repeats:NO] retain];
+    timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(loadAdTimeOut:) userInfo:nil repeats:NO];
     
     GADRequest *request = [GADRequest request];
     
@@ -142,7 +142,6 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 - (void)stopTimer {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
 }
@@ -150,7 +149,6 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 - (void)loadAdTimeOut:(NSTimer*)theTimer {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     [self stopBeingDelegate];
@@ -158,7 +156,7 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 }
 
 - (void)dealloc {
-    [super dealloc];
+    //[super dealloc];
 }
 #pragma mark Ad Request Lifecycle Notifications
 
@@ -167,7 +165,6 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 - (void)adViewDidReceiveAd:(GADBannerView *)adView {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     [_adSageView adapter:self didReceiveAdView:self.adNetworkView];
@@ -179,7 +176,6 @@ static GADAdSize adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 - (void)adView:(GADBannerView *)adView didFailToReceiveAdWithError:(GADRequestError *)error {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     [_adSageView adapter:self didFailAd:self.adNetworkView];
