@@ -10,6 +10,7 @@
 
 /**
  *  图片全屏浏览控件
+ *  Link: ImageIO.framework
  **/
 @interface SCImageBrowserView : UIWindow
 

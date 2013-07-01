@@ -8,7 +8,7 @@
 
 #import "BaseTitleViewController.h"
 #import "AppDelegate.h"
-#import "NSString+FontAwesome.h"
+//#import "NSString+FontAwesome.h"
 
 @implementation BaseTitleViewController
 

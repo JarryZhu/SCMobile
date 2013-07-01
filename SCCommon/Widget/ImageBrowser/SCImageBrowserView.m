@@ -56,9 +56,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-//        self.userInteractionEnabled = NO;
-//        self.backgroundColor = BLACK_COLOR;
-        //        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         self.backgroundColor = BLACK_COLOR;
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -71,25 +68,19 @@
 - (void) dealloc
 {
     [self recoveryMemory];
+#if !ARC_FEATURE
     [super dealloc];
+#endif
 }
 
 - (void) recoveryMemory
 {
     self.dismissBlock = nil;
     
-    //    RELEASE_SAFELY(_overlayWindow);
+#if !ARC_FEATURE
     RELEASE_SAFELY(_imageView);
     RELEASE_SAFELY(_scrollView);
-    //    [_imageView release], _imageView = nil;
-    //    [_contentView release], _contentView = nil;
-    //    [_overlayWindow release], _overlayWindow = nil;
-    //    [_carousel release], _carousel  = nil;
-    //    [_contentArray release], _contentArray = nil;
-    //    [_scrollView release], _scrollView = nil;
-    //    [_fromImageView release], _fromImageView  = nil;
-
-
+#endif
 }
 
 - (void) showImage:(UIImage *)image url:(NSString *)url disappear:(voidBlock)onDismiss
@@ -242,8 +233,9 @@
         
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDismissTap:)];
         [_scrollView addGestureRecognizer:singleTap];
+#if !ARC_FEATURE
         [singleTap release];
-        
+#endif
     }
     return _scrollView;
 }
