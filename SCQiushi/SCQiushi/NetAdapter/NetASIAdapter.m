@@ -41,9 +41,10 @@
     
     NSURL *url = [NSURL URLWithString:self.linkURL];
     _request = [ASIHTTPRequest requestWithURL:url];
-    _request.delegate = nil;
-    _request.allowCompressedResponse = YES;
-    _request.shouldAttemptPersistentConnection = NO;
+    [_request setRequestMethod:@"GET"];
+    //_request.delegate = nil;
+    //_request.allowCompressedResponse = YES;
+    //_request.shouldAttemptPersistentConnection = NO;
 //    _request.shouldCompressRequestBody = NO;
     
     // init HTTP Header

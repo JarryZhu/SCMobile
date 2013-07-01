@@ -93,11 +93,13 @@
 - (void)dealloc 
 {
     [self.scrollContentView removeObserver:self forKeyPath:@"contentSize"];
+#if !ARC_FEATURE
 	[_headerView release ], _headerView  = nil;
 	[_footerView release ], _footerView  = nil;
     [_msgLabel release],    _msgLabel    = nil;
     _exDelegate = nil;
     [super dealloc];
+#endif
 }
 
 - (void)setDecorateEnabled:(BOOL)enable

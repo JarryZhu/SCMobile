@@ -7,17 +7,17 @@
 //
 #import "NetServiceManager.h"
 
+#define     kServerURL      @"http://m2.qiushibaike.com"
 /**
  *  API Request URL defines
  */
-#define     kURL_Currency       @"http://quote.yahoo.com/d/quotes.csv?f=l1&s=%@%@=X"
-#define     kURL_StockQuote     @"http://finance.yahoo.com/d/quotes.csv?s=%@&f=snd1l1c"
+#define     kURL_List       [NSString stringWithFormat:@"%@/article/list/", kServerURL]
 
 /**
  *  API Method, used for request cache and cancel
  */
-#define     kAPI_Currency       @"CurrencyConvert"
-#define     kAPI_StockQuote     @"StockQuote"
+#define     kAPI_Latest     @"latest"
+#define     kAPI_Suggest    @"suggest"
 
 
 /**
@@ -26,25 +26,13 @@
 @interface NetServiceFace : NSObject
 
 /*!
- *	@brief	Currency conversion Request 
+ *	@brief	
  *
- *	@param 	from        from currency
- *	@param 	toCurrency  to currency
  *	@param 	success 	request success Block
  *	@param 	failed      request failed Block
  *
  */
-+ (void) requestCurrencyConvertFrom:(NSString *)from toCurrency:(NSString *)to onSuc:(idBlock)success onFailed:(idBlock)failed;
-
-/*!
- *	@brief	Stock Quote Request
- *
- *	@param 	name        Stock Name
- *	@param 	success 	request success Block
- *	@param 	failed      request failed Block
- *
- */
-+ (void) requestStockQuote:(NSString *)name onSuc:(idBlock)success onFailed:(idBlock)failed;
++ (void) requestWithMethod:(NSString *)method param:(NSDictionary *)param onSuc:(idBlock)success onFailed:(idBlock)failed onError:(idBlock)error;
 
 /**
  *  Request Service with URL

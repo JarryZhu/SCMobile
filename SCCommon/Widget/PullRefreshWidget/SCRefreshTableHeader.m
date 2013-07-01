@@ -187,7 +187,9 @@
 	_lastUpdatedLabel.text = [NSString stringWithString:strTime];
 	[[NSUserDefaults standardUserDefaults] setObject:_lastUpdatedLabel.text forKey:@"EGORefreshTableView_LastRefresh"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+#if !ARC_FEATURE
 	[formatter release];
+#endif
 }
 
 - (void)setState:(eRefreshAndReloadState)aState
@@ -300,6 +302,7 @@
 
 - (void)dealloc 
 {
+#if !ARC_FEATURE
 	[_activityView release ],       _activityView       = nil;
 	[_statusLabel release ],        _statusLabel        = nil;
 	[_arrowImage release ],         _arrowImage         = nil;
@@ -308,6 +311,7 @@
 //    [_spinner release],             _spinner            = nil;
     
     [super dealloc];
+#endif
 }
 
 @end

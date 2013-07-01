@@ -43,11 +43,11 @@ static NSString *menuTitles[] = {@"随便看看", @"精华", @"有图有真相",
 	// Do any additional setup after loading the view.
     
     //创建广告 banner
-    if (adView == nil) {
+    /*if (adView == nil) {
         adView = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50]; //设置广告显示位置
         adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
     }
-    [self.view addSubview:adView];
+    [self.view addSubview:adView];*/
 }
 
 - (void)didReceiveMemoryWarning

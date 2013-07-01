@@ -1,6 +1,6 @@
 //
 //  NetServiceFace.m
-//  Currency
+//  SCQiushi
 //
 //  Created by jarry on 13-4-18.
 //  Copyright (c) 2013年 jarry. All rights reserved.
@@ -12,16 +12,10 @@
 
 @implementation NetServiceFace : NSObject
 
-+ (void) requestCurrencyConvertFrom:(NSString *)from toCurrency:(NSString *)to onSuc:(idBlock)success onFailed:(idBlock)failed
++ (void) requestWithMethod:(NSString *)method param:(NSDictionary *)param onSuc:(idBlock)success onFailed:(idBlock)failed onError:(idBlock)error
 {
-    NSString *url = [NSString stringWithFormat:kURL_Currency, from, to];
-    [self serviceWithURL:url method:kAPI_Currency onSuc:success onFailed:failed];
-}
-
-+ (void) requestStockQuote:(NSString *)name onSuc:(idBlock)success onFailed:(idBlock)failed
-{
-    NSString *url = [NSString stringWithFormat:kURL_StockQuote, name];
-    [self serviceWithURL:url method:kAPI_StockQuote onSuc:success onFailed:failed];
+    NSString *url = [NSString stringWithFormat:@"%@%@?count=10&page=1", kURL_List, method];
+    [self serviceWithURL:url method:method onSuc:success onFailed:failed onError:error];
 }
 
 + (void) serviceWithURL:(NSString *)url method:(NSString *)method onSuc:(idBlock)success onFailed:(idBlock)failed
@@ -58,14 +52,15 @@
 //        return NO;
 //    }];
     
+    __weak NetBaseAdapter *wAdapter = adapterASI;
     // 返回成功
-    NSString *contents = [adapterASI contents];
     [adapterASI setSuccessBlock:^{
+        NetBaseAdapter *sAdapter = wAdapter;
         if (success) {
             SBJSON *json = [[SBJSON alloc] init];
-            NSDictionary *deserializedData = [json fragmentWithString:contents error:nil];
-            NSDictionary *resultDic = [deserializedData objectForKey:@"result"];
-            success(resultDic);
+            NSDictionary *deserializedData = [json fragmentWithString:[sAdapter contents] error:nil];
+            //NSDictionary *resultDic = [deserializedData objectForKey:@"result"];
+            success(deserializedData);
         }
         clearBlock();
     }];
@@ -73,14 +68,14 @@
     // 返回失败
     [adapterASI setFailedBlock:^{
         //[self showFailedMsg:contents];
+        NetBaseAdapter *sAdapter = wAdapter;
         if (failed) {
-            failed(contents);
+            failed([sAdapter contents]);
         }
         clearBlock();
     }];
     
     __block NSInteger retryCount = 0;
-    __weak NetBaseAdapter *wAdapter = adapterASI;
     // 连接错吴
     [adapterASI setErrorBlock:^{
         NetBaseAdapter *sAdapter = wAdapter;

@@ -7,6 +7,7 @@
 //
 
 #import "BaseTitleViewController.h"
+#import "MainTableView.h"
 #import "AdSageDelegate.h"
 #import "AdSageView.h"
 
@@ -15,5 +16,6 @@
     AdSageView * adView;
 }
 
+@property   (nonatomic, strong)     MainTableView   *tableView;
 
 @end

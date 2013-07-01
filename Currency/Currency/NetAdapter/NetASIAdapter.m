@@ -49,7 +49,7 @@
     // init HTTP Header
     [_request addRequestHeader:@"Content-Type" value:@"application/json; charset = UTF-8"];
         
-    INFOLOG(@"==== request URL ====\n %@", self.linkURL);
+    INFOLOG(@"==== request URL ====\n %@", url);
     
     return self;
 }

@@ -34,15 +34,17 @@
     if (self) 
     {
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.decoreate = [[[SCScrollViewDecorate alloc] initWithFrame:frame with:self type:theType delegate:theDelegate] autorelease];
+        _decoreate = [[SCScrollViewDecorate alloc] initWithFrame:frame with:self type:theType delegate:theDelegate];
     }
     return self;
 }
 
 - (void)dealloc 
 {
+#if !ARC_FEATURE
     [_decoreate release],   _decoreate   = nil;
     [super dealloc];
+#endif
 }
 
 - (void) setEditing:(BOOL)editing animated:(BOOL)animated

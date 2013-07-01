@@ -14,10 +14,10 @@
  */
 @interface NetASIAdapter : NetBaseAdapter
 {
-    __block ASIHTTPRequest *_request;
+    ASIHTTPRequest *_request;
 }
 
-@property (nonatomic, copy)     NSString        *linkURL;
+@property (nonatomic, copy)     NSString    *linkURL;
 
 /**
  *	@brief	初始化网络适配器，发起HTTP请求

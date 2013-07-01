@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "AppDelegate.h"
+#import "NetServiceFace.h"
+#import "ListResponse.h"
 
 @implementation MainViewController
 
@@ -21,6 +23,10 @@
     
     self.title = @"随便看看";
     
+    [self.view addSubview:self.tableView];
+    [self addRefreshBlock];
+    [self addLoadingBlock];
+    [self addItemBlock];
     
     //创建广告 banner
     if (adView == nil) {
@@ -28,6 +34,17 @@
         adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
     }
     [self.view addSubview:adView];
+    
+    [self setupContent];
+   
+}
+
+- (void) setupContent
+{
+    //self.request = [[[ListRequest alloc] init] autorelease];
+    [self.tableView prepareToRefresh:^{
+        [self sendRequest];
+    }];
 }
 
 - (IBAction) leftButtonAction:(id)sender
@@ -39,6 +56,84 @@
 {
     [adView removeFromSuperview];
     adView = nil;
+}
+
+- (void) cancelRequest
+{
+    [self.tableView tableViewDidFinishedLoading];
+    [self finishProgress];
+}
+
+- (void) sendRequest
+{
+    //
+    [NetServiceFace requestWithMethod:kAPI_Suggest param:nil
+                                onSuc:^(id content)
+     {
+         [self.tableView tableViewDidFinishedLoading];
+         ListResponse *response = [[ListResponse alloc] initWithDictionary:content];
+         [self.tableView updateTableData:response isFirst:YES];
+
+     } onFailed:^(id content) {
+         [self.tableView tableViewDidFinishedLoading];
+     } onError:^(id content) {
+         [self.tableView tableViewDidFinishedLoading];
+     }];
+}
+
+#pragma mark - Views Init
+
+- (MainTableView *) tableView
+{
+    if (!_tableView) {
+        _tableView = [[MainTableView alloc] initWithFrame:CONTENT_FRAME
+                                                    style:UITableViewStylePlain
+                                                     type:(eTypeHeader | eTypeFooter)
+                                                 delegate:nil];
+    }
+    return _tableView;
+}
+
+#pragma mark - TableView Blocks
+
+- (void) addRefreshBlock
+{
+    idBlock refreshBlock = ^(id content) {
+        
+        //[self.request resetPage];
+        [self sendRequest];
+        
+    };
+    
+    [self.tableView setRefreshBlock:refreshBlock];
+}
+
+- (void) addLoadingBlock
+{
+    idBlock loadingBlock = ^(id content) {
+        
+        //[self.request nextPage];
+        [self sendRequest];
+    };
+    
+    [self.tableView setLoadMoreBlock:loadingBlock];
+}
+
+- (void) addItemBlock
+{
+    idBlock itemBlock = ^(id content) {
+        
+        /*DetailViewController *vc = [[[DetailViewController alloc] init] autorelease];
+        vc.itemData = content;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        __block MainViewController *blockSelf = self;
+        vc.backBlock = ^(id content) {
+            [blockSelf.tableView updateSelectCell:content];
+        };*/
+    };
+    
+    [self.tableView setItemBlock:itemBlock];
 }
 
 #pragma mark - AdSageDelegate
