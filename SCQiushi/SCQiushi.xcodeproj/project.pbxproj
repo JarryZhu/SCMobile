@@ -62,6 +62,8 @@
 		449E93E9178172120099A91C /* SCRefreshTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E93E2178172120099A91C /* SCRefreshTableHeader.m */; };
 		449E93EA178172120099A91C /* SCScrollViewDecorate.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E93E4178172120099A91C /* SCScrollViewDecorate.m */; };
 		449E93ED178173F80099A91C /* MainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E93EC178173F80099A91C /* MainTableCell.m */; };
+		44A0629F1782784B00BD2251 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0629E1782784B00BD2251 /* DetailViewController.m */; };
+		44A062A217827BEB00BD2251 /* MLResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44A062A117827BEB00BD2251 /* MLResource.bundle */; };
 		44B55CA217811D7400008A2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B55CA117811D7400008A2E /* AudioToolbox.framework */; };
 		44B55CA417811E0D00008A2E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B55CA317811E0D00008A2E /* AdSupport.framework */; };
 		44C04F331774535E005AA1D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C04F321774535E005AA1D7 /* UIKit.framework */; };
@@ -209,6 +211,9 @@
 		449E93E4178172120099A91C /* SCScrollViewDecorate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCScrollViewDecorate.m; sourceTree = "<group>"; };
 		449E93EB178173F80099A91C /* MainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableCell.h; sourceTree = "<group>"; };
 		449E93EC178173F80099A91C /* MainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableCell.m; sourceTree = "<group>"; };
+		44A0629D1782784B00BD2251 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		44A0629E1782784B00BD2251 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		44A062A117827BEB00BD2251 /* MLResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MLResource.bundle; path = ../../../SCUtility/SCUtility/Widget/MLNavigation/MLResource.bundle; sourceTree = "<group>"; };
 		44B55CA117811D7400008A2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		44B55CA317811E0D00008A2E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		44C04F2F1774535E005AA1D7 /* SCQiushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCQiushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,6 +346,8 @@
 				449E93D8178171CF0099A91C /* MainTableView.m */,
 				449E93EB178173F80099A91C /* MainTableCell.h */,
 				449E93EC178173F80099A91C /* MainTableCell.m */,
+				44A0629D1782784B00BD2251 /* DetailViewController.h */,
+				44A0629E1782784B00BD2251 /* DetailViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -547,6 +554,14 @@
 			path = ../../../SCCommon/Widget/PullRefreshWidget;
 			sourceTree = "<group>";
 		};
+		44A062A017827BD200BD2251 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				44A062A117827BEB00BD2251 /* MLResource.bundle */,
+			);
+			name = others;
+			sourceTree = "<group>";
+		};
 		44C04F261774535E005AA1D7 = {
 			isa = PBXGroup;
 			children = (
@@ -676,6 +691,7 @@
 			children = (
 				449D8D2A177BD8C400D7CF78 /* main */,
 				449D8D2C177BD8C400D7CF78 /* menu */,
+				44A062A017827BD200BD2251 /* others */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -771,6 +787,7 @@
 				449E92DE177EE97E00D39119 /* icon.png in Resources */,
 				449E93E5178172120099A91C /* blueArrow.png in Resources */,
 				449E93E6178172120099A91C /* blueArrow@2x.png in Resources */,
+				44A062A217827BEB00BD2251 /* MLResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,6 +858,7 @@
 				449E93E9178172120099A91C /* SCRefreshTableHeader.m in Sources */,
 				449E93EA178172120099A91C /* SCScrollViewDecorate.m in Sources */,
 				449E93ED178173F80099A91C /* MainTableCell.m in Sources */,
+				44A0629F1782784B00BD2251 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

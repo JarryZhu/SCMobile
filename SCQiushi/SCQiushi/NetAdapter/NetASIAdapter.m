@@ -114,7 +114,7 @@
 {
     [super success];
 
-    DEBUGLOG(@"==== response data ====\n %@", _request.responseString);
+//    DEBUGLOG(@"==== response data ====\n %@", _request.responseString);
 
     if (self.successBlock) {
         self.successBlock();

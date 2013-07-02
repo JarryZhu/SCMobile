@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "NetServiceFace.h"
 #import "ListResponse.h"
+#import "DetailViewController.h"
 
 @implementation MainViewController
 
@@ -67,7 +68,7 @@
 - (void) sendRequest
 {
     //
-    [NetServiceFace requestWithMethod:kAPI_Suggest param:nil
+    [NetServiceFace requestWithMethod:kAPI_Latest param:nil
                                 onSuc:^(id content)
      {
          [self.tableView tableViewDidFinishedLoading];
@@ -123,14 +124,14 @@
 {
     idBlock itemBlock = ^(id content) {
         
-        /*DetailViewController *vc = [[[DetailViewController alloc] init] autorelease];
-        vc.itemData = content;
+        DetailViewController *vc = [[DetailViewController alloc] init];
+        //vc.itemData = content;
         [self.navigationController pushViewController:vc animated:YES];
         
-        __block MainViewController *blockSelf = self;
-        vc.backBlock = ^(id content) {
-            [blockSelf.tableView updateSelectCell:content];
-        };*/
+//        __block MainViewController *blockSelf = self;
+//        vc.backBlock = ^(id content) {
+//            [blockSelf.tableView updateSelectCell:content];
+//        };
     };
     
     [self.tableView setItemBlock:itemBlock];

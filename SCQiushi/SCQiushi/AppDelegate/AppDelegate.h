@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JASidePanelController.h"
+#import "MLNavigationController.h"
 
 @class ViewController;
 

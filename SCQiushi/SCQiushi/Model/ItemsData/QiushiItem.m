@@ -10,6 +10,11 @@
 
 @implementation QiushiItem
 
+- (NSString *) shortContent
+{
+    return (self.content.length > 100) ? ([self.content substringToIndex:100]) : self.content;
+}
+
 - (void) parseItemData:(NSDictionary *)dictionary
 {
     self.tag = [dictionary objectForKey:@"tag"];
@@ -23,11 +28,13 @@
     {
         self.imageURL = [dictionary objectForKey:@"image"];
         
-        NSString *newImageURL = [NSString stringWithFormat:@"http://img.qiushibaike.com/system/pictures/%@/small/%@",self.qiushiID,self.imageURL];
-        NSString *newImageMidURL = [NSString stringWithFormat:@"http://img.qiushibaike.com/system/pictures/%@/medium/%@",self.qiushiID,self.imageURL];
+        NSString *newImageURL = [NSString stringWithFormat:@"http://pic.moumentei.com/system/pictures/%@/%@/small/%@",[self.qiushiID substringToIndex:4],self.qiushiID,self.imageURL];
+        NSString *newImageMidURL = [NSString stringWithFormat:@"http://pic.moumentei.com/system/pictures/%@/%@/medium/%@",[self.qiushiID substringToIndex:4],self.qiushiID,self.imageURL];
         self.imageURL = newImageURL;
         self.imageMidURL = newImageMidURL;
     }
+    
+    WARNLOG(@"-- %@", self.content);
 
     NSDictionary *vote = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"votes"]];
     self.downCount = [[vote objectForKey:@"down"]intValue];

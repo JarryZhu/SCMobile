@@ -111,19 +111,19 @@
 
 - (CGFloat) computeHeight:(NSString *)content
 {
-    CGSize size = CGSizeMake(250, 2000);
-    CGSize titleSize = [content sizeWithFont:BOLDSYSTEMFONT(13)
+    CGSize size = CGSizeMake(300, 2000);
+    CGSize titleSize = [content sizeWithFont:BOLDSYSTEMFONT(15)
                            constrainedToSize:size
                                lineBreakMode:UILineBreakModeTailTruncation];
     
-    return MAX(60, titleSize.height + 30);
+    return titleSize.height + 70;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     QiushiItem *item = [self.listResponse.result objectAtIndex:indexPath.row];
-    return [self computeHeight:item.content];
-    //return 30;
+    return (item.imageURL==nil) ? [self computeHeight:[item shortContent]] : [self computeHeight:[item shortContent]]+110;
+    //return [self computeHeight:[item shortContent]]+120;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

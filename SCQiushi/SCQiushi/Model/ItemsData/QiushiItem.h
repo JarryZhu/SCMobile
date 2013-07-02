@@ -22,4 +22,7 @@
 @property (nonatomic,assign) NSInteger    downCount;    //顶的数量
 @property (nonatomic,assign) NSInteger    upCount;      //踩的数量
 
+
+- (NSString *) shortContent;
+
 @end

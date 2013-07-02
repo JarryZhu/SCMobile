@@ -11,6 +11,9 @@
 @interface MainTableCell : UITableViewCell
 
 @property   (nonatomic, strong)     UILabel     *contentLabel;
+@property   (nonatomic, strong)     UIButton    *contentImage;
+
+@property   (nonatomic, strong)     QiushiItem  *itemData;
 
 - (void) updateCell:(QiushiItem *)itemData;
 

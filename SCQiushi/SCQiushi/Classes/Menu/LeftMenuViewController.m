@@ -9,7 +9,7 @@
 #import "LeftMenuViewController.h"
 #import "LeftMenuCell.h"
 
-static NSString *menuTitles[] = {@"随便看看", @"精华", @"有图有真相", @"穿越", @"设置"};
+static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图有真相", @"穿越更精彩", @"我的收藏", @"应用推荐", @"设置"};
 
 
 @interface LeftMenuViewController ()
@@ -79,7 +79,7 @@ static NSString *menuTitles[] = {@"随便看看", @"精华", @"有图有真相",
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 7;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

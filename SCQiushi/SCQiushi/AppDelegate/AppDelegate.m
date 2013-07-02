@@ -29,7 +29,9 @@
     self.menuController = [[JASidePanelController alloc] init];
     self.menuController.shouldDelegateAutorotateToVisiblePanel = NO;
     
-    self.menuController.centerPanel = [[MainViewController alloc] init];
+    MLNavigationController *naviController = [[MLNavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+    self.menuController.centerPanel = naviController;
+    
     self.menuController.leftPanel = [[LeftMenuViewController alloc] init];
     
     
