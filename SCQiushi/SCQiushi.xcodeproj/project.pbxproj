@@ -13,6 +13,7 @@
 		441F9027177D933300C66F97 /* left_menu_line2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9025177D933300C66F97 /* left_menu_line2@2x.png */; };
 		449C022717812BDB00B4CB9A /* AdSageAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 449C021C17812BDB00B4CB9A /* AdSageAdapterAdMob.m */; };
 		449C022817812BDB00B4CB9A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449C022617812BDB00B4CB9A /* libGoogleAdMobAds.a */; };
+		449C022A17830FA600B4CB9A /* default_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 449C022917830FA600B4CB9A /* default_icon@2x.jpg */; };
 		449D8D24177BD58F00D7CF78 /* BaseTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D21177BD58F00D7CF78 /* BaseTitleViewController.m */; };
 		449D8D25177BD58F00D7CF78 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D23177BD58F00D7CF78 /* BaseViewController.m */; };
 		449D8D29177BD88600D7CF78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D8D28177BD88600D7CF78 /* MainViewController.m */; };
@@ -118,6 +119,7 @@
 		449C022417812BDB00B4CB9A /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
 		449C022517812BDB00B4CB9A /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		449C022617812BDB00B4CB9A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		449C022917830FA600B4CB9A /* default_icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default_icon@2x.jpg"; sourceTree = "<group>"; };
 		449D8D20177BD58F00D7CF78 /* BaseTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTitleViewController.h; sourceTree = "<group>"; };
 		449D8D21177BD58F00D7CF78 /* BaseTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTitleViewController.m; sourceTree = "<group>"; };
 		449D8D22177BD58F00D7CF78 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				449D8D2B177BD8C400D7CF78 /* navigation_bg@2x.png */,
 				449D8D49177C37D100D7CF78 /* top_btn_menu@2x.png */,
 				449D8D45177C01F800D7CF78 /* top_btn_back@2x.png */,
+				449C022917830FA600B4CB9A /* default_icon@2x.jpg */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				449E93E5178172120099A91C /* blueArrow.png in Resources */,
 				449E93E6178172120099A91C /* blueArrow@2x.png in Resources */,
 				44A062A217827BEB00BD2251 /* MLResource.bundle in Resources */,
+				449C022A17830FA600B4CB9A /* default_icon@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

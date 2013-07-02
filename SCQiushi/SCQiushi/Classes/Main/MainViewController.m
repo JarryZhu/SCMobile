@@ -125,7 +125,7 @@
     idBlock itemBlock = ^(id content) {
         
         DetailViewController *vc = [[DetailViewController alloc] init];
-        //vc.itemData = content;
+        vc.itemData = content;
         [self.navigationController pushViewController:vc animated:YES];
         
 //        __block MainViewController *blockSelf = self;

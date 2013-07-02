@@ -22,6 +22,7 @@
         // 选中背景
         UIView *bgView = [[UIView alloc] init];
 		[bgView addBackgroundColor:@"left_menu_cell_select"];
+//        [bgView addBackgroundStretchableImage:@"left_menu_cell_select" leftCapWidth:0 topCapHeight:0];
 		self.selectedBackgroundView = bgView;
         
         // Menu Text

@@ -34,8 +34,6 @@
         self.imageMidURL = newImageMidURL;
     }
     
-    WARNLOG(@"-- %@", self.content);
-
     NSDictionary *vote = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"votes"]];
     self.downCount = [[vote objectForKey:@"down"]intValue];
     self.upCount = [[vote objectForKey:@"up"]intValue];
@@ -45,10 +43,12 @@
     {
         NSDictionary *user = [NSDictionary dictionaryWithDictionary:[dictionary objectForKey:@"user"]];
         self.anchor = [user objectForKey:@"login"];
+        NSString *uId = [user objectForKey:@"id"];
         id icon = [user objectForKey:@"icon"];
         if ((NSNull *)icon != [NSNull null])
         {
-            //self.iconURL =
+            self.iconURL = [NSString stringWithFormat:@"http://pic.moumentei.com/system/avtnew/%@/%@/thumb/%@", [uId substringToIndex:3], uId, [user objectForKey:@"icon"]];
+            //WARNLOG(@"-- %@", self.iconURL);
         }
     }
 }
