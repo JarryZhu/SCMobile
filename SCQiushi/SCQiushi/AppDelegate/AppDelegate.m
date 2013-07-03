@@ -29,7 +29,8 @@
     self.menuController = [[JASidePanelController alloc] init];
     self.menuController.shouldDelegateAutorotateToVisiblePanel = NO;
     
-    MLNavigationController *naviController = [[MLNavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+    self.mainViewController = [[MainViewController alloc] init];
+    MLNavigationController *naviController = [[MLNavigationController alloc] initWithRootViewController:self.mainViewController];
     self.menuController.centerPanel = naviController;
     
     self.menuController.leftPanel = [[LeftMenuViewController alloc] init];
@@ -66,6 +67,34 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) switchMenu:(NSInteger)index animated:(BOOL)anim exData:(id)data
+{
+    if (self.currentMenuID==index) {
+        [self.menuController showCenterPanelAnimated:anim];
+        return;
+    }
+    
+    switch (index) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        {
+            [self.mainViewController refreshData:kAPI_Latest title:data];
+            [self.menuController showCenterPanelAnimated:anim];
+        }
+            break;
+            
+        default:
+        {
+            return;
+        }
+            break;
+    }
+    
+    self.currentMenuID = index;
 }
 
 @end

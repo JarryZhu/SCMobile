@@ -10,6 +10,7 @@
 #import "MainTableView.h"
 #import "AdSageDelegate.h"
 #import "AdSageView.h"
+#import "NetServiceFace.h"
 
 @interface MainViewController : BaseTitleViewController <AdSageDelegate>
 {
@@ -17,5 +18,9 @@
 }
 
 @property   (nonatomic, strong)     MainTableView   *tableView;
+
+
+- (void) refreshData:(NSString *)apiId title:(NSString *)title;
+
 
 @end

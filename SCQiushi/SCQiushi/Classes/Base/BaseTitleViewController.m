@@ -50,7 +50,7 @@
         _titleLabel.frame = HEADER_TITLE_FRAME;
         _titleLabel.font = BOLDSYSTEMFONT(20);
         _titleLabel.backgroundColor = CLEAR_COLOR;
-        _titleLabel.textColor = WHITE_COLOR;
+        _titleLabel.textColor = RGBCOLOR(0xff, 0xf1, 0xcc);
         _titleLabel.lineBreakMode = UILineBreakModeTailTruncation;
         _titleLabel.textAlignment = UITextAlignmentCenter;
         _titleLabel.userInteractionEnabled = YES;

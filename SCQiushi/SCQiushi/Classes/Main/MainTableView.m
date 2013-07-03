@@ -116,7 +116,7 @@
                            constrainedToSize:size
                                lineBreakMode:UILineBreakModeTailTruncation];
     
-    return titleSize.height + 70;
+    return titleSize.height + 60;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

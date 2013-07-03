@@ -8,7 +8,6 @@
 
 #import "MainViewController.h"
 #import "AppDelegate.h"
-#import "NetServiceFace.h"
 #import "ListResponse.h"
 #import "DetailViewController.h"
 
@@ -57,6 +56,16 @@
 {
     [adView removeFromSuperview];
     adView = nil;
+}
+
+- (void) refreshData:(NSString *)apiId title:(NSString *)title
+{
+    self.title = title;
+    
+    [self.tableView resetContent];
+    [self.tableView prepareToRefresh:^{
+        [self sendRequest];
+    }];
 }
 
 - (void) cancelRequest

@@ -23,6 +23,7 @@
 
         [self addSubview:self.contentLabel];
         [self addSubview:self.contentImage];
+        [self addSubview:self.bottomView];
     }
     return self;
 }
@@ -38,12 +39,13 @@
 {
     [super layoutSubviews];
     if (self.itemData && self.itemData.imageURL) {
-        [self.contentLabel setFrameHeight:self.height-180];
-        [self.contentImage setFrameY:self.height-150];
+        [self.contentLabel setFrameHeight:self.height-170];
+        [self.contentImage setFrameY:self.height-140];
     }
     else {
-        [self.contentLabel setFrameHeight:self.height-70];
+        [self.contentLabel setFrameHeight:self.height-60];
     }
+    [self.bottomView setFrameY:self.height-32];
 }
 
 - (void)drawRect:(CGRect)rect
@@ -60,10 +62,13 @@
     self.itemData = itemData;
     [self.contentLabel setText:itemData.content];
     
+    [self.likeButton setText:kIntToString(itemData.upCount)];
+    [self.againstButton setText:kIntToString(itemData.downCount)];
+    
     if (itemData.imageURL) {
         [self.contentImage setHidden:NO];
         [self.contentImage setImageWithURL:[NSURL URLWithString:itemData.imageURL]
-                          placeholderImage:nil];
+                          placeholderImage:[UIImage imageNamed:@"default_content_image"]];
     }
     else {
         [self.contentImage setHidden:YES];
@@ -103,6 +108,41 @@
     return _contentImage;
 }
 
+- (UIView *) bottomView
+{
+    if (!_bottomView) {
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(10, 400, 300, 32)];
+        //_bottomView.backgroundColor = RED_COLOR;
+        
+        [_bottomView addSubview:self.likeButton];
+        [_bottomView addSubview:self.againstButton];
+    }
+    return _bottomView;
+}
+
+- (ImageCountButton *) likeButton
+{
+    if (!_likeButton) {
+        _likeButton = [ImageCountButton buttonWithType:UIButtonTypeCustom];
+        _likeButton.frame = CGRectMake(10, 0, 80, 30);
+        [_likeButton setTitle:@"123" forState:UIControlStateNormal];
+        
+        [_likeButton setNormalImage:@"icon_like" selectedImage:@"icon_like"];
+    }
+    return _likeButton;
+}
+
+- (ImageCountButton *) againstButton
+{
+    if (!_againstButton) {
+        _againstButton = [ImageCountButton buttonWithType:UIButtonTypeCustom];
+        _againstButton.frame = CGRectMake(80, 0, 80, 30);
+        [_againstButton setTitle:@"123" forState:UIControlStateNormal];
+        
+        [_againstButton setNormalImage:@"icon_against" selectedImage:@"icon_against"];
+    }
+    return _againstButton;
+}
 
 #pragma mark - Action
 

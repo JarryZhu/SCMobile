@@ -7,11 +7,16 @@
 //
 
 #import "QiushiItem.h"
+#import "ImageCountButton.h"
 
 @interface MainTableCell : UITableViewCell
 
 @property   (nonatomic, strong)     UILabel     *contentLabel;
 @property   (nonatomic, strong)     UIButton    *contentImage;
+
+@property   (nonatomic, strong)     UIView      *bottomView;
+@property   (nonatomic, strong)     ImageCountButton *likeButton;
+@property   (nonatomic, strong)     ImageCountButton *againstButton;
 
 @property   (nonatomic, strong)     QiushiItem  *itemData;
 

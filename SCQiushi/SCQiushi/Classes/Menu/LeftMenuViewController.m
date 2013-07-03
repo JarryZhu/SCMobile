@@ -50,8 +50,8 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
 
 - (void) dealloc
 {
-    [adView removeFromSuperview];
-    adView = nil;
+    //[adView removeFromSuperview];
+    //adView = nil;
 }
 
 - (void)viewDidLoad
@@ -60,11 +60,11 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
 	// Do any additional setup after loading the view.
     
     //创建广告 banner
-    if (adView == nil) {
+    /*if (adView == nil) {
         adView = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50]; //设置广告显示位置
         adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
     }
-    [self.view addSubview:adView];
+    [self.view addSubview:adView];*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -138,7 +138,7 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    //[[AppDelegate sharedAppDelegate] switchMenu:indexPath.row animated:YES exData:nil];
+    [[AppDelegate sharedAppDelegate] switchMenu:indexPath.row animated:YES exData:menuTitles[indexPath.row]];
     
 }
 

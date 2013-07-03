@@ -18,6 +18,7 @@
  */
 #define     kAPI_Latest     @"latest"
 #define     kAPI_Suggest    @"suggest"
+#define     kAPI_Images     @"images"
 
 
 /**

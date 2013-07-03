@@ -11,6 +11,7 @@
 #import "MLNavigationController.h"
 
 @class ViewController;
+@class MainViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -18,8 +19,13 @@
 
 @property (strong, nonatomic) JASidePanelController *menuController;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) ViewController    *viewController;
+@property (strong, nonatomic) MainViewController *mainViewController;
+
+@property (nonatomic, assign) NSInteger     currentMenuID;
 
 + (AppDelegate *) sharedAppDelegate;
+
+- (void) switchMenu:(NSInteger)index animated:(BOOL)anim exData:(id)data;
 
 @end

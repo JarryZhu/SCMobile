@@ -63,11 +63,11 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
         return;
     }
     
-    timer = [[NSTimer scheduledTimerWithTimeInterval:5
+    timer = [NSTimer scheduledTimerWithTimeInterval:5
                                               target:self
                                             selector:@selector(loadAdTimeOut:)
                                             userInfo:nil
-                                             repeats:NO] retain];
+                                             repeats:NO];
     
     CGRect frame = adSizeList(bannerAdViewSize);
     
@@ -85,7 +85,6 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
     Aderdelegate = self;
     self.adNetworkView = bgView;
     
-    [bgView release];
 }
 
 - (void)getFullScreenAd {
@@ -94,11 +93,11 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
         return;
     }
     
-    timer = [[NSTimer scheduledTimerWithTimeInterval:5
+    timer = [NSTimer scheduledTimerWithTimeInterval:5
                                               target:self
                                             selector:@selector(loadAdTimeOut:)
                                             userInfo:nil
-                                             repeats:NO] retain];
+                                             repeats:NO];
     
     NSString *publisherID = [self getPublisherId];
     
@@ -122,7 +121,6 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 - (void)stopTimer {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     if (Aderdelegate == self) {
@@ -136,10 +134,8 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
     
     if (aderInterstitial) {
         aderInterstitial.delegate = nil;
-        [aderInterstitial release];
     }
     
-	[super dealloc];
 }
 
 - (void)loadAdTimeOut:(NSTimer*)theTimer {
@@ -156,7 +152,6 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
 
@@ -176,7 +171,6 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     [_adSageView adapter:self didFailAd:self.adNetworkView];
@@ -189,7 +183,6 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     
@@ -221,7 +214,6 @@ static CGRect adSizeList(AdSageBannerAdViewSizeType bannerAdViewSize)
 {
     if (timer) {
         [timer invalidate];
-        [timer release];
         timer = nil;
     }
     [_adSageView adapter:self didFailAd:nil];

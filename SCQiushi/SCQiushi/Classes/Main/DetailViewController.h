@@ -8,16 +8,15 @@
 
 #import "BaseTitleViewController.h"
 #import "QiushiItem.h"
+#import "DetailTopView.h"
 
 @interface DetailViewController : BaseTitleViewController <UIScrollViewDelegate>
 
 @property   (nonatomic, strong)     UIScrollView    *contentView;
-@property   (nonatomic, strong)     UIButton    *userIconImage;
-@property   (nonatomic, strong)     UILabel     *userNameLabel;
-@property   (nonatomic, strong)     UILabel     *timeLabel;
-@property   (nonatomic, strong)     UILabel     *contentLabel;
-@property   (nonatomic, strong)     UIButton    *contentImage;
+
+@property   (nonatomic, strong)     DetailTopView *topView;
 
 @property   (nonatomic, strong)     QiushiItem  *itemData;
+
 
 @end
