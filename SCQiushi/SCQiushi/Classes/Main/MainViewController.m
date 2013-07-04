@@ -62,6 +62,7 @@
 
 - (void) refreshData:(NSString *)apiId title:(NSString *)title
 {
+    [NetServiceFace cancelServiceMethod:self.apiMethod];
     self.apiMethod = apiId;
     self.title = title;
     

@@ -111,7 +111,7 @@
     if (!_contentLabel) {
         _contentLabel  = [[UILabel alloc] init];
         _contentLabel.frame = CGRectMake(10, 30, 300, 50);
-        _contentLabel.font = SYSTEMFONT(14.0f);
+        _contentLabel.font = SYSTEMFONT(15.0f);
         _contentLabel.backgroundColor = CLEAR_COLOR;
         _contentLabel.textColor = DARKGRAY_COLOR;
         _contentLabel.lineBreakMode = UILineBreakModeTailTruncation;

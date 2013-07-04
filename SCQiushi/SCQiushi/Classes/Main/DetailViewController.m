@@ -64,6 +64,16 @@
 
 }
 
+- (void) viewDidUnload
+{
+    [NetServiceFace cancelServiceMethod:kAPI_Comments];
+
+    if (self.adView) {
+        [self.adView removeFromSuperview];
+        self.adView = nil;
+    }
+}
+
 - (IBAction) leftButtonAction:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -87,16 +97,12 @@
     //[self.topView setFrameHeight:topHeight];
     [self.commentListView setFrameY:topHeight];
     
-    if (self.itemData.commentsCount > 0) {
-        
-        
-    }
-    else {
+    if (self.itemData.commentsCount == 0) {
         [self.emptyView setHidden:NO];
         [self.emptyView setFrameY:topHeight];
     }
     
-    CGFloat height = self.commentListView.y + self.commentListView.height;
+    CGFloat height = self.commentListView.y + self.commentListView.height + 50;
     [self.contentView setContentSize:CGSizeMake(320, height)];
 }
 
@@ -160,7 +166,7 @@
         _emptyView.backgroundColor = CLEAR_COLOR;
         
         UILabel *textLabel  = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 320, 50)];
-        textLabel.font = SYSTEMFONT(14.0f);
+        textLabel.font = SYSTEMFONT(15.0f);
         textLabel.backgroundColor = CLEAR_COLOR;
         textLabel.textColor = DARKGRAY_COLOR;
         textLabel.text = @"亲，还没有评论哦~~";
@@ -189,7 +195,7 @@
 
 - (void) adSageDidReceiveBannerAd:(AdSageView *)adSageView
 {
-    [self.contentView setFrameHeight:BOUNDS_HEIGHT-NAVIGATION_HEIGHT-50];
+    //[self.contentView setFrameHeight:BOUNDS_HEIGHT-NAVIGATION_HEIGHT-50];
 }
 
 - (void) adSageDidFailToReceiveBannerAd:(AdSageView *)adSageView
