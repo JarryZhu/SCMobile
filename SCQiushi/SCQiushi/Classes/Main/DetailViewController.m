@@ -84,7 +84,7 @@
     //
     //CGFloat commentHeight = 200;// (self.itemData.commentCount > 0) ? self.commentListView.height : 10;
     CGFloat topHeight = [self.topView getViewHeight];
-    [self.topView setFrameHeight:topHeight];
+    //[self.topView setFrameHeight:topHeight];
     [self.commentListView setFrameY:topHeight];
     
     if (self.itemData.commentsCount > 0) {
@@ -159,7 +159,7 @@
         _emptyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
         _emptyView.backgroundColor = CLEAR_COLOR;
         
-        UILabel *textLabel  = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, 50)];
+        UILabel *textLabel  = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 320, 50)];
         textLabel.font = SYSTEMFONT(14.0f);
         textLabel.backgroundColor = CLEAR_COLOR;
         textLabel.textColor = DARKGRAY_COLOR;

@@ -17,6 +17,7 @@
 @property (nonatomic,copy)  NSString    *content;       //内容
 @property (nonatomic,copy)  NSString    *anchor;        //作者
 @property (nonatomic,copy)  NSString    *iconURL;       //作者头像链接地址
+@property (nonatomic,copy)  NSString    *publishDate;   //发布时间
 @property (nonatomic,assign) NSTimeInterval published_at; //发布时间
 @property (nonatomic,assign) NSInteger    commentsCount;  //评论数量
 @property (nonatomic,assign) NSInteger    downCount;    //顶的数量

@@ -7,6 +7,7 @@
 //
 
 #import "QiushiItem.h"
+#import "NSDate+Extend.h"
 
 @implementation QiushiItem
 
@@ -22,6 +23,9 @@
     self.content = [dictionary objectForKey:@"content"];
     self.published_at = [[dictionary objectForKey:@"published_at"] doubleValue];
     self.commentsCount = [[dictionary objectForKey:@"comments_count"] intValue];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:self.published_at];
+    self.publishDate = [date formattedDateWithFormatString:@"yyyy-MM-dd HH:mm:ss"];
 
     id image = [dictionary objectForKey:@"image"];
     if ((NSNull *)image != [NSNull null])

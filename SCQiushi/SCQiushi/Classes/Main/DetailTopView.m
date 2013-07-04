@@ -45,7 +45,7 @@
     [self.againstButton setText:kIntToString(itemData.downCount)];
     [self.commentButton setText:kIntToString(itemData.commentsCount)];
 
-    //[self.timeLabel setText:[NSString stringWithFormat:@"%.1f", self.itemData.published_at]];
+    [self.timeLabel setText:[NSString stringWithFormat:@"匿名  %@", itemData.publishDate]];
 
     if (itemData.anchor) {
         [self.userNameLabel setText:itemData.anchor];
