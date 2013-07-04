@@ -19,6 +19,8 @@
 
 @property   (nonatomic, strong)     MainTableView   *tableView;
 
+@property   (nonatomic, copy)       NSString        *apiMethod;
+
 
 - (void) refreshData:(NSString *)apiId title:(NSString *)title;
 

@@ -10,7 +10,7 @@
 #import "LeftMenuCell.h"
 #import "AppDelegate.h"
 
-static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图有真相", @"穿越更精彩", @"我的收藏", @"精品应用", @"设置"};
+static NSString *menuTitles[] = {@"谁能有我糗", @"精华连连看", @"有图有真相", @"穿越更精彩", @"我的收藏", @"精品应用", @"我的设置"};
 
 
 @interface LeftMenuViewController ()
@@ -30,7 +30,7 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
         UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 6, 320, 37)];
         [titleView addBackgroundStretchableImage:@"left_menu_head_bg" leftCapWidth:0 topCapHeight:0];
         
-        UILabel *titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 37)];
+        UILabel *titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 200, 37)];
         titleLabel.font = BOLDSYSTEMFONT(15);
         titleLabel.backgroundColor = CLEAR_COLOR;
         titleLabel.textColor = WHITE_COLOR;
@@ -39,6 +39,11 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
         titleLabel.shadowOffset = CGSizeMake(0.4f, 0.6f);
 		titleLabel.shadowColor = DARKGRAY_COLOR;
         [titleView addSubview:titleLabel];
+        
+        //
+        UIImageView *iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 16, 16)];
+        iconImage.image = [UIImage imageNamed:@"icon"];
+        [titleView addSubview:iconImage];
         
         [self.view addSubview:titleView];
         
@@ -65,6 +70,7 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
         adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
     }
     [self.view addSubview:adView];*/
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,14 +96,16 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
 
 #pragma mark - UITableViewDataSource
 
+static int numbers[] = {4, 3};
+
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    return numbers[section];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,25 +117,30 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
         //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = menuTitles[indexPath.row];
+    cell.textLabel.text = menuTitles[indexPath.section*4+indexPath.row];
     
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-/*- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 33;
+	return (section==1) ? 20 : 0;
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, SCREEN_WIDTH, 33)];
-    [headerView addBackgroundColor:@"left_menu_head_bg"];
+    if (section == 1) {
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, SCREEN_WIDTH, 20)];
+        //[headerView addBackgroundColor:@"left_menu_head_bg"];
+        [headerView addBackgroundStretchableImage:@"left_menu_head_bg" leftCapWidth:0 topCapHeight:0];
         
-    return headerView;
-}*/
+        return  headerView;
+    }
+        
+    return nil;
+}
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -138,10 +151,18 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [[AppDelegate sharedAppDelegate] switchMenu:indexPath.row animated:YES exData:menuTitles[indexPath.row]];
-    
+    if (indexPath.section == 0) {
+        [[AppDelegate sharedAppDelegate] switchMenu:indexPath.row animated:YES exData:menuTitles[indexPath.row]];
+    }
+    else if (indexPath.section == 1) {
+        if (indexPath.row == 1) {
+            //[recmdView OpenAdSageRecmdModalView];
+        }
+        [[AppDelegate sharedAppDelegate] switchMenu:4+indexPath.row animated:YES exData:nil];
+    }
 }
 
+/*
 #pragma mark - AdSageDelegate
 - (UIViewController *) viewControllerForPresentingModalView
 {
@@ -156,5 +177,8 @@ static NSString *menuTitles[] = {@"随便看看", @"精华连连看", @"有图�
 {
     ERRORLOG(@"-- LeftMenu -- adSageDidFailToReceiveBannerAd");
 }
+*/
+
+
 
 @end

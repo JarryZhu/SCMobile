@@ -15,9 +15,9 @@ enum eMenuID
     eMenuID_Setting
 };
 
-@interface LeftMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, AdSageDelegate>
+@interface LeftMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    AdSageView * adView;
+    //AdSageView * adView;
 }
 
 @property   (nonatomic, retain)     UITableView     *tableView;

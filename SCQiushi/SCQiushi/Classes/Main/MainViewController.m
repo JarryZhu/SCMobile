@@ -21,7 +21,7 @@
     [self.view addBackgroundColor:@"main_background"];
 //    [self.titleView addSubview:self.rightButton];
     
-    self.title = @"随便看看";
+    self.title = @"谁能有我糗";
     
     [self.view addSubview:self.tableView];
     [self addRefreshBlock];
@@ -41,6 +41,8 @@
 
 - (void) setupContent
 {
+    self.apiMethod = kAPI_Latest;
+    
     //self.request = [[[ListRequest alloc] init] autorelease];
     [self.tableView prepareToRefresh:^{
         [self sendRequest];
@@ -54,12 +56,13 @@
 
 - (void) reduceMemory
 {
-    [adView removeFromSuperview];
+    //[adView removeFromSuperview];
     adView = nil;
 }
 
 - (void) refreshData:(NSString *)apiId title:(NSString *)title
 {
+    self.apiMethod = apiId;
     self.title = title;
     
     [self.tableView resetContent];
@@ -77,7 +80,7 @@
 - (void) sendRequest
 {
     //
-    [NetServiceFace requestWithMethod:kAPI_Latest param:nil
+    [NetServiceFace requestWithMethod:self.apiMethod param:nil
                                 onSuc:^(id content)
      {
          [self.tableView tableViewDidFinishedLoading];

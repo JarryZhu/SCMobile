@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "JASidePanelController.h"
 #import "MLNavigationController.h"
+#import "MobiSageSDK.h"
 
 @class ViewController;
 @class MainViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, MobiSageRecommendDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -21,6 +22,8 @@
 
 @property (strong, nonatomic) ViewController    *viewController;
 @property (strong, nonatomic) MainViewController *mainViewController;
+
+@property (strong, nonatomic) MobiSageRecommendView * recmdView;
 
 @property (nonatomic, assign) NSInteger     currentMenuID;
 

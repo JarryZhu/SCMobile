@@ -64,7 +64,8 @@
     
     [self.likeButton setText:kIntToString(itemData.upCount)];
     [self.againstButton setText:kIntToString(itemData.downCount)];
-    
+    [self.commentButton setText:kIntToString(itemData.commentsCount)];
+
     if (itemData.imageURL) {
         [self.contentImage setHidden:NO];
         [self.contentImage setImageWithURL:[NSURL URLWithString:itemData.imageURL]
@@ -82,7 +83,7 @@
     if (!_contentLabel) {
         _contentLabel  = [[UILabel alloc] init];
         _contentLabel.frame = CGRectMake(18, 18, 292, 40);
-        _contentLabel.font = BOLDSYSTEMFONT(15.0f);//ARIALFONTSIZE(16.0f);
+        _contentLabel.font = BOLDSYSTEMFONT(16.0f);//ARIALFONTSIZE(16.0f);
         _contentLabel.backgroundColor = CLEAR_COLOR;
         _contentLabel.textColor = DARKGRAY_COLOR;
         _contentLabel.lineBreakMode = UILineBreakModeTailTruncation;
@@ -116,6 +117,8 @@
         
         [_bottomView addSubview:self.likeButton];
         [_bottomView addSubview:self.againstButton];
+        [_bottomView addSubview:self.commentButton];
+        [_bottomView addSubview:self.favoriteButton];
     }
     return _bottomView;
 }
@@ -142,6 +145,29 @@
         [_againstButton setNormalImage:@"icon_against" selectedImage:@"icon_against"];
     }
     return _againstButton;
+}
+
+- (ImageCountButton *) commentButton
+{
+    if (!_commentButton) {
+        _commentButton = [ImageCountButton buttonWithType:UIButtonTypeCustom];
+        _commentButton.frame = CGRectMake(160, 0, 80, 30);
+        [_commentButton setTitle:@"123" forState:UIControlStateNormal];
+        
+        [_commentButton setNormalImage:@"icon_comment" selectedImage:@"icon_comment"];
+    }
+    return _commentButton;
+}
+
+- (UIButton *) favoriteButton
+{
+    if (!_favoriteButton) {
+        _favoriteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _favoriteButton.frame = CGRectMake(240, 0, 80, 30);
+        [_favoriteButton setNormalImage:@"icon_fav_enable" selectedImage:@"icon_fav_active"];
+        [_favoriteButton setImage:nil forState:UIControlStateHighlighted];
+    }
+    return _favoriteButton;
 }
 
 #pragma mark - Action

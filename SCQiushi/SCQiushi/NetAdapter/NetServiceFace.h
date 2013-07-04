@@ -12,6 +12,7 @@
  *  API Request URL defines
  */
 #define     kURL_List       [NSString stringWithFormat:@"%@/article/list/", kServerURL]
+#define     kURL_Comment(id) [NSString stringWithFormat:@"%@/article/%@/comments?count=50&page=1", kServerURL, id]
 
 /**
  *  API Method, used for request cache and cancel
@@ -19,7 +20,8 @@
 #define     kAPI_Latest     @"latest"
 #define     kAPI_Suggest    @"suggest"
 #define     kAPI_Images     @"images"
-
+#define     kAPI_History    @"week"
+#define     kAPI_Comments   @"comments"
 
 /**
  *  网络请求接口封装
@@ -34,6 +36,8 @@
  *
  */
 + (void) requestWithMethod:(NSString *)method param:(NSDictionary *)param onSuc:(idBlock)success onFailed:(idBlock)failed onError:(idBlock)error;
+
++ (void) requestCommentList:(NSString *)itemId onSuc:(idBlock)success onFailed:(idBlock)failed onError:(idBlock)error;
 
 /**
  *  Request Service with URL

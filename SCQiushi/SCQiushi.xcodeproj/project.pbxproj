@@ -73,6 +73,15 @@
 		449E93ED178173F80099A91C /* MainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E93EC178173F80099A91C /* MainTableCell.m */; };
 		44A0629F1782784B00BD2251 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A0629E1782784B00BD2251 /* DetailViewController.m */; };
 		44A062A217827BEB00BD2251 /* MLResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44A062A117827BEB00BD2251 /* MLResource.bundle */; };
+		44A4682D178501C500022568 /* icon_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A4682C178501C500022568 /* icon_comment@2x.png */; };
+		44A46830178509C200022568 /* icon_fav_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A4682E178509C200022568 /* icon_fav_active@2x.png */; };
+		44A46831178509C200022568 /* icon_fav_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A4682F178509C200022568 /* icon_fav_enable@2x.png */; };
+		44A468351785200C00022568 /* libMobiSageRecommend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A468331785200C00022568 /* libMobiSageRecommend.a */; };
+		44A468361785200C00022568 /* MobiSageRecommendBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44A468341785200C00022568 /* MobiSageRecommendBundle.bundle */; };
+		44A4683917854AE400022568 /* CommentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683817854AE400022568 /* CommentTableView.m */; };
+		44A4683C17854B5500022568 /* CommentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683B17854B5500022568 /* CommentTableCell.m */; };
+		44A4683F178555AB00022568 /* CommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683E178555AB00022568 /* CommentItem.m */; };
+		44A46842178557A600022568 /* CommentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A46841178557A600022568 /* CommentResponse.m */; };
 		44B55CA217811D7400008A2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B55CA117811D7400008A2E /* AudioToolbox.framework */; };
 		44B55CA417811E0D00008A2E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B55CA317811E0D00008A2E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		44BC41A0178403C2004CF8A9 /* divider_line_bold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BC419E178403C2004CF8A9 /* divider_line_bold@2x.png */; };
@@ -244,6 +253,19 @@
 		44A0629D1782784B00BD2251 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		44A0629E1782784B00BD2251 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		44A062A117827BEB00BD2251 /* MLResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MLResource.bundle; path = ../../../SCUtility/SCUtility/Widget/MLNavigation/MLResource.bundle; sourceTree = "<group>"; };
+		44A4682C178501C500022568 /* icon_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_comment@2x.png"; sourceTree = "<group>"; };
+		44A4682E178509C200022568 /* icon_fav_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_fav_active@2x.png"; sourceTree = "<group>"; };
+		44A4682F178509C200022568 /* icon_fav_enable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_fav_enable@2x.png"; sourceTree = "<group>"; };
+		44A468331785200C00022568 /* libMobiSageRecommend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageRecommend.a; sourceTree = "<group>"; };
+		44A468341785200C00022568 /* MobiSageRecommendBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobiSageRecommendBundle.bundle; sourceTree = "<group>"; };
+		44A4683717854AE400022568 /* CommentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableView.h; sourceTree = "<group>"; };
+		44A4683817854AE400022568 /* CommentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableView.m; sourceTree = "<group>"; };
+		44A4683A17854B5400022568 /* CommentTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableCell.h; sourceTree = "<group>"; };
+		44A4683B17854B5500022568 /* CommentTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableCell.m; sourceTree = "<group>"; };
+		44A4683D178555AB00022568 /* CommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentItem.h; sourceTree = "<group>"; };
+		44A4683E178555AB00022568 /* CommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentItem.m; sourceTree = "<group>"; };
+		44A46840178557A600022568 /* CommentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentResponse.h; sourceTree = "<group>"; };
+		44A46841178557A600022568 /* CommentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentResponse.m; sourceTree = "<group>"; };
 		44B55CA117811D7400008A2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		44B55CA317811E0D00008A2E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		44BC419E178403C2004CF8A9 /* divider_line_bold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divider_line_bold@2x.png"; sourceTree = "<group>"; };
@@ -314,6 +336,7 @@
 				449E8D23177EC6C700CB3065 /* libMobiSageMediatorSDK.a in Frameworks */,
 				449C022817812BDB00B4CB9A /* libGoogleAdMobAds.a in Frameworks */,
 				449C251D1783B1450097C28F /* libAderSDK.a in Frameworks */,
+				44A468351785200C00022568 /* libMobiSageRecommend.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +434,10 @@
 				44A0629E1782784B00BD2251 /* DetailViewController.m */,
 				44BC41A217840418004CF8A9 /* DetailTopView.h */,
 				44BC41A317840418004CF8A9 /* DetailTopView.m */,
+				44A4683717854AE400022568 /* CommentTableView.h */,
+				44A4683817854AE400022568 /* CommentTableView.m */,
+				44A4683A17854B5400022568 /* CommentTableCell.h */,
+				44A4683B17854B5500022568 /* CommentTableCell.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -429,6 +456,9 @@
 				44BC419F178403C2004CF8A9 /* divider_line@2x.png */,
 				44BC41AB17842803004CF8A9 /* icon_against@2x.png */,
 				44BC41AC17842803004CF8A9 /* icon_like@2x.png */,
+				44A4682C178501C500022568 /* icon_comment@2x.png */,
+				44A4682E178509C200022568 /* icon_fav_active@2x.png */,
+				44A4682F178509C200022568 /* icon_fav_enable@2x.png */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -483,6 +513,7 @@
 		449E8D21177EC6AE00CB3065 /* MobiSage */ = {
 			isa = PBXGroup;
 			children = (
+				44A468321785200C00022568 /* Recommend */,
 				449C021917812BA900B4CB9A /* Adater File */,
 				449E8D22177EC6C700CB3065 /* libMobiSageMediatorSDK.a */,
 				449E8D24177EC6D300CB3065 /* Public File */,
@@ -582,6 +613,8 @@
 				449E93C1178166620099A91C /* BaseItemData.m */,
 				449E93D1178169440099A91C /* QiushiItem.h */,
 				449E93D2178169440099A91C /* QiushiItem.m */,
+				44A4683D178555AB00022568 /* CommentItem.h */,
+				44A4683E178555AB00022568 /* CommentItem.m */,
 			);
 			path = ItemsData;
 			sourceTree = "<group>";
@@ -602,6 +635,8 @@
 				449E93C9178168700099A91C /* BaseListResponse.m */,
 				449E93CB178168E80099A91C /* ListResponse.h */,
 				449E93CC178168E80099A91C /* ListResponse.m */,
+				44A46840178557A600022568 /* CommentResponse.h */,
+				44A46841178557A600022568 /* CommentResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -631,6 +666,16 @@
 				44A062A117827BEB00BD2251 /* MLResource.bundle */,
 			);
 			name = others;
+			sourceTree = "<group>";
+		};
+		44A468321785200C00022568 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				44A468331785200C00022568 /* libMobiSageRecommend.a */,
+				44A468341785200C00022568 /* MobiSageRecommendBundle.bundle */,
+			);
+			name = Recommend;
+			path = "../../../SCCommon/Vender/MobiSage/lite/Other File/Recommend";
 			sourceTree = "<group>";
 		};
 		44BC41A5178411AB004CF8A9 /* ImageButton */ = {
@@ -880,6 +925,10 @@
 				44BC41AA178412E2004CF8A9 /* default_content_image@2x.png in Resources */,
 				44BC41AD17842803004CF8A9 /* icon_against@2x.png in Resources */,
 				44BC41AE17842803004CF8A9 /* icon_like@2x.png in Resources */,
+				44A4682D178501C500022568 /* icon_comment@2x.png in Resources */,
+				44A46830178509C200022568 /* icon_fav_active@2x.png in Resources */,
+				44A46831178509C200022568 /* icon_fav_enable@2x.png in Resources */,
+				44A468361785200C00022568 /* MobiSageRecommendBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,6 +1003,10 @@
 				449C251C1783B1450097C28F /* AdSageAdapterAder.m in Sources */,
 				44BC41A417840418004CF8A9 /* DetailTopView.m in Sources */,
 				44BC41A8178411E6004CF8A9 /* ImageCountButton.m in Sources */,
+				44A4683917854AE400022568 /* CommentTableView.m in Sources */,
+				44A4683C17854B5500022568 /* CommentTableCell.m in Sources */,
+				44A4683F178555AB00022568 /* CommentItem.m in Sources */,
+				44A46842178557A600022568 /* CommentResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1076,6 +1129,7 @@
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/AdMob\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Ader\"",
+					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Other File/Recommend\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1106,6 +1160,7 @@
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/AdMob\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Ader\"",
+					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Other File/Recommend\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

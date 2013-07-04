@@ -52,8 +52,8 @@
 #endif
 
 // G－C－D
-#define     BACK(block)         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-#define     MAIN(block)         dispatch_async(dispatch_get_main_queue(),block)
+#define     GCD_DEFAULT(block)  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define     GCD_MAIN(block)     dispatch_async(dispatch_get_main_queue(),block)
 
 // 文件路径
 #define     RESOURCE_PATH       [[NSBundle mainBundle] resourcePath]

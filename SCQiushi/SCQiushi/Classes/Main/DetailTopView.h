@@ -12,6 +12,8 @@
 #define kDefaultIconImage   @"missing"
 #define kUserNameColor      RGBCOLOR(0xAA, 0x80, 0x41)
 
+@protocol DetailViewDelegate;
+
 @interface DetailTopView : UIView
 
 @property   (nonatomic, strong)     UIButton    *userIconImage;
@@ -23,7 +25,10 @@
 @property   (nonatomic, strong)     UIView      *bottomView;
 @property   (nonatomic, strong)     ImageCountButton *likeButton;
 @property   (nonatomic, strong)     ImageCountButton *againstButton;
+@property   (nonatomic, strong)     ImageCountButton *commentButton;
+@property   (nonatomic, strong)     UIButton    *favoriteButton;
 
+@property   (nonatomic, ARC_WEAK)   id<DetailViewDelegate> delegate;
 
 - (void) computeSize;
 
@@ -31,4 +36,10 @@
 
 - (void) updateContent:(QiushiItem *)itemData;
 
+@end
+
+@protocol DetailViewDelegate <NSObject>
+
+@optional
+- (void) imageLoadFinished:(DetailTopView *)view;
 @end

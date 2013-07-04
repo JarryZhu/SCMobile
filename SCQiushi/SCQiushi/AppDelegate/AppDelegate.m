@@ -35,6 +35,10 @@
     
     self.menuController.leftPanel = [[LeftMenuViewController alloc] init];
     
+    //
+    if (self.recmdView == nil) {
+        self.recmdView = [[MobiSageRecommendView alloc] initWithDelegate:self];
+    }
     
     self.window.rootViewController = self.menuController;
     [self.window makeKeyAndVisible];
@@ -76,14 +80,24 @@
         return;
     }
     
+    static NSString *APIs[] = {kAPI_Latest, kAPI_Suggest, kAPI_Images, kAPI_History, nil};
+    
     switch (index) {
         case 0:
         case 1:
         case 2:
         case 3:
         {
-            [self.mainViewController refreshData:kAPI_Latest title:data];
+            [self.mainViewController refreshData:APIs[index] title:data];
             [self.menuController showCenterPanelAnimated:anim];
+        }
+            break;
+            
+        case 5:
+        {
+            [self.menuController showCenterPanelAnimated:anim];
+            [self.recmdView OpenAdSageRecmdModalView];
+            return;
         }
             break;
             
@@ -95,6 +109,12 @@
     }
     
     self.currentMenuID = index;
+}
+
+#pragma mark - MobiSageRecommendDelegate
+- (UIViewController *) viewControllerForPresentingModalView
+{
+    return self.window.rootViewController;
 }
 
 @end

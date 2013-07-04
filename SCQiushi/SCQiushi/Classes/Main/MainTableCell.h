@@ -17,6 +17,8 @@
 @property   (nonatomic, strong)     UIView      *bottomView;
 @property   (nonatomic, strong)     ImageCountButton *likeButton;
 @property   (nonatomic, strong)     ImageCountButton *againstButton;
+@property   (nonatomic, strong)     ImageCountButton *commentButton;
+@property   (nonatomic, strong)     UIButton    *favoriteButton;
 
 @property   (nonatomic, strong)     QiushiItem  *itemData;
 

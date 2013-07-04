@@ -112,7 +112,7 @@
 - (CGFloat) computeHeight:(NSString *)content
 {
     CGSize size = CGSizeMake(300, 2000);
-    CGSize titleSize = [content sizeWithFont:BOLDSYSTEMFONT(15)
+    CGSize titleSize = [content sizeWithFont:BOLDSYSTEMFONT(16)
                            constrainedToSize:size
                                lineBreakMode:UILineBreakModeTailTruncation];
     

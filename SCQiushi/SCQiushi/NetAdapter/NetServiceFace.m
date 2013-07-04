@@ -18,6 +18,12 @@
     [self serviceWithURL:url method:method onSuc:success onFailed:failed onError:error];
 }
 
++ (void) requestCommentList:(NSString *)itemId onSuc:(idBlock)success onFailed:(idBlock)failed onError:(idBlock)error
+{
+    NSString *url = kURL_Comment(itemId);
+    [self serviceWithURL:url method:kAPI_Comments onSuc:success onFailed:failed onError:error];
+}
+
 + (void) serviceWithURL:(NSString *)url method:(NSString *)method onSuc:(idBlock)success onFailed:(idBlock)failed
 {
     [self serviceWithURL:url method:method onSuc:success onFailed:failed onError:nil];

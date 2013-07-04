@@ -38,11 +38,12 @@
 {
     [self.contentLabel setText:itemData.content];
     
-    CGSize size = [self.contentLabel.text sizeWithFont:self.contentLabel.font constrainedToSize:CGSizeMake(305, CGFLOAT_MAX) lineBreakMode:UILineBreakModeTailTruncation];
+    CGSize size = [self.contentLabel.text sizeWithFont:self.contentLabel.font constrainedToSize:CGSizeMake(302, CGFLOAT_MAX) lineBreakMode:UILineBreakModeTailTruncation];
     [self.contentLabel setFrameHeight:size.height];
     
     [self.likeButton setText:kIntToString(itemData.upCount)];
     [self.againstButton setText:kIntToString(itemData.downCount)];
+    [self.commentButton setText:kIntToString(itemData.commentsCount)];
 
     //[self.timeLabel setText:[NSString stringWithFormat:@"%.1f", self.itemData.published_at]];
 
@@ -71,6 +72,7 @@
              DetailTopView *sSelf = wSelf;
              [sSelf setImage:image];
          } failure:nil];
+        [self.bottomView setFrameY:self.contentImage.y + self.contentImage.height+8];
     }
     else {
         [self.contentImage setHidden:YES];
@@ -114,6 +116,10 @@
     }
     
     [self.bottomView setFrameY:self.contentImage.y + self.contentImage.height+8];
+    
+    if ([self.delegate respondsToSelector:@selector(imageLoadFinished:)]) {
+        [self.delegate imageLoadFinished:self];
+    }
 }
 
 
@@ -124,7 +130,7 @@
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
     [[UIColor colorWithPatternImage:[UIImage imageNamed:@"divider_line_bold"]] set];
-    CGContextFillRect(context, CGRectMake(8.0f, [self getViewHeight]-2.0f, SCREEN_WIDTH-16.0f, 2.0f));
+    CGContextFillRect(context, CGRectMake(10.0f, [self getViewHeight]-2.0f, SCREEN_WIDTH-20.0f, 2.0f));
 }
 
 
@@ -133,7 +139,7 @@
 - (UIButton *) userIconImage
 {
     if (!_userIconImage) {
-        _userIconImage = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 32, 32)];
+        _userIconImage = [[UIButton alloc] initWithFrame:CGRectMake(10, 12, 28, 28)];
         _userIconImage.imageView.contentMode = UIViewContentModeScaleToFill;
         [_userIconImage setBackgroundImage:kDefaultIconImage hilighted:nil selectedImage:nil];
         
@@ -149,7 +155,7 @@
 {
     if (!_userNameLabel) {
         _userNameLabel  = [[UILabel alloc] init];
-        _userNameLabel.frame = CGRectMake(50, 16, 250, 20);
+        _userNameLabel.frame = CGRectMake(48, 16, 250, 20);
         _userNameLabel.font = ARIALFONTSIZE(15);
         _userNameLabel.backgroundColor = CLEAR_COLOR;
         _userNameLabel.textColor = kUserNameColor;
@@ -166,7 +172,7 @@
         _timeLabel.font = ARIALFONTSIZE(15);
         _timeLabel.backgroundColor = CLEAR_COLOR;
         _timeLabel.textColor = kUserNameColor;
-        _timeLabel.text = @"2013-07-03 12:02:18";
+        _timeLabel.text = @"匿名  2013-07-03 12:02:18";
         [self.timeLabel setTextAlignment:UITextAlignmentLeft];
     }
     return _timeLabel;
@@ -177,7 +183,7 @@
     if (!_contentLabel) {
         _contentLabel  = [[UILabel alloc] init];
         _contentLabel.frame = CGRectMake(10, 48, 302, 40);
-        _contentLabel.font = BOLDSYSTEMFONT(15.0f);//ARIALFONTSIZE(16.0f);
+        _contentLabel.font = BOLDSYSTEMFONT(16.0f);//ARIALFONTSIZE(16.0f);
         _contentLabel.backgroundColor = CLEAR_COLOR;
         _contentLabel.textColor = DARKGRAY_COLOR;
         _contentLabel.lineBreakMode = UILineBreakModeTailTruncation;
@@ -205,6 +211,8 @@
         
         [_bottomView addSubview:self.likeButton];
         [_bottomView addSubview:self.againstButton];
+        [_bottomView addSubview:self.commentButton];
+        [_bottomView addSubview:self.favoriteButton];
     }
     return _bottomView;
 }
@@ -213,7 +221,7 @@
 {
     if (!_likeButton) {
         _likeButton = [ImageCountButton buttonWithType:UIButtonTypeCustom];
-        _likeButton.frame = CGRectMake(10, 2, 80, 30);
+        _likeButton.frame = CGRectMake(12, 2, 80, 30);
         [_likeButton setTitle:@"123" forState:UIControlStateNormal];
         
         [_likeButton setNormalImage:@"icon_like" selectedImage:@"icon_like"];
@@ -231,6 +239,29 @@
         [_againstButton setNormalImage:@"icon_against" selectedImage:@"icon_against"];
     }
     return _againstButton;
+}
+
+- (ImageCountButton *) commentButton
+{
+    if (!_commentButton) {
+        _commentButton = [ImageCountButton buttonWithType:UIButtonTypeCustom];
+        _commentButton.frame = CGRectMake(160, 2, 80, 30);
+        [_commentButton setTitle:@"123" forState:UIControlStateNormal];
+        
+        [_commentButton setNormalImage:@"icon_comment" selectedImage:@"icon_comment"];
+    }
+    return _commentButton;
+}
+
+- (UIButton *) favoriteButton
+{
+    if (!_favoriteButton) {
+        _favoriteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _favoriteButton.frame = CGRectMake(250, 2, 80, 30);
+        [_favoriteButton setNormalImage:@"icon_fav_enable" selectedImage:@"icon_fav_active"];
+        [_favoriteButton setImage:nil forState:UIControlStateHighlighted];
+    }
+    return _favoriteButton;
 }
 
 @end
