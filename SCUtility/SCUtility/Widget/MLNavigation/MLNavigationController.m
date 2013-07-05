@@ -93,7 +93,70 @@
     [self.screenShotsList addObject:[self capture]];
     //[self.screenShotsList addObject:[self.view screenshot]];
     
-    [super pushViewController:viewController animated:animated];
+    if (animated) {
+        [self pushViewControllerAnimated:viewController];
+    }
+    else {
+        [super pushViewController:viewController animated:animated];
+    }
+}
+
+- (void)pushViewControllerAnimated:(UIViewController *)viewController
+{
+    /////////////////
+    if (!self.backgroundView)
+    {
+        CGRect frame = self.view.frame;
+        
+        self.backgroundView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width , frame.size.height)] autorelease];
+        self.backgroundView.backgroundColor = BLACK_COLOR;
+        [self.view.superview addSubview:self.backgroundView];
+        
+        blackMask = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width , frame.size.height)] autorelease];
+        blackMask.backgroundColor = [UIColor blackColor];
+        blackMask.alpha = 0;
+        [self.backgroundView addSubview:blackMask];
+    }
+    
+    if (lastScreenShotView) [lastScreenShotView removeFromSuperview];
+    
+    UIImage *lastScreenShot = [self.screenShotsList lastObject];
+    lastScreenShotView = [[[UIImageView alloc] initWithImage:lastScreenShot] autorelease];
+    [self.backgroundView insertSubview:lastScreenShotView belowSubview:blackMask];
+    
+    CGRect frame = SCREEN_FRAME;
+    frame.origin.x = 320;
+    viewController.view.frame = frame;
+    [self.view.superview addSubview:viewController.view];
+    
+    __block MLNavigationController *blockSelf = self;
+    [UIView animateWithDuration:.3f animations:^{
+        
+        [viewController.view setFrameX:0];
+        
+        if (lastScreenShotView) {
+            lastScreenShotView.transform = CGAffineTransformMakeScale(0.95f, 0.95f);
+        }
+        if (blackMask) {
+            blackMask.alpha = 0.4f;
+        }
+
+    } completion:^(BOOL finished) {
+        
+        if (lastScreenShotView) {
+            [lastScreenShotView removeFromSuperview];
+            lastScreenShotView = nil;
+        }
+        if (blockSelf.backgroundView) {
+            [blockSelf.backgroundView removeFromSuperview];
+            blockSelf.backgroundView = nil;
+        }
+        
+        [viewController.view removeFromSuperview];
+        [super pushViewController:viewController animated:NO];
+    }];
+    
+    /////////////////
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
@@ -143,132 +206,6 @@
         blackMask.alpha = alpha;
     }
 }
-
-/*
-#pragma mark - UIResponse Subclassing Methods -
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-//    NSLog(@"navi touch begin");
-    [super touchesBegan:touches withEvent:event];
-    
-    if (self.viewControllers.count <= 1 || !self.canDragBack) return;
-    
-    isMoving = NO;
-    startTouch = [((UITouch *)[touches anyObject])locationInView:KEY_WINDOW];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [super touchesMoved:touches withEvent:event];
-    
-//    NSLog(@"navi touch move:%f",[((UITouch *)[touches anyObject])locationInView:KEY_WINDOW].x);
-
-    if (self.viewControllers.count <= 1 || !self.canDragBack) return;
-    
-    CGPoint moveTouch = [((UITouch *)[touches anyObject])locationInView:KEY_WINDOW];
-    
-    if (!isMoving) {
-        if(moveTouch.x - startTouch.x > 10)
-        {
-            isMoving = YES;
-            
-            if (!self.backgroundView)
-            {
-                CGRect frame = self.view.frame;
-                
-                self.backgroundView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width , frame.size.height)] autorelease];
-                [self.view.superview insertSubview:self.backgroundView belowSubview:self.view];
-                
-                blackMask = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width , frame.size.height)] autorelease];
-                blackMask.backgroundColor = [UIColor blackColor];
-                [self.backgroundView addSubview:blackMask];
-            }
-            
-            if (lastScreenShotView) [lastScreenShotView removeFromSuperview];
-            
-            UIImage *lastScreenShot = [self.screenShotsList lastObject];
-            lastScreenShotView = [[[UIImageView alloc] initWithImage:lastScreenShot] autorelease];
-            [self.backgroundView insertSubview:lastScreenShotView belowSubview:blackMask];
-
-        }
-    }
-    
-    if (isMoving) {
-        [self moveViewWithX:moveTouch.x - startTouch.x];
-    }
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-//    NSLog(@"navi touch end");
-    
-    [super touchesEnded:touches withEvent:event];
-    
-    if (self.viewControllers.count <= 1 || !self.canDragBack || !isMoving) return;
-
-    CGPoint endTouch = [((UITouch *)[touches anyObject]) locationInView:KEY_WINDOW];
-
-    __block MLNavigationController *blockSelf = self;
-    if (endTouch.x - startTouch.x > 50)
-    {
-        [UIView animateWithDuration:0.3 animations:^{
-            [blockSelf moveViewWithX:320];
-        } completion:^(BOOL finished) {
-
-            if (lastScreenShotView) {
-                [lastScreenShotView removeFromSuperview];
-                lastScreenShotView = nil;
-            }
-            if (blockSelf.backgroundView) {
-                [blockSelf.backgroundView removeFromSuperview];
-                blockSelf.backgroundView = nil;
-            }
-            
-            [blockSelf popViewControllerAnimated:NO];
-            
-            CGRect frame = blockSelf.view.frame;
-            frame.origin.x = 0;
-            blockSelf.view.frame = frame;
-
-            isMoving = NO;
-        }];
-    }
-    else
-    {
-        [UIView animateWithDuration:0.3 animations:^{
-            [blockSelf moveViewWithX:0];
-        } completion:^(BOOL finished) {
-            
-            if (lastScreenShotView) {
-                [lastScreenShotView removeFromSuperview];
-                lastScreenShotView = nil;
-            }
-            if (blockSelf.backgroundView) {
-                [blockSelf.backgroundView removeFromSuperview];
-                blockSelf.backgroundView = nil;
-            }
-
-            isMoving = NO;
-        }];
-
-    }
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-//    NSLog(@"navi touch cancel");
-
-    [super touchesCancelled:touches withEvent:event];
-    
-    if (self.viewControllers.count <= 1 || !self.canDragBack || !isMoving) return;
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        [self moveViewWithX:0];
-    } completion:^(BOOL finished) {
-        isMoving = NO;
-    }];
-}*/
 
 #pragma mark - UIGestureRecognizerDelegate
 

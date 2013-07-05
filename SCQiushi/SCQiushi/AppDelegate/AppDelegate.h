@@ -11,6 +11,7 @@
 #import "MLNavigationController.h"
 #import "MobiSageSDK.h"
 
+
 @class ViewController;
 @class MainViewController;
 
@@ -19,9 +20,9 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) JASidePanelController *menuController;
-
-@property (strong, nonatomic) ViewController    *viewController;
+@property (strong, nonatomic) MLNavigationController *naviController;
 @property (strong, nonatomic) MainViewController *mainViewController;
+@property (strong, nonatomic) ViewController    *viewController;
 
 @property (strong, nonatomic) MobiSageRecommendView * recmdView;
 

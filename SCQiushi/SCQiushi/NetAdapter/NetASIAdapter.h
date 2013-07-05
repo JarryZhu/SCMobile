@@ -17,7 +17,8 @@
     ASIHTTPRequest *_request;
 }
 
-@property (nonatomic, copy)     NSString    *linkURL;
+@property (nonatomic, copy)     NSString        *linkURL;
+@property (nonatomic, strong)   NSDictionary    *params;
 
 /**
  *	@brief	初始化网络适配器，发起HTTP请求
@@ -27,7 +28,7 @@
  *
  *	@return	return value self
  */
-- (id) initWithURL:(NSString *)linkURL;
+- (id) initWithURL:(NSString *)linkURL params:(NSDictionary *)paramDic;
 
 /**
  *	@brief	获取ASI HTTP对象

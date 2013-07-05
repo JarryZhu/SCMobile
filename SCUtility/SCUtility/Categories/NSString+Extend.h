@@ -17,4 +17,6 @@
 
 - (NSNumber *) numericValue;
 
++ (void) printFontAndFamilyName;
+
 @end

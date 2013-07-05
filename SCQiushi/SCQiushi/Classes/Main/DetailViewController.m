@@ -33,17 +33,18 @@
     [self.contentView addSubview:self.emptyView];
     [self.view addSubview:self.contentView];
     
+#if kAdEnabled
     //创建广告 banner
     [self performBlock:^{
-        
         if (self.adView == nil) {
             self.adView = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50]; //设置广告显示位置
             self.adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
         }
         [self.view addSubview:self.adView];
         
-    } afterDelay:1.0f];
-
+    } afterDelay:.5f];
+#endif
+    
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -68,10 +69,12 @@
 {
     [NetServiceFace cancelServiceMethod:kAPI_Comments];
 
+#if kAdEnabled
     if (self.adView) {
         [self.adView removeFromSuperview];
         self.adView = nil;
     }
+#endif
 }
 
 - (IBAction) leftButtonAction:(id)sender
@@ -102,7 +105,7 @@
         [self.emptyView setFrameY:topHeight];
     }
     
-    CGFloat height = self.commentListView.y + self.commentListView.height + 50;
+    CGFloat height = self.commentListView.y + self.commentListView.height + 52;
     [self.contentView setContentSize:CGSizeMake(320, height)];
 }
 

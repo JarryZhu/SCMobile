@@ -20,11 +20,12 @@
 
 @synthesize linkURL = _linkURL;
 
-- (id) initWithURL:(NSString *)linkURL
+- (id) initWithURL:(NSString *)linkURL params:(NSDictionary *)paramDic
 {
     self = [super init];
     if (self) {
         [self setLinkURL:linkURL];
+        [self setParams:paramDic];
     }
     return self;
 }

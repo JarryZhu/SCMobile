@@ -8,6 +8,7 @@
 
 #import "NSString+Extend.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "SCLog.h"
 
 @implementation NSString (Extend)
 
@@ -34,6 +35,27 @@
 - (NSNumber *) numericValue
 {
     return [NSNumber numberWithInt:[self intValue]];
+}
+
++ (void) printFontAndFamilyName
+{
+    NSArray *familyNames =[[NSArray alloc]initWithArray:[UIFont familyNames]];
+    NSArray *fontNames;
+    NSInteger indFamily, indFont;
+    NSMutableString *debugStr = [NSMutableString string];
+    for(indFamily=0;indFamily<[familyNames count];++indFamily)
+    {
+        [debugStr appendFormat:@"Family name: %@", [familyNames objectAtIndex:indFamily]];
+        //DEBUGLOG(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
+        fontNames =[[NSArray alloc]initWithArray:[UIFont fontNamesForFamilyName:[familyNames objectAtIndex:indFamily]]];
+        for(indFont=0; indFont<[fontNames count]; ++indFont)
+        {
+            [debugStr appendFormat:@"\n  Font name: %@",[fontNames objectAtIndex:indFont]];
+            //DEBUGLOG(@" Font name: %@",[fontNames objectAtIndex:indFont]);
+        }
+        [debugStr appendString:@"\n\n"];
+    }
+    DEBUGLOG(@"%@", debugStr);
 }
 
 @end

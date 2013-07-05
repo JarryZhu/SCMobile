@@ -66,7 +66,8 @@
         __weak DetailTopView *wSelf = self;
         [self.contentImage setFrameY:self.contentLabel.y+self.contentLabel.height+8];
         [self.contentImage setImageWithURL:[NSURL URLWithString:itemData.imageURL]
-                          placeholderImage:nil success:^(UIImage *image)
+                          placeholderImage:IMAGENAMED(@"default_content_image")
+                                   success:^(UIImage *image)
          {
              curImage = image;
              DetailTopView *sSelf = wSelf;

@@ -8,7 +8,6 @@
 
 #import "UILabel+Size.h"
 
-
 @implementation UILabel (Size)
 
 //

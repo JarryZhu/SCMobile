@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LeftMenuViewController.h"
 #import "MainViewController.h"
+#import "FavoriteViewController.h"
+#import "SettingViewController.h"
 
 #import "ViewController.h"
 
@@ -30,8 +32,8 @@
     self.menuController.shouldDelegateAutorotateToVisiblePanel = NO;
     
     self.mainViewController = [[MainViewController alloc] init];
-    MLNavigationController *naviController = [[MLNavigationController alloc] initWithRootViewController:self.mainViewController];
-    self.menuController.centerPanel = naviController;
+    self.naviController = [[MLNavigationController alloc] initWithRootViewController:self.mainViewController];
+    self.menuController.centerPanel = self.naviController;
     
     self.menuController.leftPanel = [[LeftMenuViewController alloc] init];
     
@@ -88,8 +90,14 @@
         case 2:
         case 3:
         {
+            [self.menuController setCenterPanel:self.naviController];
             [self.mainViewController refreshData:APIs[index] title:data];
-            [self.menuController showCenterPanelAnimated:anim];
+        }
+            break;
+            
+        case 4:
+        {
+            [self.menuController setCenterPanel:[[FavoriteViewController alloc] init]];
         }
             break;
             
@@ -97,6 +105,14 @@
         {
             [self.menuController showCenterPanelAnimated:anim];
             [self.recmdView OpenAdSageRecmdModalView];
+            return;
+        }
+            break;
+            
+        case 6:
+        {
+            SettingViewController *setting = [[SettingViewController alloc] init];
+            [self.window.rootViewController presentModalViewController:setting animated:YES];
             return;
         }
             break;

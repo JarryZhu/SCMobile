@@ -48,7 +48,7 @@
     if (!_titleLabel) {
         _titleLabel  = [[UILabel alloc] init];
         _titleLabel.frame = HEADER_TITLE_FRAME;
-        _titleLabel.font = BOLDSYSTEMFONT(20);
+        _titleLabel.font = TNRFONTSIZE(20);
         _titleLabel.backgroundColor = CLEAR_COLOR;
         _titleLabel.textColor = RGBCOLOR(0xff, 0xf1, 0xcc);
         _titleLabel.lineBreakMode = UILineBreakModeTailTruncation;
@@ -57,7 +57,7 @@
         _titleLabel.text = self.title;
         
         _titleLabel.shadowOffset = CGSizeMake(0.4f, 0.6f);
-		_titleLabel.shadowColor = DARKGRAY_COLOR;
+		_titleLabel.shadowColor = WHITE_COLOR;
         
 //        UITapGestureRecognizer *gesture = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleDidTapped:)] autorelease];
 //        [_titleLabel addGestureRecognizer:gesture];

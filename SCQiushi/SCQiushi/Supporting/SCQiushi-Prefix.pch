@@ -13,5 +13,7 @@
     #import <Foundation/Foundation.h>
 
     #import "SCUtility.h"
-    
+
+    #define kAdEnabled  1
+
 #endif

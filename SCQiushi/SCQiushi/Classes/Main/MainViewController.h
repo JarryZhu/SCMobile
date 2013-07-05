@@ -11,6 +11,7 @@
 #import "AdSageDelegate.h"
 #import "AdSageView.h"
 #import "NetServiceFace.h"
+#import "PagingRequest.h"
 
 @interface MainViewController : BaseTitleViewController <AdSageDelegate>
 {
@@ -20,6 +21,7 @@
 @property   (nonatomic, strong)     MainTableView   *tableView;
 
 @property   (nonatomic, copy)       NSString        *apiMethod;
+@property   (nonatomic, strong)     PagingRequest   *request;
 
 
 - (void) refreshData:(NSString *)apiId title:(NSString *)title;

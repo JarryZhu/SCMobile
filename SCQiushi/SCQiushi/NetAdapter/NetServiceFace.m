@@ -14,7 +14,16 @@
 
 + (void) requestWithMethod:(NSString *)method param:(NSDictionary *)param onSuc:(idBlock)success onFailed:(idBlock)failed onError:(idBlock)error
 {
-    NSString *url = [NSString stringWithFormat:@"%@%@?count=10&page=1", kURL_List, method];
+    NSArray *keys = [[param allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    NSMutableString *paramStr = [NSMutableString string];
+    int i = 0;
+    for (NSString *key in keys) {
+        [paramStr appendString:(i > 0) ? @"&" : @""];
+        [paramStr appendFormat:@"%@=%@", key, [param objectForKey:key]];
+        i ++;
+    }
+
+    NSString *url = [NSString stringWithFormat:@"%@%@?%@", kURL_List, method, paramStr];
     [self serviceWithURL:url method:method onSuc:success onFailed:failed onError:error];
 }
 
@@ -38,7 +47,7 @@
     
     [self cancelServiceMethod:method];
     
-    __block NetBaseAdapter *adapterASI = [[NetASIAdapter alloc] initWithURL:url];
+    __block NetBaseAdapter *adapterASI = [[NetASIAdapter alloc] initWithURL:url params:nil];
 
     // store cached ASI
     [[NetServiceManager sharedInstance] store:adapterASI forKey:method];
