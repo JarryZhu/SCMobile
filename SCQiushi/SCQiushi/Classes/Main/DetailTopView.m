@@ -157,7 +157,7 @@
     if (!_userNameLabel) {
         _userNameLabel  = [[UILabel alloc] init];
         _userNameLabel.frame = CGRectMake(48, 16, 250, 20);
-        _userNameLabel.font = ARIALFONTSIZE(15);
+        _userNameLabel.font = ARIALFONTSIZE(16);
         _userNameLabel.backgroundColor = CLEAR_COLOR;
         _userNameLabel.textColor = kUserNameColor;
         _userNameLabel.text = @"Name";
@@ -169,7 +169,7 @@
 {
     if (!_timeLabel) {
         _timeLabel  = [[UILabel alloc] init];
-        _timeLabel.frame = CGRectMake(12, 12, 300, 20);
+        _timeLabel.frame = CGRectMake(10, 12, 300, 20);
         _timeLabel.font = ARIALFONTSIZE(15);
         _timeLabel.backgroundColor = CLEAR_COLOR;
         _timeLabel.textColor = kUserNameColor;

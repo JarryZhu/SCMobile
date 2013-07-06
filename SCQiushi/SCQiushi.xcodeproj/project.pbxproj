@@ -44,6 +44,7 @@
 		449DF9051786B44800DD8690 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449DF9041786B44700DD8690 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		449DF9091786C78400DD8690 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449DF9081786C78400DD8690 /* SettingViewController.m */; };
 		449DF90B1786C84600DD8690 /* top_btn_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449DF90A1786C84600DD8690 /* top_btn_close@2x.png */; };
+		449DF90F1787AFAD00DD8690 /* MBSpinningCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 449DF90E1787AFAD00DD8690 /* MBSpinningCircle.m */; };
 		449E8D0A177EC62C00CB3065 /* SCImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E8D09177EC62C00CB3065 /* SCImageBrowserView.m */; };
 		449E8D10177EC63B00CB3065 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E8D0D177EC63B00CB3065 /* JASidePanelController.m */; };
 		449E8D11177EC63B00CB3065 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 449E8D0F177EC63B00CB3065 /* UIViewController+JASidePanel.m */; };
@@ -203,6 +204,8 @@
 		449DF9071786C78400DD8690 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		449DF9081786C78400DD8690 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		449DF90A1786C84600DD8690 /* top_btn_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_btn_close@2x.png"; sourceTree = "<group>"; };
+		449DF90D1787AFAD00DD8690 /* MBSpinningCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpinningCircle.h; sourceTree = "<group>"; };
+		449DF90E1787AFAD00DD8690 /* MBSpinningCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpinningCircle.m; sourceTree = "<group>"; };
 		449E8D08177EC62C00CB3065 /* SCImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageBrowserView.h; sourceTree = "<group>"; };
 		449E8D09177EC62C00CB3065 /* SCImageBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageBrowserView.m; sourceTree = "<group>"; };
 		449E8D0C177EC63B00CB3065 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
@@ -434,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				44BC41A5178411AB004CF8A9 /* ImageButton */,
+				449DF90C1787AFAD00DD8690 /* MBSpinningCircle */,
 				449E93DA178172120099A91C /* PullRefreshWidget */,
 				449E8D07177EC62C00CB3065 /* ImageBrowser */,
 				449E8D0B177EC63B00CB3065 /* JASidePanel */,
@@ -555,6 +559,16 @@
 				449DF9081786C78400DD8690 /* SettingViewController.m */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		449DF90C1787AFAD00DD8690 /* MBSpinningCircle */ = {
+			isa = PBXGroup;
+			children = (
+				449DF90D1787AFAD00DD8690 /* MBSpinningCircle.h */,
+				449DF90E1787AFAD00DD8690 /* MBSpinningCircle.m */,
+			);
+			name = MBSpinningCircle;
+			path = ../../../SCCommon/Widget/MBSpinningCircle;
 			sourceTree = "<group>";
 		};
 		449E8D07177EC62C00CB3065 /* ImageBrowser */ = {
@@ -1090,6 +1104,7 @@
 				449DF8E41786730A00DD8690 /* FavoriteViewController.m in Sources */,
 				449DF8FF1786B40700DD8690 /* AdSageAdapterDoMob.m in Sources */,
 				449DF9091786C78400DD8690 /* SettingViewController.m in Sources */,
+				449DF90F1787AFAD00DD8690 /* MBSpinningCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1228,8 +1243,8 @@
 		44C04F691774535F005AA1D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HANGZHOU SUCANG TECHNOLOGY CO.,LTD (LHLYYKHQ2G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HANGZHOU SUCANG TECHNOLOGY CO.,LTD (LHLYYKHQ2G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 俭 谌 (3MMKKPU4HW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 俭 谌 (3MMKKPU4HW)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../SCCommon/Vender\"",
@@ -1252,8 +1267,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "23B6B1C9-14F7-4CD8-99D0-0592F047AE82";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "23B6B1C9-14F7-4CD8-99D0-0592F047AE82";
+				PROVISIONING_PROFILE = "099FD5BB-7D9A-4F0D-BA44-9722D57AEAFF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "099FD5BB-7D9A-4F0D-BA44-9722D57AEAFF";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};

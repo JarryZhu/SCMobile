@@ -39,7 +39,7 @@
 
 + (void) printFontAndFamilyName
 {
-    NSArray *familyNames =[[NSArray alloc]initWithArray:[UIFont familyNames]];
+    NSArray *familyNames =[[[NSArray alloc] initWithArray:[UIFont familyNames]] autorelease];
     NSArray *fontNames;
     NSInteger indFamily, indFont;
     NSMutableString *debugStr = [NSMutableString string];
@@ -47,7 +47,7 @@
     {
         [debugStr appendFormat:@"Family name: %@", [familyNames objectAtIndex:indFamily]];
         //DEBUGLOG(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
-        fontNames =[[NSArray alloc]initWithArray:[UIFont fontNamesForFamilyName:[familyNames objectAtIndex:indFamily]]];
+        fontNames =[[[NSArray alloc] initWithArray:[UIFont fontNamesForFamilyName:[familyNames objectAtIndex:indFamily]]] autorelease];
         for(indFont=0; indFont<[fontNames count]; ++indFont)
         {
             [debugStr appendFormat:@"\n  Font name: %@",[fontNames objectAtIndex:indFont]];

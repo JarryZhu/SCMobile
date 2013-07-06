@@ -57,7 +57,7 @@
         _titleLabel.text = self.title;
         
         _titleLabel.shadowOffset = CGSizeMake(0.4f, 0.6f);
-		_titleLabel.shadowColor = WHITE_COLOR;
+		_titleLabel.shadowColor = BLACK_COLOR;
         
 //        UITapGestureRecognizer *gesture = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleDidTapped:)] autorelease];
 //        [_titleLabel addGestureRecognizer:gesture];

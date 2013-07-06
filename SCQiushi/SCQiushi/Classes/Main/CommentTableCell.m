@@ -70,8 +70,8 @@
         _iconImage.contentMode = UIViewContentModeScaleAspectFill;
         _iconImage.image = IMAGENAMED(@"missing");
         
-        _iconImage.layer.masksToBounds = YES;
-        _iconImage.layer.cornerRadius = 2.0;
+        //_iconImage.layer.masksToBounds = YES;
+        //_iconImage.layer.cornerRadius = 2.0;
     }
     return _iconImage;
 }

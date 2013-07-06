@@ -10,6 +10,7 @@
 #import "QiushiItem.h"
 #import "DetailTopView.h"
 #import "CommentTableView.h"
+#import "MBSpinningCircle.h"
 #import "AdSageDelegate.h"
 #import "AdSageView.h"
 
@@ -19,6 +20,7 @@
 @property   (nonatomic, strong)     DetailTopView   *topView;
 @property   (nonatomic, strong)     CommentTableView *commentListView;
 @property   (nonatomic, strong)     UIView          *emptyView;
+@property   (nonatomic, strong)     MBSpinningCircle *spinningCircle;
 
 @property   (nonatomic, strong)     QiushiItem  *itemData;
 

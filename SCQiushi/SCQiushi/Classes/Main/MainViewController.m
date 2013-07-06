@@ -27,19 +27,7 @@
     [self addRefreshBlock];
     [self addLoadingBlock];
     [self addItemBlock];
-    
-#if kAdEnabled
-    //创建广告 banner
-    [self performBlock:^{
-        if (adView == nil) {
-            adView = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50]; //设置广告显示位置
-            adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
-        }
-        [self.view addSubview:adView];
         
-    } afterDelay:.5f];
-#endif
-    
     [self setupContent];
 }
 
@@ -63,6 +51,24 @@
 #if kAdEnabled
     [adView removeFromSuperview];
     adView = nil;
+#endif
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+#if kAdEnabled
+    //创建广告 banner
+    [self performBlock:^{
+        if (adView == nil) {
+            adView = [AdSageView requestAdSageBannerAdView:self sizeType:AdSageBannerAdViewSize_320X50]; //设置广告显示位置
+            adView.frame = CGRectMake(0, self.view.height - 50, 320, 50); //显示广告
+        }
+        if (![adView superview]) {
+            [self.view addSubview:adView];
+        }
+     
+    } afterDelay:.5f];
 #endif
 }
 

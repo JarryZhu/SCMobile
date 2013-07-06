@@ -31,7 +31,16 @@
     [self.contentView addSubview:self.topView];
     [self.contentView addSubview:self.commentListView];
     [self.contentView addSubview:self.emptyView];
+    [self.contentView addSubview:self.spinningCircle];
     [self.view addSubview:self.contentView];
+    
+    //
+    if (self.itemData.commentsCount > 0) {
+        self.spinningCircle.isAnimating = YES;
+        GCD_DEFAULT(^ {
+            [self requestCommentsList];
+        });
+    }
     
 #if kAdEnabled
     //创建广告 banner
@@ -55,14 +64,6 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    //
-    if (self.itemData.commentsCount > 0) {
-        GCD_DEFAULT(^ {
-            [self requestCommentsList];
-        });
-    }
-
 }
 
 - (void) viewDidUnload
@@ -95,17 +96,18 @@
 - (void) computerSize
 {
     //
-    //CGFloat commentHeight = 200;// (self.itemData.commentCount > 0) ? self.commentListView.height : 10;
+    CGFloat commentHeight = (self.commentListView.contentArray.count > 0) ? self.commentListView.height : 50;
     CGFloat topHeight = [self.topView getViewHeight];
     //[self.topView setFrameHeight:topHeight];
     [self.commentListView setFrameY:topHeight];
-    
+    [self.spinningCircle setFrameOrigin:CGPointMake(140, topHeight+12)];
+
+    [self.emptyView setFrameY:topHeight];
     if (self.itemData.commentsCount == 0) {
         [self.emptyView setHidden:NO];
-        [self.emptyView setFrameY:topHeight];
     }
     
-    CGFloat height = self.commentListView.y + self.commentListView.height + 52;
+    CGFloat height = topHeight + commentHeight + 52;
     [self.contentView setContentSize:CGSizeMake(320, height)];
 }
 
@@ -116,14 +118,20 @@
                                 onSuc:^(id content)
      {
          CommentResponse *response = [[CommentResponse alloc] initWithDictionary:content];
-         [self.commentListView setContentArray:response.result];
-         
          GCD_MAIN(^{
+             [self.commentListView setContentArray:response.result];
+             
+             self.spinningCircle.isAnimating = NO;
+             if (response.result.count == 0) {
+                 [self.emptyView setHidden:NO];
+             }
              [self computerSize];
          });
          
      } onFailed:^(id content) {
+         self.spinningCircle.isAnimating = NO;
      } onError:^(id content) {
+         self.spinningCircle.isAnimating = NO;
      }];
 }
 
@@ -182,6 +190,15 @@
         _emptyView.hidden = YES;
     }
     return _emptyView;
+}
+
+- (MBSpinningCircle *) spinningCircle
+{
+    if (!_spinningCircle) {
+        _spinningCircle = [MBSpinningCircle circleWithSize:NSSpinningCircleSizeSmall color:RGBCOLOR(0xED, 0xE4, 0xD5)];
+        //[_spinningCircle setFrameOrigin:CGPointMake(120, 200)];
+    }
+    return _spinningCircle;
 }
 
 #pragma mark - DetailViewDelegate

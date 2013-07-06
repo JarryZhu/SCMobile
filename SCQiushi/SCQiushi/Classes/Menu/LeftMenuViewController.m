@@ -30,19 +30,21 @@ static NSString *menuTitles[] = {@"谁能有我糗", @"精华连连看", @"有�
         UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 6, 320, 37)];
         [titleView addBackgroundStretchableImage:@"left_menu_head_bg" leftCapWidth:0 topCapHeight:0];
         
-        UILabel *titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 200, 37)];
-        titleLabel.font = BOLDSYSTEMFONT(15);
+        UILabel *titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(26, 0, 200, 37)];
+        titleLabel.font = SYSTEMFONT(15);
         titleLabel.backgroundColor = CLEAR_COLOR;
         titleLabel.textColor = WHITE_COLOR;
         titleLabel.lineBreakMode = UILineBreakModeTailTruncation;
-        titleLabel.text = [NSString stringWithFormat:@"%@  V%@", @"糗事贴吧", APP_VERSION];
+        titleLabel.text = [NSString stringWithFormat:@"%@  v%@", @"糗事贴吧", APP_VERSION];
         titleLabel.shadowOffset = CGSizeMake(0.4f, 0.6f);
-		titleLabel.shadowColor = DARKGRAY_COLOR;
+		titleLabel.shadowColor = BLACK_COLOR;
         [titleView addSubview:titleLabel];
         
         //
-        UIImageView *iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 16, 16)];
+        UIImageView *iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(6, 11, 15, 15)];
         iconImage.image = [UIImage imageNamed:@"icon"];
+        iconImage.layer.masksToBounds = YES;
+        iconImage.layer.cornerRadius = 2.0;
         [titleView addSubview:iconImage];
         
         [self.view addSubview:titleView];

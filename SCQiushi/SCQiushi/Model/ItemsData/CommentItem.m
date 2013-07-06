@@ -26,7 +26,6 @@
         if ((NSNull *)icon != [NSNull null])
         {
             self.iconURL = [NSString stringWithFormat:@"http://pic.moumentei.com/system/avtnew/%@/%@/thumb/%@", kIntToString(uId.intValue/10000), uId, [user objectForKey:@"icon"]];
-            WARNLOG(@"-- %@", self.iconURL);
         }
     }
 }
