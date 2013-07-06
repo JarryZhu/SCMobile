@@ -30,8 +30,8 @@ static NSString *menuTitles[] = {@"谁能有我糗", @"精华连连看", @"有�
         UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 6, 320, 37)];
         [titleView addBackgroundStretchableImage:@"left_menu_head_bg" leftCapWidth:0 topCapHeight:0];
         
-        UILabel *titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(26, 0, 200, 37)];
-        titleLabel.font = SYSTEMFONT(15);
+        UILabel *titleLabel  = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 200, 37)];
+        titleLabel.font = FONTNAMEWITHSIZE(@"Helvetica-Oblique", 15); //SYSTEMFONT(15);
         titleLabel.backgroundColor = CLEAR_COLOR;
         titleLabel.textColor = WHITE_COLOR;
         titleLabel.lineBreakMode = UILineBreakModeTailTruncation;
@@ -41,11 +41,11 @@ static NSString *menuTitles[] = {@"谁能有我糗", @"精华连连看", @"有�
         [titleView addSubview:titleLabel];
         
         //
-        UIImageView *iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(6, 11, 15, 15)];
+        UIImageView *iconImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 11, 15, 15)];
         iconImage.image = [UIImage imageNamed:@"icon"];
         iconImage.layer.masksToBounds = YES;
         iconImage.layer.cornerRadius = 2.0;
-        [titleView addSubview:iconImage];
+        //[titleView addSubview:iconImage];
         
         [self.view addSubview:titleView];
         

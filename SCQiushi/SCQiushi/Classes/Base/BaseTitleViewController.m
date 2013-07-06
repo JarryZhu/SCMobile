@@ -48,7 +48,7 @@
     if (!_titleLabel) {
         _titleLabel  = [[UILabel alloc] init];
         _titleLabel.frame = HEADER_TITLE_FRAME;
-        _titleLabel.font = TNRFONTSIZE(20);
+        _titleLabel.font = BOLDTNRFONTSIZE(20);
         _titleLabel.backgroundColor = CLEAR_COLOR;
         _titleLabel.textColor = RGBCOLOR(0xff, 0xf1, 0xcc);
         _titleLabel.lineBreakMode = UILineBreakModeTailTruncation;

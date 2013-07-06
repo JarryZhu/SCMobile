@@ -8,6 +8,12 @@
 
 #import "BaseTitleViewController.h"
 
-@interface SettingViewController : BaseTitleViewController
+@interface SettingViewController : BaseTitleViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
+
+@property   (nonatomic, strong)     UITableView *tableView;
+
+@property   (nonatomic, strong)     UILabel     *copyRightLabel;
+
+@property   (nonatomic, copy)       NSString    *memorySize;
 
 @end

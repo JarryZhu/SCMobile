@@ -20,19 +20,19 @@
     if (igb != 0)
     {
         double fmb = (imb - igb * 1024) / 1024.0;
-        NSString *GBString = [[[NSString alloc] initWithString:[NSString stringWithFormat:@"%.2fGB",(igb+fmb)]] autorelease];
+        NSString *GBString = [[[NSString alloc] initWithString:[NSString stringWithFormat:@"%.2fG",(igb+fmb)]] autorelease];
         return GBString;
     }
     else if (imb != 0)
     {
         double fkb = (ikb - imb * 1024) / 1024.0;
-        NSString *MBString = [[[NSString alloc] initWithString:[NSString stringWithFormat:@"%.2fMB",(imb+fkb)]] autorelease];
+        NSString *MBString = [[[NSString alloc] initWithString:[NSString stringWithFormat:@"%.2fM",(imb+fkb)]] autorelease];
         return MBString;
     }
     else if (ikb != 0)
     {
         float fb = (byte - ikb * 1024) / 1024.0;
-        NSString *KBString = [[[NSString alloc] initWithString:[NSString stringWithFormat:@"%.2fKB",(ikb+fb)]] autorelease];
+        NSString *KBString = [[[NSString alloc] initWithString:[NSString stringWithFormat:@"%.2fK",(ikb+fb)]] autorelease];
         return KBString;
     }
     else
