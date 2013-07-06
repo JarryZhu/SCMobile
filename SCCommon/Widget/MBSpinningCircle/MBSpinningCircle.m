@@ -70,7 +70,7 @@
     _isAnimating = animating;
     if(animating)
     {
-        [UIView animateWithDuration:0.3 animations:^{ self.alpha = 1.0; }];
+        [UIView animateWithDuration:0.1 animations:^{ self.alpha = 1.0; }];
         [self addRotationAnimation];
     }
     else
@@ -81,7 +81,7 @@
 
 - (void) hide
 {
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         self.alpha = 0.0;
     } completion:^(BOOL fin) {
         [self.layer removeAllAnimations];

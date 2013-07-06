@@ -127,6 +127,8 @@
     CGRect frame = SCREEN_FRAME;
     frame.origin.x = 320;
     viewController.view.frame = frame;
+    viewController.view.layer.cornerRadius = 5;
+    viewController.view.layer.masksToBounds = YES;
     [self.view.superview addSubview:viewController.view];
     
     __block MLNavigationController *blockSelf = self;
