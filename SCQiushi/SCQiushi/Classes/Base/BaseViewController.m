@@ -59,11 +59,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    // DataTracker
+    [[DataTracker sharedInstance] beginTrackPage:self.pageViewId];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    // DataTracker
+    [[DataTracker sharedInstance] endTrackPage:self.pageViewId];
     
     [self finishProgress];
 }

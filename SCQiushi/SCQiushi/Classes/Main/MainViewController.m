@@ -22,6 +22,7 @@
 //    [self.titleView addSubview:self.rightButton];
     
     self.title = @"谁能有我糗";
+    self.pageViewId = @"谁能有我糗";
     
     [self.view addSubview:self.tableView];
     [self addRefreshBlock];
@@ -77,8 +78,11 @@
     [NetServiceFace cancelServiceMethod:self.apiMethod];
     self.apiMethod = apiId;
     self.title = title;
-    [self.request resetPage];
     
+    self.pageViewId = title;
+    [[DataTracker sharedInstance] beginTrackPage:self.pageViewId];
+    
+    [self.request resetPage];
     [self.tableView resetContent];
     [self.tableView prepareToRefresh:^{
         [self sendRequest];

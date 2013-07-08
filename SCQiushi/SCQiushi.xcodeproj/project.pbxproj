@@ -93,6 +93,9 @@
 		44A4683C17854B5500022568 /* CommentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683B17854B5500022568 /* CommentTableCell.m */; };
 		44A4683F178555AB00022568 /* CommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683E178555AB00022568 /* CommentItem.m */; };
 		44A46842178557A600022568 /* CommentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A46841178557A600022568 /* CommentResponse.m */; };
+		44B11EE017898E7C00C9F565 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B11EDF17898E7C00C9F565 /* libGoogleAnalytics.a */; };
+		44B11EE517898F4000C9F565 /* DataTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B11EE417898F4000C9F565 /* DataTracker.m */; };
+		44B11EEB1789956200C9F565 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B11EEA1789956200C9F565 /* CoreData.framework */; };
 		44B55CA217811D7400008A2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B55CA117811D7400008A2E /* AudioToolbox.framework */; };
 		44B55CA417811E0D00008A2E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B55CA317811E0D00008A2E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		44BC41A0178403C2004CF8A9 /* divider_line_bold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BC419E178403C2004CF8A9 /* divider_line_bold@2x.png */; };
@@ -298,6 +301,16 @@
 		44A4683E178555AB00022568 /* CommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentItem.m; sourceTree = "<group>"; };
 		44A46840178557A600022568 /* CommentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentResponse.h; sourceTree = "<group>"; };
 		44A46841178557A600022568 /* CommentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentResponse.m; sourceTree = "<group>"; };
+		44B11EDA17898E7C00C9F565 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		44B11EDB17898E7C00C9F565 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		44B11EDC17898E7C00C9F565 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		44B11EDD17898E7C00C9F565 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		44B11EDE17898E7C00C9F565 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		44B11EDF17898E7C00C9F565 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		44B11EE317898F4000C9F565 /* DataTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTracker.h; sourceTree = "<group>"; };
+		44B11EE417898F4000C9F565 /* DataTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTracker.m; sourceTree = "<group>"; };
+		44B11EE7178992AA00C9F565 /* TrackerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackerDefine.h; sourceTree = "<group>"; };
+		44B11EEA1789956200C9F565 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		44B55CA117811D7400008A2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		44B55CA317811E0D00008A2E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		44BC419E178403C2004CF8A9 /* divider_line_bold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "divider_line_bold@2x.png"; sourceTree = "<group>"; };
@@ -344,6 +357,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B11EEB1789956200C9F565 /* CoreData.framework in Frameworks */,
 				449DF9051786B44800DD8690 /* Social.framework in Frameworks */,
 				449DF9031786B44000DD8690 /* PassKit.framework in Frameworks */,
 				449C25251783B3170097C28F /* MapKit.framework in Frameworks */,
@@ -372,6 +386,7 @@
 				449C251D1783B1450097C28F /* libAderSDK.a in Frameworks */,
 				44A468351785200C00022568 /* libMobiSageRecommend.a in Frameworks */,
 				449DF9011786B40700DD8690 /* libDomobAdSDK.a in Frameworks */,
+				44B11EE017898E7C00C9F565 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +673,7 @@
 		449E9124177E70C900D39119 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				44B11ED917898E7C00C9F565 /* GoogleAnalytics */,
 				449E8D3C177EC71700CB3065 /* SDWebImage */,
 				449E8D21177EC6AE00CB3065 /* MobiSage */,
 			);
@@ -765,6 +781,47 @@
 			path = "../../../SCCommon/Vender/MobiSage/lite/Other File/Recommend";
 			sourceTree = "<group>";
 		};
+		44B11ED917898E7C00C9F565 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				44B11EDA17898E7C00C9F565 /* GAI.h */,
+				44B11EDB17898E7C00C9F565 /* GAITrackedViewController.h */,
+				44B11EDC17898E7C00C9F565 /* GAITracker.h */,
+				44B11EDD17898E7C00C9F565 /* GAITransaction.h */,
+				44B11EDE17898E7C00C9F565 /* GAITransactionItem.h */,
+				44B11EDF17898E7C00C9F565 /* libGoogleAnalytics.a */,
+			);
+			name = GoogleAnalytics;
+			path = ../../../SCCommon/Vender/GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		44B11EE117898F2000C9F565 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				44B11EE217898F4000C9F565 /* DataTracker */,
+			);
+			name = Utility;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		44B11EE217898F4000C9F565 /* DataTracker */ = {
+			isa = PBXGroup;
+			children = (
+				44B11EE317898F4000C9F565 /* DataTracker.h */,
+				44B11EE417898F4000C9F565 /* DataTracker.m */,
+			);
+			name = DataTracker;
+			path = ../../../SCCommon/Utility/DataTracker;
+			sourceTree = "<group>";
+		};
+		44B11EE61789924300C9F565 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				44B11EE7178992AA00C9F565 /* TrackerDefine.h */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		44BC41A5178411AB004CF8A9 /* ImageButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -801,6 +858,7 @@
 				44C04F6D17745377005AA1D7 /* libs */,
 				44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */,
 				449C251E1783B1C90097C28F /* libxml2.dylib */,
+				44B11EEA1789956200C9F565 /* CoreData.framework */,
 				449DF9041786B44700DD8690 /* Social.framework */,
 				449DF9021786B44000DD8690 /* PassKit.framework */,
 				449C25241783B3170097C28F /* MapKit.framework */,
@@ -828,11 +886,13 @@
 		44C04F381774535E005AA1D7 /* SCQiushi */ = {
 			isa = PBXGroup;
 			children = (
+				44B11EE61789924300C9F565 /* Global */,
 				44C04F6E17745410005AA1D7 /* AppDelegate */,
 				44C04F7217745430005AA1D7 /* Classes */,
 				449D8D17177BCA5800D7CF78 /* Widget */,
 				449E92CE177EBF5000D39119 /* NetAdapter */,
 				449E93BE178166620099A91C /* Model */,
+				44B11EE117898F2000C9F565 /* Utility */,
 				449E9124177E70C900D39119 /* Vender */,
 				44C04F8117745787005AA1D7 /* Resources */,
 				44C04F391774535E005AA1D7 /* Supporting Files */,
@@ -1105,6 +1165,7 @@
 				449DF8FF1786B40700DD8690 /* AdSageAdapterDoMob.m in Sources */,
 				449DF9091786C78400DD8690 /* SettingViewController.m in Sources */,
 				449DF90F1787AFAD00DD8690 /* MBSpinningCircle.m in Sources */,
+				44B11EE517898F4000C9F565 /* DataTracker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1229,6 +1290,7 @@
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Ader\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Other File/Recommend\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Domob\"",
+					"\"$(SRCROOT)/../SCCommon/Vender/GoogleAnalytics\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1243,8 +1305,8 @@
 		44C04F691774535F005AA1D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: 俭 谌 (3MMKKPU4HW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 俭 谌 (3MMKKPU4HW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: HANGZHOU SUCANG TECHNOLOGY CO.,LTD (LHLYYKHQ2G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HANGZHOU SUCANG TECHNOLOGY CO.,LTD (LHLYYKHQ2G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../SCCommon/Vender\"",
@@ -1261,14 +1323,15 @@
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Ader\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Other File/Recommend\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Domob\"",
+					"\"$(SRCROOT)/../SCCommon/Vender/GoogleAnalytics\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "099FD5BB-7D9A-4F0D-BA44-9722D57AEAFF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "099FD5BB-7D9A-4F0D-BA44-9722D57AEAFF";
+				PROVISIONING_PROFILE = "23B6B1C9-14F7-4CD8-99D0-0592F047AE82";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "23B6B1C9-14F7-4CD8-99D0-0592F047AE82";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};

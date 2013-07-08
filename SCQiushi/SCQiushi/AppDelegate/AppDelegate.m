@@ -23,7 +23,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [SCLog initLog];    //init SCLog utility
+    // init SCLog utility
+    [SCLog initLog];
+    
+    // DataTracker
+    [[DataTracker sharedInstance] startDataTracker];
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
@@ -61,6 +65,9 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    //
+    [[DataTracker sharedInstance] submitTrack];
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

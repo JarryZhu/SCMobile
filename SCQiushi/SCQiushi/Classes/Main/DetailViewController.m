@@ -20,6 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = @"糗事真相";
+    self.pageViewId = self.title;
     
     self.titleLabel.textColor = RGBCOLOR(0x83, 0x60, 0x3b);
     self.titleLabel.shadowColor = WHITE_COLOR;
