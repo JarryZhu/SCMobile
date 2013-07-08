@@ -32,6 +32,13 @@
 		self.textLabel.textColor = COLOR_MENU_TEXT;
         self.textLabel.highlightedTextColor = LIGHTGRAY_COLOR;
         
+        UIImageView *selectView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 4, kMenuCellHeight)];
+        selectView.contentMode = UIViewContentModeScaleToFill;
+        selectView.image = IMAGENAMED(@"left_menu_cell_select");
+        selectView.alpha = 0.0;
+        selectView.tag = 100;
+        [self addSubview:selectView];
+        
         UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(230, 0, 10, kMenuCellHeight)];
         accessoryView.backgroundColor = CLEAR_COLOR;
         accessoryView.contentMode = UIViewContentModeCenter;
@@ -47,6 +54,12 @@
         
     }
     return self;
+}
+
+- (void) setChecked:(BOOL)select
+{
+    UIView *view = [self viewWithTag:100];
+    view.alpha = select ? 1.0 : 0.0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

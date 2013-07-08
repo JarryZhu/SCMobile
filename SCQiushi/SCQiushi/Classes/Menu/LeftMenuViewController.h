@@ -18,6 +18,7 @@ enum eMenuID
 @interface LeftMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     //AdSageView * adView;
+    NSInteger selectIndex;
 }
 
 @property   (nonatomic, retain)     UITableView     *tableView;

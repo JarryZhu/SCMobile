@@ -12,4 +12,7 @@
 
 @interface LeftMenuCell : UITableViewCell
 
+
+- (void) setChecked:(BOOL)select;
+
 @end

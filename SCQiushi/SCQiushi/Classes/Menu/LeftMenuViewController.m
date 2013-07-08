@@ -121,6 +121,10 @@ static int numbers[] = {4, 3};
     
     cell.textLabel.text = menuTitles[indexPath.section*4+indexPath.row];
     
+    if (indexPath.section == 0) {
+        [cell setChecked:(selectIndex==indexPath.row)];
+    }
+    
     return cell;
 }
 
@@ -155,6 +159,9 @@ static int numbers[] = {4, 3};
     
     if (indexPath.section == 0) {
         [[AppDelegate sharedAppDelegate] switchMenu:indexPath.row animated:YES exData:menuTitles[indexPath.row]];
+        //
+        selectIndex = indexPath.row;
+        [tableView reloadData];
     }
     else if (indexPath.section == 1) {
         if (indexPath.row == 1) {
@@ -162,6 +169,7 @@ static int numbers[] = {4, 3};
         }
         [[AppDelegate sharedAppDelegate] switchMenu:4+indexPath.row animated:YES exData:nil];
     }
+    
 }
 
 /*
