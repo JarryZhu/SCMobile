@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "UISplashWindow.h"
+#import "DataTracker.h"
+
 #import "LeftMenuViewController.h"
 #import "MainViewController.h"
 #import "FavoriteViewController.h"
@@ -29,9 +32,6 @@
     // DataTracker
     [[DataTracker sharedInstance] startDataTracker];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -50,8 +50,16 @@
     }
     
     self.window.rootViewController = self.menuController;
-    [self.window makeKeyAndVisible];
+    //[self.window makeKeyAndVisible];
     
+    //启动画面加载
+    __block AppDelegate *blockSelf = self;
+    [UISplashWindow dismiss:^{
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+        [blockSelf.window makeKeyAndVisible];
+    }];
+
     return YES;
 }
 

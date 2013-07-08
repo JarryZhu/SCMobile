@@ -9,6 +9,7 @@
 #import "DetailTopView.h"
 #import "UIButton+WebCache.h"
 #import "UIImageView+WebCache.h"
+#import "SCImageBrowserView.h"
 
 @implementation DetailTopView
 
@@ -81,6 +82,7 @@
     }
     
     if (itemData.imageMidURL) {
+        self.imageUrl = itemData.imageMidURL;
         //获取大图
         [self performBlock:^{
             [self.contentImage setImageWithURL:[NSURL URLWithString:itemData.imageMidURL]
@@ -134,6 +136,10 @@
     CGContextFillRect(context, CGRectMake(10.0f, [self getViewHeight]-2.0f, SCREEN_WIDTH-20.0f, 2.0f));
 }
 
+- (IBAction) imageClick:(id)sender
+{
+    [SCImageBrowserView showImage:_contentImage.imageView.image url:self.imageUrl disappear:nil];
+}
 
 #pragma mark - Views Init
 
@@ -195,11 +201,12 @@
     return _contentLabel;
 }
 
-- (UIImageView *) contentImage
+- (ImageContent *) contentImage
 {
     if (!_contentImage) {
-        _contentImage = [[UIImageView alloc] initWithFrame:CGRectMake(12, 8, 280, 280)];
-        _contentImage.contentMode = UIViewContentModeScaleToFill;
+        _contentImage = [[ImageContent alloc] initWithFrame:CGRectMake(12, 8, 280, 280)];
+        
+        [_contentImage addTarget:self action:@selector(imageClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _contentImage;
 }

@@ -93,6 +93,15 @@
 		44A4683C17854B5500022568 /* CommentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683B17854B5500022568 /* CommentTableCell.m */; };
 		44A4683F178555AB00022568 /* CommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A4683E178555AB00022568 /* CommentItem.m */; };
 		44A46842178557A600022568 /* CommentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A46841178557A600022568 /* CommentResponse.m */; };
+		44A686D9178A56A100CEE180 /* ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A686D8178A56A100CEE180 /* ImageContent.m */; };
+		44A686DC178A57B900CEE180 /* UISplashWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A686DB178A57B900CEE180 /* UISplashWindow.m */; };
+		44A68710178A68CF00CEE180 /* AdSageAdapterBaidu.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A686DF178A68CE00CEE180 /* AdSageAdapterBaidu.m */; };
+		44A68711178A68CF00CEE180 /* baidumobadsdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44A686E1178A68CE00CEE180 /* baidumobadsdk.bundle */; };
+		44A68712178A68CF00CEE180 /* libBaiduMobAdSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A686E3178A68CE00CEE180 /* libBaiduMobAdSdk.a */; };
+		44A68713178A68CF00CEE180 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = 44A686E5178A68CE00CEE180 /* mongoose.c */; };
+		44A6876C178A743E00CEE180 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A6876B178A743E00CEE180 /* AVFoundation.framework */; };
+		44A6876E178A746A00CEE180 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A6876D178A746A00CEE180 /* MediaPlayer.framework */; };
+		44A68770178A749800CEE180 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A6876F178A749800CEE180 /* CoreMotion.framework */; };
 		44B11EE017898E7C00C9F565 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B11EDF17898E7C00C9F565 /* libGoogleAnalytics.a */; };
 		44B11EE517898F4000C9F565 /* DataTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B11EE417898F4000C9F565 /* DataTracker.m */; };
 		44B11EEB1789956200C9F565 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B11EEA1789956200C9F565 /* CoreData.framework */; };
@@ -301,6 +310,21 @@
 		44A4683E178555AB00022568 /* CommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentItem.m; sourceTree = "<group>"; };
 		44A46840178557A600022568 /* CommentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentResponse.h; sourceTree = "<group>"; };
 		44A46841178557A600022568 /* CommentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentResponse.m; sourceTree = "<group>"; };
+		44A686D7178A56A100CEE180 /* ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContent.h; sourceTree = "<group>"; };
+		44A686D8178A56A100CEE180 /* ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContent.m; sourceTree = "<group>"; };
+		44A686DA178A57B900CEE180 /* UISplashWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISplashWindow.h; sourceTree = "<group>"; };
+		44A686DB178A57B900CEE180 /* UISplashWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISplashWindow.m; sourceTree = "<group>"; };
+		44A686DE178A68CE00CEE180 /* AdSageAdapterBaidu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapterBaidu.h; sourceTree = "<group>"; };
+		44A686DF178A68CE00CEE180 /* AdSageAdapterBaidu.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AdSageAdapterBaidu.m; sourceTree = "<group>"; };
+		44A686E0178A68CE00CEE180 /* BaiduMobAdDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdDelegateProtocol.h; sourceTree = "<group>"; };
+		44A686E1178A68CE00CEE180 /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
+		44A686E2178A68CE00CEE180 /* BaiduMobAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdView.h; sourceTree = "<group>"; };
+		44A686E3178A68CE00CEE180 /* libBaiduMobAdSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobAdSdk.a; sourceTree = "<group>"; };
+		44A686E5178A68CE00CEE180 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
+		44A686E6178A68CE00CEE180 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
+		44A6876B178A743E00CEE180 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		44A6876D178A746A00CEE180 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		44A6876F178A749800CEE180 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		44B11EDA17898E7C00C9F565 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		44B11EDB17898E7C00C9F565 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
 		44B11EDC17898E7C00C9F565 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
@@ -357,6 +381,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A68770178A749800CEE180 /* CoreMotion.framework in Frameworks */,
+				44A6876E178A746A00CEE180 /* MediaPlayer.framework in Frameworks */,
+				44A6876C178A743E00CEE180 /* AVFoundation.framework in Frameworks */,
 				44B11EEB1789956200C9F565 /* CoreData.framework in Frameworks */,
 				449DF9051786B44800DD8690 /* Social.framework in Frameworks */,
 				449DF9031786B44000DD8690 /* PassKit.framework in Frameworks */,
@@ -387,6 +414,7 @@
 				44A468351785200C00022568 /* libMobiSageRecommend.a in Frameworks */,
 				449DF9011786B40700DD8690 /* libDomobAdSDK.a in Frameworks */,
 				44B11EE017898E7C00C9F565 /* libGoogleAnalytics.a in Frameworks */,
+				44A68712178A68CF00CEE180 /* libBaiduMobAdSdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +434,7 @@
 		449C021917812BA900B4CB9A /* Adater File */ = {
 			isa = PBXGroup;
 			children = (
+				44A686DD178A68CE00CEE180 /* Baidu */,
 				449DF8F51786B40700DD8690 /* Domob */,
 				449C25141783B1450097C28F /* Ader */,
 				449C021A17812BDB00B4CB9A /* AdMob */,
@@ -781,6 +810,30 @@
 			path = "../../../SCCommon/Vender/MobiSage/lite/Other File/Recommend";
 			sourceTree = "<group>";
 		};
+		44A686DD178A68CE00CEE180 /* Baidu */ = {
+			isa = PBXGroup;
+			children = (
+				44A686DE178A68CE00CEE180 /* AdSageAdapterBaidu.h */,
+				44A686DF178A68CE00CEE180 /* AdSageAdapterBaidu.m */,
+				44A686E0178A68CE00CEE180 /* BaiduMobAdDelegateProtocol.h */,
+				44A686E1178A68CE00CEE180 /* baidumobadsdk.bundle */,
+				44A686E2178A68CE00CEE180 /* BaiduMobAdView.h */,
+				44A686E3178A68CE00CEE180 /* libBaiduMobAdSdk.a */,
+				44A686E4178A68CE00CEE180 /* Mongoose */,
+			);
+			name = Baidu;
+			path = "../../../SCCommon/Vender/MobiSage/lite/Adapter File/Baidu";
+			sourceTree = "<group>";
+		};
+		44A686E4178A68CE00CEE180 /* Mongoose */ = {
+			isa = PBXGroup;
+			children = (
+				44A686E5178A68CE00CEE180 /* mongoose.c */,
+				44A686E6178A68CE00CEE180 /* mongoose.h */,
+			);
+			path = Mongoose;
+			sourceTree = "<group>";
+		};
 		44B11ED917898E7C00C9F565 /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +880,8 @@
 			children = (
 				44BC41A6178411E6004CF8A9 /* ImageCountButton.h */,
 				44BC41A7178411E6004CF8A9 /* ImageCountButton.m */,
+				44A686D7178A56A100CEE180 /* ImageContent.h */,
+				44A686D8178A56A100CEE180 /* ImageContent.m */,
 			);
 			path = ImageButton;
 			sourceTree = "<group>";
@@ -858,6 +913,9 @@
 				44C04F6D17745377005AA1D7 /* libs */,
 				44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */,
 				449C251E1783B1C90097C28F /* libxml2.dylib */,
+				44A6876F178A749800CEE180 /* CoreMotion.framework */,
+				44A6876D178A746A00CEE180 /* MediaPlayer.framework */,
+				44A6876B178A743E00CEE180 /* AVFoundation.framework */,
 				44B11EEA1789956200C9F565 /* CoreData.framework */,
 				449DF9041786B44700DD8690 /* Social.framework */,
 				449DF9021786B44000DD8690 /* PassKit.framework */,
@@ -947,6 +1005,8 @@
 			children = (
 				44C04F6F17745410005AA1D7 /* AppDelegate.h */,
 				44C04F7017745410005AA1D7 /* AppDelegate.m */,
+				44A686DA178A57B900CEE180 /* UISplashWindow.h */,
+				44A686DB178A57B900CEE180 /* UISplashWindow.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1081,6 +1141,7 @@
 				44A468361785200C00022568 /* MobiSageRecommendBundle.bundle in Resources */,
 				449DF9001786B40700DD8690 /* DomobAdSDKBundle.bundle in Resources */,
 				449DF90B1786C84600DD8690 /* top_btn_close@2x.png in Resources */,
+				44A68711178A68CF00CEE180 /* baidumobadsdk.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1166,6 +1227,10 @@
 				449DF9091786C78400DD8690 /* SettingViewController.m in Sources */,
 				449DF90F1787AFAD00DD8690 /* MBSpinningCircle.m in Sources */,
 				44B11EE517898F4000C9F565 /* DataTracker.m in Sources */,
+				44A686D9178A56A100CEE180 /* ImageContent.m in Sources */,
+				44A686DC178A57B900CEE180 /* UISplashWindow.m in Sources */,
+				44A68710178A68CF00CEE180 /* AdSageAdapterBaidu.m in Sources */,
+				44A68713178A68CF00CEE180 /* mongoose.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,6 +1356,7 @@
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Other File/Recommend\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Domob\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/GoogleAnalytics\"",
+					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Baidu\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1324,6 +1390,7 @@
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Other File/Recommend\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Domob\"",
 					"\"$(SRCROOT)/../SCCommon/Vender/GoogleAnalytics\"",
+					"\"$(SRCROOT)/../SCCommon/Vender/MobiSage/lite/Adapter File/Baidu\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

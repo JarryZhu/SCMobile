@@ -77,7 +77,7 @@
     return _viewController;
 }
 
-- (void) dissmiss
+- (void) dismiss
 {
     __block SCSplashWindow *blockSelf = self;
     [self performBlock:^{

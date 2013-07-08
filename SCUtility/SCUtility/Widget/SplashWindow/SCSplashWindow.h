@@ -17,7 +17,7 @@
 
 - (void) initViews;
 
-- (void) dissmiss;
+- (void) dismiss;
 
 - (void) recoveryMemory;
 

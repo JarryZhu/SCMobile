@@ -8,6 +8,7 @@
 
 #import "QiushiItem.h"
 #import "ImageCountButton.h"
+#import "ImageContent.h"
 
 #define kDefaultIconImage   @"missing"
 #define kUserNameColor      RGBCOLOR(0xAA, 0x80, 0x41)
@@ -20,13 +21,15 @@
 @property   (nonatomic, strong)     UILabel     *userNameLabel;
 @property   (nonatomic, strong)     UILabel     *timeLabel;
 @property   (nonatomic, strong)     UILabel     *contentLabel;
-@property   (nonatomic, strong)     UIImageView *contentImage;
+@property   (nonatomic, strong)     ImageContent *contentImage;
 
 @property   (nonatomic, strong)     UIView      *bottomView;
 @property   (nonatomic, strong)     ImageCountButton *likeButton;
 @property   (nonatomic, strong)     ImageCountButton *againstButton;
 @property   (nonatomic, strong)     ImageCountButton *commentButton;
 @property   (nonatomic, strong)     UIButton    *favoriteButton;
+
+@property   (nonatomic, copy)       NSString    *imageUrl;
 
 @property   (nonatomic, ARC_WEAK)   id<DetailViewDelegate> delegate;
 

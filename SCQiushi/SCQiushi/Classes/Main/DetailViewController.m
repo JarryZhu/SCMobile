@@ -36,12 +36,12 @@
     [self.view addSubview:self.contentView];
     
     //
-    if (self.itemData.commentsCount > 0) {
+    //if (self.itemData.commentsCount > 0) {
         self.spinningCircle.isAnimating = YES;
         GCD_DEFAULT(^ {
             [self requestCommentsList];
         });
-    }
+    //}
     
 #if kAdEnabled
     //创建广告 banner
@@ -104,9 +104,9 @@
     [self.spinningCircle setFrameOrigin:CGPointMake(140, topHeight+12)];
 
     [self.emptyView setFrameY:topHeight];
-    if (self.itemData.commentsCount == 0) {
-        [self.emptyView setHidden:NO];
-    }
+//    if (self.itemData.commentsCount == 0) {
+//        [self.emptyView setHidden:NO];
+//    }
     
     CGFloat height = topHeight + commentHeight + 52;
     [self.contentView setContentSize:CGSizeMake(320, height)];
@@ -121,6 +121,7 @@
          CommentResponse *response = [[CommentResponse alloc] initWithDictionary:content];
          GCD_MAIN(^{
              [self.commentListView setContentArray:response.result];
+             self.itemData.commentsCount = response.count;
              
              self.spinningCircle.isAnimating = NO;
              if (response.result.count == 0) {
@@ -181,7 +182,7 @@
         textLabel.font = SYSTEMFONT(15.0f);
         textLabel.backgroundColor = CLEAR_COLOR;
         textLabel.textColor = DARKGRAY_COLOR;
-        textLabel.text = @"亲，还没有评论哦~~";
+        textLabel.text = @"亲，还没有糗友评论哦~~";
         [_emptyView addSubview:textLabel];
 
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(10, 49, 300, 1.0f)];

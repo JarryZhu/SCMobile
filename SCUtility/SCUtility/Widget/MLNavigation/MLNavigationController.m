@@ -163,9 +163,58 @@
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-    [self.screenShotsList removeLastObject];
+    if (animated) {
+        [self popAnimated];
+        return nil;
+    }
     
+    [self.screenShotsList removeLastObject];
     return [super popViewControllerAnimated:animated];
+}
+
+- (void) popAnimated
+{
+    if (!self.backgroundView)
+    {
+        CGRect frame = self.view.frame;
+        
+        self.backgroundView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width , frame.size.height)] autorelease];
+        self.backgroundView.backgroundColor = BLACK_COLOR;
+        [self.view.superview insertSubview:self.backgroundView belowSubview:self.view];
+        
+        blackMask = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width , frame.size.height)] autorelease];
+        blackMask.backgroundColor = [UIColor blackColor];
+        [self.backgroundView addSubview:blackMask];
+    }
+    
+    if (lastScreenShotView) [lastScreenShotView removeFromSuperview];
+    
+    UIImage *lastScreenShot = [self.screenShotsList lastObject];
+    lastScreenShotView = [[[UIImageView alloc] initWithImage:lastScreenShot] autorelease];
+    [self.backgroundView insertSubview:lastScreenShotView belowSubview:blackMask];
+    
+    [self moveViewWithX:0];
+    
+    __block MLNavigationController *blockSelf = self;
+    [UIView animateWithDuration:0.3 animations:^{
+        [blockSelf moveViewWithX:320];
+    } completion:^(BOOL finished) {
+        
+        if (lastScreenShotView) {
+            [lastScreenShotView removeFromSuperview];
+            lastScreenShotView = nil;
+        }
+        if (blockSelf.backgroundView) {
+            [blockSelf.backgroundView removeFromSuperview];
+            blockSelf.backgroundView = nil;
+        }
+        
+        [blockSelf popViewControllerAnimated:NO];
+        
+        CGRect frame = blockSelf.view.frame;
+        frame.origin.x = 0;
+        blockSelf.view.frame = frame;
+    }];
 }
 
 //- (void) setCanDragBack:(BOOL)canDragBack
