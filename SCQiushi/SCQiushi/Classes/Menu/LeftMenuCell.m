@@ -32,13 +32,6 @@
 		self.textLabel.textColor = COLOR_MENU_TEXT;
         self.textLabel.highlightedTextColor = LIGHTGRAY_COLOR;
         
-        UIImageView *selectView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 4, kMenuCellHeight)];
-        selectView.contentMode = UIViewContentModeScaleToFill;
-        selectView.image = IMAGENAMED(@"left_menu_cell_select");
-        selectView.alpha = 0.0;
-        selectView.tag = 100;
-        [self addSubview:selectView];
-        
         UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(230, 0, 10, kMenuCellHeight)];
         accessoryView.backgroundColor = CLEAR_COLOR;
         accessoryView.contentMode = UIViewContentModeCenter;
@@ -51,6 +44,13 @@
         UIView *bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, kMenuCellHeight-1, 320, 1)];
         [bottomLine addBackgroundColor:@"left_menu_line2"];
         [self addSubview:bottomLine];
+        
+        UIImageView *selectView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 4, kMenuCellHeight)];
+        selectView.contentMode = UIViewContentModeScaleToFill;
+        selectView.image = IMAGENAMED(@"left_menu_cell_select");
+        selectView.alpha = 0.0;
+        selectView.tag = 100;
+        [self addSubview:selectView];
         
     }
     return self;

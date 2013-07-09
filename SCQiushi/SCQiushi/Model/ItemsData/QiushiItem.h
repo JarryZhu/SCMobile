@@ -27,3 +27,12 @@
 - (NSString *) shortContent;
 
 @end
+
+
+@interface DBItem : NSObject
+
+@property (nonatomic,copy)  NSString    *qiushiID;      //糗事id
+@property (nonatomic,copy)  NSString    *content;       //内容
+@property (nonatomic,copy)  NSString    *anchor;        //作者
+
+@end

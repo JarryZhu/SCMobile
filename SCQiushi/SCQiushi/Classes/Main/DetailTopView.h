@@ -29,7 +29,7 @@
 @property   (nonatomic, strong)     ImageCountButton *commentButton;
 @property   (nonatomic, strong)     UIButton    *favoriteButton;
 
-@property   (nonatomic, copy)       NSString    *imageUrl;
+@property   (nonatomic, strong)     QiushiItem  *itemData;
 
 @property   (nonatomic, ARC_WEAK)   id<DetailViewDelegate> delegate;
 

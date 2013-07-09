@@ -57,4 +57,23 @@
     }
 }
 
++ (NSString *) getPrimaryKey
+{
+    return @"qiushiID";
+}
+
++ (NSString *) getTableName
+{
+    return @"QiushiTable";
+}
+
++ (int) getTableVersion
+{
+    return 1;
+}
+
+@end
+
+@implementation DBItem
+
 @end

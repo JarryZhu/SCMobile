@@ -11,6 +11,16 @@
 		441F9023177D8E9700C66F97 /* left_menu_cell_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9022177D8E9700C66F97 /* left_menu_cell_select@2x.png */; };
 		441F9026177D933300C66F97 /* left_menu_line1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9024177D933300C66F97 /* left_menu_line1@2x.png */; };
 		441F9027177D933300C66F97 /* left_menu_line2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 441F9025177D933300C66F97 /* left_menu_line2@2x.png */; };
+		4472E4A5178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E493178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.m */; };
+		4472E4A6178BE92500AB52A3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E496178BE92500AB52A3 /* FMDatabase.m */; };
+		4472E4A7178BE92500AB52A3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E498178BE92500AB52A3 /* FMDatabaseAdditions.m */; };
+		4472E4A8178BE92500AB52A3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E49A178BE92500AB52A3 /* FMDatabasePool.m */; };
+		4472E4A9178BE92500AB52A3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E49C178BE92500AB52A3 /* FMDatabaseQueue.m */; };
+		4472E4AA178BE92500AB52A3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E49E178BE92500AB52A3 /* FMResultSet.m */; };
+		4472E4AB178BE92500AB52A3 /* LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E4A0178BE92500AB52A3 /* LKDBHelper.m */; };
+		4472E4AC178BE92500AB52A3 /* LKDBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E4A2178BE92500AB52A3 /* LKDBUtils.m */; };
+		4472E4AD178BE92500AB52A3 /* NSObject+LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472E4A4178BE92500AB52A3 /* NSObject+LKModel.m */; };
+		4472E4AF178BE95600AB52A3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4472E4AE178BE95600AB52A3 /* libsqlite3.dylib */; };
 		449C022717812BDB00B4CB9A /* AdSageAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 449C021C17812BDB00B4CB9A /* AdSageAdapterAdMob.m */; };
 		449C022817812BDB00B4CB9A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 449C022617812BDB00B4CB9A /* libGoogleAdMobAds.a */; };
 		449C022A17830FA600B4CB9A /* default_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 449C022917830FA600B4CB9A /* default_icon@2x.jpg */; };
@@ -154,6 +164,25 @@
 		441F9022177D8E9700C66F97 /* left_menu_cell_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_cell_select@2x.png"; sourceTree = "<group>"; };
 		441F9024177D933300C66F97 /* left_menu_line1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_line1@2x.png"; sourceTree = "<group>"; };
 		441F9025177D933300C66F97 /* left_menu_line2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_menu_line2@2x.png"; sourceTree = "<group>"; };
+		4472E492178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
+		4472E493178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
+		4472E495178BE92500AB52A3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		4472E496178BE92500AB52A3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		4472E497178BE92500AB52A3 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		4472E498178BE92500AB52A3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		4472E499178BE92500AB52A3 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		4472E49A178BE92500AB52A3 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		4472E49B178BE92500AB52A3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		4472E49C178BE92500AB52A3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		4472E49D178BE92500AB52A3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		4472E49E178BE92500AB52A3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		4472E49F178BE92500AB52A3 /* LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBHelper.h; sourceTree = "<group>"; };
+		4472E4A0178BE92500AB52A3 /* LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBHelper.m; sourceTree = "<group>"; };
+		4472E4A1178BE92500AB52A3 /* LKDBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBUtils.h; sourceTree = "<group>"; };
+		4472E4A2178BE92500AB52A3 /* LKDBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBUtils.m; sourceTree = "<group>"; };
+		4472E4A3178BE92500AB52A3 /* NSObject+LKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKModel.h"; sourceTree = "<group>"; };
+		4472E4A4178BE92500AB52A3 /* NSObject+LKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKModel.m"; sourceTree = "<group>"; };
+		4472E4AE178BE95600AB52A3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		449C021B17812BDB00B4CB9A /* AdSageAdapterAdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdSageAdapterAdMob.h; sourceTree = "<group>"; };
 		449C021C17812BDB00B4CB9A /* AdSageAdapterAdMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdSageAdapterAdMob.m; sourceTree = "<group>"; };
 		449C021D17812BDB00B4CB9A /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
@@ -381,6 +410,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4472E4AF178BE95600AB52A3 /* libsqlite3.dylib in Frameworks */,
 				44A68770178A749800CEE180 /* CoreMotion.framework in Frameworks */,
 				44A6876E178A746A00CEE180 /* MediaPlayer.framework in Frameworks */,
 				44A6876C178A743E00CEE180 /* AVFoundation.framework in Frameworks */,
@@ -431,6 +461,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4472E48F178BE92500AB52A3 /* LKDBHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4472E490178BE92500AB52A3 /* FMDB */,
+				4472E49F178BE92500AB52A3 /* LKDBHelper.h */,
+				4472E4A0178BE92500AB52A3 /* LKDBHelper.m */,
+				4472E4A1178BE92500AB52A3 /* LKDBUtils.h */,
+				4472E4A2178BE92500AB52A3 /* LKDBUtils.m */,
+				4472E4A3178BE92500AB52A3 /* NSObject+LKModel.h */,
+				4472E4A4178BE92500AB52A3 /* NSObject+LKModel.m */,
+			);
+			name = LKDBHelper;
+			path = ../../../SCCommon/Vender/LKDBHelper;
+			sourceTree = "<group>";
+		};
+		4472E490178BE92500AB52A3 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				4472E491178BE92500AB52A3 /* extra */,
+				4472E494178BE92500AB52A3 /* src */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		4472E491178BE92500AB52A3 /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				4472E492178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.h */,
+				4472E493178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.m */,
+			);
+			path = extra;
+			sourceTree = "<group>";
+		};
+		4472E494178BE92500AB52A3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4472E495178BE92500AB52A3 /* FMDatabase.h */,
+				4472E496178BE92500AB52A3 /* FMDatabase.m */,
+				4472E497178BE92500AB52A3 /* FMDatabaseAdditions.h */,
+				4472E498178BE92500AB52A3 /* FMDatabaseAdditions.m */,
+				4472E499178BE92500AB52A3 /* FMDatabasePool.h */,
+				4472E49A178BE92500AB52A3 /* FMDatabasePool.m */,
+				4472E49B178BE92500AB52A3 /* FMDatabaseQueue.h */,
+				4472E49C178BE92500AB52A3 /* FMDatabaseQueue.m */,
+				4472E49D178BE92500AB52A3 /* FMResultSet.h */,
+				4472E49E178BE92500AB52A3 /* FMResultSet.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		449C021917812BA900B4CB9A /* Adater File */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,6 +784,7 @@
 			children = (
 				44B11ED917898E7C00C9F565 /* GoogleAnalytics */,
 				449E8D3C177EC71700CB3065 /* SDWebImage */,
+				4472E48F178BE92500AB52A3 /* LKDBHelper */,
 				449E8D21177EC6AE00CB3065 /* MobiSage */,
 			);
 			path = Vender;
@@ -911,6 +992,7 @@
 			isa = PBXGroup;
 			children = (
 				44C04F6D17745377005AA1D7 /* libs */,
+				4472E4AE178BE95600AB52A3 /* libsqlite3.dylib */,
 				44C04F99177459BB005AA1D7 /* libz.1.2.5.dylib */,
 				449C251E1783B1C90097C28F /* libxml2.dylib */,
 				44A6876F178A749800CEE180 /* CoreMotion.framework */,
@@ -1231,6 +1313,15 @@
 				44A686DC178A57B900CEE180 /* UISplashWindow.m in Sources */,
 				44A68710178A68CF00CEE180 /* AdSageAdapterBaidu.m in Sources */,
 				44A68713178A68CF00CEE180 /* mongoose.c in Sources */,
+				4472E4A5178BE92500AB52A3 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				4472E4A6178BE92500AB52A3 /* FMDatabase.m in Sources */,
+				4472E4A7178BE92500AB52A3 /* FMDatabaseAdditions.m in Sources */,
+				4472E4A8178BE92500AB52A3 /* FMDatabasePool.m in Sources */,
+				4472E4A9178BE92500AB52A3 /* FMDatabaseQueue.m in Sources */,
+				4472E4AA178BE92500AB52A3 /* FMResultSet.m in Sources */,
+				4472E4AB178BE92500AB52A3 /* LKDBHelper.m in Sources */,
+				4472E4AC178BE92500AB52A3 /* LKDBUtils.m in Sources */,
+				4472E4AD178BE92500AB52A3 /* NSObject+LKModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

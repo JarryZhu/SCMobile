@@ -10,6 +10,8 @@
 #import "UIButton+WebCache.h"
 #import "UIImageView+WebCache.h"
 #import "SCImageBrowserView.h"
+#import "LKDBHelper.h"
+#import "SVProgressHUD.h"
 
 @implementation DetailTopView
 
@@ -37,6 +39,7 @@
 
 - (void) updateContent:(QiushiItem *)itemData
 {
+    self.itemData = itemData;
     [self.contentLabel setText:itemData.content];
     
     CGSize size = [self.contentLabel.text sizeWithFont:self.contentLabel.font constrainedToSize:CGSizeMake(302, CGFLOAT_MAX) lineBreakMode:UILineBreakModeTailTruncation];
@@ -82,7 +85,6 @@
     }
     
     if (itemData.imageMidURL) {
-        self.imageUrl = itemData.imageMidURL;
         //获取大图
         [self performBlock:^{
             [self.contentImage setImageWithURL:[NSURL URLWithString:itemData.imageMidURL]
@@ -138,7 +140,31 @@
 
 - (IBAction) imageClick:(id)sender
 {
-    [SCImageBrowserView showImage:_contentImage.imageView.image url:self.imageUrl disappear:nil];
+    [SCImageBrowserView showImage:_contentImage.imageView.image url:self.itemData.imageMidURL disappear:nil];
+}
+
+- (IBAction)saveAction:(id)sender
+{
+    [[LKDBHelper sharedDBHelper] createTableWithModelClass:[QiushiItem class]];
+    if ([self.favoriteButton isSelected]) {
+        [[LKDBHelper sharedDBHelper] deleteToDB:self.itemData
+                                       callback:^(BOOL result)
+        {
+            [SVProgressHUD showInfoWithStatus:@"已取消收藏！"];
+            [self.favoriteButton setSelected:NO];
+        }];
+    }
+    else {
+    //if ( ![[LKDBHelper sharedDBHelper] isExistsModel:self.itemData] )
+
+        [[LKDBHelper sharedDBHelper] insertToDB:self.itemData
+                                       callback:^(BOOL result)
+         {
+             [SVProgressHUD showSuccessWithStatus:@"已添加到收藏！"];
+             [self.favoriteButton setSelected:YES];
+         }];
+    }
+
 }
 
 #pragma mark - Views Init
@@ -268,6 +294,8 @@
         _favoriteButton.frame = CGRectMake(250, 2, 80, 30);
         [_favoriteButton setNormalImage:@"icon_fav_enable" selectedImage:@"icon_fav_active"];
         [_favoriteButton setImage:nil forState:UIControlStateHighlighted];
+        
+        [_favoriteButton addTarget:self action:@selector(saveAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _favoriteButton;
 }
