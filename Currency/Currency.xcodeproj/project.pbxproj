@@ -34,6 +34,7 @@
 		4495918617700505009EFDFD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4495918517700505009EFDFD /* MobileCoreServices.framework */; };
 		4495918817700512009EFDFD /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4495918717700512009EFDFD /* libz.1.2.5.dylib */; };
 		4495918D17700573009EFDFD /* NetServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44959181176FFF26009EFDFD /* NetServiceManager.m */; };
+		44B50894178E9BDC006D1967 /* CalculateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B50893178E9BDC006D1967 /* CalculateUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		44959183177004E0009EFDFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4495918517700505009EFDFD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4495918717700512009EFDFD /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		44B50892178E9BDC006D1967 /* CalculateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateUtil.h; sourceTree = "<group>"; };
+		44B50893178E9BDC006D1967 /* CalculateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,7 @@
 			children = (
 				4495915D176FF513009EFDFD /* AppDelegate */,
 				44959172176FF97A009EFDFD /* NetAdapter */,
+				44B50891178E9B9E006D1967 /* Utility */,
 				44959136176FF3BB009EFDFD /* ViewController.h */,
 				44959137176FF3BB009EFDFD /* ViewController.m */,
 				44959167176FF662009EFDFD /* ViewController.xib */,
@@ -222,6 +226,15 @@
 				44959177176FF97A009EFDFD /* NetBaseAdapter.m */,
 			);
 			path = NetAdapter;
+			sourceTree = "<group>";
+		};
+		44B50891178E9B9E006D1967 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				44B50892178E9BDC006D1967 /* CalculateUtil.h */,
+				44B50893178E9BDC006D1967 /* CalculateUtil.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +354,7 @@
 				4495917C176FF97A009EFDFD /* NetBaseAdapter.m in Sources */,
 				4495917D176FF97A009EFDFD /* NetServiceFace.m in Sources */,
 				4495918D17700573009EFDFD /* NetServiceManager.m in Sources */,
+				44B50894178E9BDC006D1967 /* CalculateUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

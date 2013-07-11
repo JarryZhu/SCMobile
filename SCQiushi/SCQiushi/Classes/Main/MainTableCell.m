@@ -83,9 +83,9 @@
     if (!_contentLabel) {
         _contentLabel  = [[UILabel alloc] init];
         _contentLabel.frame = CGRectMake(18, 18, 292, 40);
-        _contentLabel.font = BOLDSYSTEMFONT(16.0f);//ARIALFONTSIZE(16.0f);
+        _contentLabel.font = SYSTEMFONT(16.0f);//ARIALFONTSIZE(16.0f);
         _contentLabel.backgroundColor = CLEAR_COLOR;
-        _contentLabel.textColor = DARKGRAY_COLOR;
+        _contentLabel.textColor = RGBCOLOR(0x1f, 0x1f, 0x1f);
         _contentLabel.lineBreakMode = UILineBreakModeTailTruncation;
         _contentLabel.text = @"内容";
         _contentLabel.numberOfLines = 0;
