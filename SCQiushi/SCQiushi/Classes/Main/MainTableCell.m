@@ -18,9 +18,8 @@
     if (self) {
         // Initialization code
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        //self.backgroundColor = RED_COLOR;
         
-        self.backgroundColor = RED_COLOR;
-
         [self addSubview:self.contentLabel];
         [self addSubview:self.contentImage];
         [self addSubview:self.bottomView];
@@ -52,9 +51,13 @@
 {
     [super    drawRect:rect];
 
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [RGBCOLOR(0xf9, 0xf9, 0xf9) set];
-    CGContextFillRect(context, CGRectMake(8.0f, 8.0f, SCREEN_WIDTH-16.0f, self.height-8.0f));
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    [RGBCOLOR(0xf9, 0xf9, 0xf9) set];
+//    CGContextFillRect(context, CGRectMake(8.0f, 8.0f, SCREEN_WIDTH-16.0f, self.height-8.0f));
+    
+    UIImage *cellBg = [[UIImage imageNamed:@"main_cell_bg"] stretchableImageWithLeftCapWidth:6
+                                                                                topCapHeight:6];
+    [cellBg drawInRect:CGRectMake(8.0f, 8.0f, SCREEN_WIDTH-16.0f, self.height-8.0f)];
 }
 
 - (void) updateCell:(QiushiItem *)itemData
